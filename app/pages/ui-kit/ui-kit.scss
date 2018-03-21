@@ -1,3 +1,18 @@
 .ui-kit {
   display: block;
+
+  .font2 {
+    font-family: $font-second;
+    font-weight: 700;
+  }
+
+  .font3 {
+    font-family: $font-third;
+    font-weight: 500;
+  }
+
+  .font4 {
+    font-family: $font-fourth;
+    font-weight: 300;
+  }
 }

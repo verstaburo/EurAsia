@@ -1,0 +1,11 @@
+mixin header()
+  +b.header&attributes(attributes)
+    +logo.__logo(href="index.html") Сердце ЕврАзии
+    +e.NAV.navigation
+      +block-list
+        +e.LI.item
+          +link._dark.js-popup(href="#registration") Зарегистрировать пациента
+        +e.LI.item
+          +link._dark.js-popup(href="#donation") Поддержать Фонд
+        +e.LI.item
+          +link._dark.js-popup(href="#contacts") Связаться с нами

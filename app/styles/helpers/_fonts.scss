@@ -14,6 +14,84 @@
 }
 */
 
+@font-face {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Georgia.eot');
+  src:
+    url('../fonts/Georgia.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Georgia.woff') format('woff'),
+    url('../fonts/Georgia.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Georgia-Bold.eot');
+  src:
+    url('../fonts/Georgia-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Georgia-Bold.woff') format('woff'),
+    url('../fonts/Georgia-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'PFRegalDisplayPro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/pfregaldisplaypro-bold.eot');
+  src:
+    url('../fonts/pfregaldisplaypro-bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/pfregaldisplaypro-bold.woff2') format('woff2'),
+    url('../fonts/pfregaldisplaypro-bold.woff') format('woff'),
+    url('../fonts/pfregaldisplaypro-bold.otf')  format('opentype'),
+    url('../fonts/pfregaldisplaypro-bold.ttf')  format('truetype'),
+    url('../fonts/pfregaldisplaypro-bold.svg#pfregaldisplaypro-bold') format('svg');
+}
+
+@font-face {
+  font-family: 'PFRegalTextPro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/pfregaltextpro-medium.eot');
+  src:
+    url('../fonts/pfregaltextpro-medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/pfregaltextpro-medium.woff2') format('woff2'),
+    url('../fonts/pfregaltextpro-medium.woff') format('woff'),
+    url('../fonts/pfregaltextpro-medium.otf')  format('opentype'),
+    url('../fonts/pfregaltextpro-medium.ttf')  format('truetype'),
+    url('../fonts/pfregaltextpro-medium.svg#pfregaltextpro-medium') format('svg');
+}
+
+@font-face {
+  font-family: 'SFDisplay';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/sfdisplay-bold.eot');
+  src:
+    url('../fonts/sfdisplay-light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/sfdisplay-light.woff2') format('woff2'),
+    url('../fonts/sfdisplay-light.woff') format('woff'),
+    url('../fonts/sfdisplay-light.otf')  format('opentype'),
+    url('../fonts/sfdisplay-light.ttf')  format('truetype'),
+    url('../fonts/sfdisplay-light.svg#sfdisplay-light') format('svg');
+}
+
+@font-face {
+  font-family: 'SFDisplay';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/sfdisplay-bold.eot');
+  src:
+    url('../fonts/sfdisplay-bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/sfdisplay-bold.woff2') format('woff2'),
+    url('../fonts/sfdisplay-bold.woff') format('woff'),
+    url('../fonts/sfdisplay-bold.otf')  format('opentype'),
+    url('../fonts/sfdisplay-bold.ttf')  format('truetype'),
+    url('../fonts/sfdisplay-bold.svg#sfdisplay-bold') format('svg');
+}
+
 /* Соответствие письменного названия жирности числовому значению
 100 — Thin
 200 — Extra Light, Ultra Light

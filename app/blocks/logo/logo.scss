@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: default;
+
+  &__image {
+    width: 46px;
+    height: 46px;
+    margin-right: 19px;
+  }
+
+  &__text {
+    display: inline-block;
+    box-sizing: border-box;
+    padding-bottom: 6px;
+
+    @include text-small;
+    font-family: $font-fourth;
+    line-height: 1.2;
+    letter-spacing: .03em;
+    font-weight: 700;
+    text-align: left;
+    color: $color-basic;
+  }
+}

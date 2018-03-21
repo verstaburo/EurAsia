@@ -8,3 +8,9 @@ mixin link-icon(iconname)
     +icon(iconname).__icon
     +e.SPAN.text
       block
+
+mixin link-language(img)
+  +b.A.link_language&attributes(attributes)
+    +e.IMG.icon(src=img)
+    +e.SPAN.text
+      block

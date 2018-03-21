@@ -3,22 +3,30 @@
 // ##########
 // Базовые настройки сетки сайта
 // ##########
-$container-width: 960px; // Максимальная ширина контейнера контента
-$container-padding: 20px; // Отступы слева и справа у контейнера
+$container-width: 100%; // Максимальная ширина контейнера контента
+$container-padding: 12.5vw; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
-$grid-gap: 20px; // Расстояние между колонками
-$grid-gap-vertical: 20px; // Расстояние между строками в сетке
+$grid-gap: 6.25vw; // Расстояние между колонками
+$grid-gap-vertical: 6.25vw; // Расстояние между строками в сетке
 $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной колонки
 
 // ##########
 // Цвета
 // ##########
-$color-basic: black; // Основной цвет текста (применяется к body)
-$color-placeholder: #777; // Основной цвет для placeholder
-$color-input: black; // Основной цвет input, select и textarea
-$color-main: #2252d8; // Основной фирменный цвет
-$color-border: #ccc; // Основной цвет границ таблиц, секций
+$color-basic: #262830; // Основной цвет текста (применяется к body)
+$color-white: #fff;
+$color-placeholder: $color-basic; // Основной цвет для placeholder
+$color-input: $color-basic; // Основной цвет input, select и textarea
+$color-main: #b8945a; // Основной фирменный цвет
+$color-border: #ececec; // Основной цвет границ таблиц, секций
+$color-dirt: #927649;
+$color-bg: #f5f3f0;
+$color-grey: #3c414f;
+$color-light-grey: #a2a6b2;
+$color-middle-grey: #949599;
+$color-lighter-grey: #e5e3e0;
+$color-lightest-grey: #f2f2f2;
 
 // ##########
 // Transitions
@@ -28,5 +36,7 @@ $ease-main: .3s ease;
 // ##########
 // Шрифты
 // ##########
-$font-main: Arial, sans-serif; // Основной шрифт сайта
-$font-second: Times New Roman, sans-serif; // Дополнительный шрифт
+$font-main: 'Georgia', 'Arial', sans-serif; // Основной шрифт сайта
+$font-second: 'PFRegalDisplayPro' , 'Georgia', 'Arial', sans-serif; // Дополнительный шрифт
+$font-third: 'PFRegalTextPro' , 'Georgia', 'Arial', sans-serif; // Дополнительный шрифт
+$font-fourth: 'SFDisplay' , 'Georgia', 'Arial', sans-serif; // Дополнительный шрифт

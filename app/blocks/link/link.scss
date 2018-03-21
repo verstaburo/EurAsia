@@ -5,10 +5,6 @@
     @include link;
   }
 
-  &_dashed &__text {
-    @include link-dashed;
-  }
-
   &_icon {
     position: relative;
     padding-left: 25px;
@@ -29,11 +25,48 @@
     fill: $color-main;
   }
 
+  &_language {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    @include text-small;
+    font-family: $font-fourth;
+    line-height: 1.17;
+    letter-spacing: .03em;
+    font-weight: 700;
+
+    .link {
+
+      &__icon {
+        width: 23px;
+        height: 15px;
+        margin-right: 12px;
+      }
+
+      &__text {
+        color: $color-basic;
+      }
+    }
+  }
+
+  &_dark {
+
+    .link__text {
+      @include link-dark;
+    }
+  }
+
+  &_light {
+
+    .link__text {
+      @include link-light;
+    }
+  }
+
   &.disabled {
     pointer-events: none;
 
     .link__icon { fill: $color-border; }
-
-    .link__text { @include link-disabled; }
   }
 }
