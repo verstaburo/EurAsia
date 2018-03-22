@@ -1,0 +1,13 @@
+.child-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+
+  &__item {
+    width: 18.75vw;
+    margin-left: 3.125vw;
+    margin-bottom: 6.6vh;
+  }
+}

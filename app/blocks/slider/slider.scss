@@ -2,11 +2,27 @@
 
 .slider {
   position: relative;
-  border: 1px solid $color-border;
 
   &__slide {
-    padding: 100px;
-    text-align: center;
+    width: auto;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 11vh;
+    padding-bottom: 11vh;
+    border-right: 1px solid $color-border;
+
+    &_statistic {
+      width: 42.2vw;
+    }
+
+    &_child {
+      width: 25vw;
+    }
+
+    &_list {
+      border-right: none;
+      padding-bottom: 0;
+    }
   }
 
   &__dots {
@@ -41,52 +57,40 @@
     position: absolute;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    width: 40px;
-    height: 40px;
-    border: 1px solid $color-border;
-    transition: opacity $ease-main;
+    width: 66px;
+    height: 66px;
+    transition: all $ease-main;
     z-index: 2;
     cursor: pointer;
-    background-color: white;
+    background-color: $color-main;
+    box-sizing: border-box;
+    padding-left: 4px;
 
-    &::before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      border-style: solid;
-      border-color: $color-basic;
-      border-width: 0;
-      position: absolute;
-      transform: rotate(45deg);
-      transform-origin: center;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
+    &:hover { opacity: .8; }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+      pointer-events: none;
     }
 
-    &:hover { opacity: .5; }
-
     &_next {
-      right: 20px;
-
-      &::before {
-        border-top-width: 2px;
-        border-right-width: 2px;
-        right: 3px;
-      }
+      right: 0;
     }
 
     &_prev {
-      left: 20px;
-
-      &::before {
-        border-bottom-width: 2px;
-        border-left-width: 2px;
-        left: 3px;
-      }
+      left: 0;
+      transform: rotate(180deg);
     }
+  }
+
+  &__icon {
+    width: 11px;
+    height: 19px;
+    fill: $color-white;
   }
 }

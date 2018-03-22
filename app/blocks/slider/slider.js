@@ -6,12 +6,9 @@ const $ = window.$;
 
 export default function slider() {
   const mySlider = new Swiper('.js-slider', {
-    loop: true,
     speed: 700,
-    autoplay: {
-      delay: 2000,
-    },
-    slidesPerView: 1,
+    slidesPerView: 'auto',
+    freeMode: true,
     navigation: {
       nextEl: '.slider__button_next',
       prevEl: '.slider__button_prev',
@@ -24,11 +21,6 @@ export default function slider() {
       bulletActiveClass: 'active',
     },
     roundLengths: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-    },
   });
 }
 /* eslint-enable no-unused-vars */

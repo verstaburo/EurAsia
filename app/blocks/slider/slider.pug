@@ -7,9 +7,10 @@ mixin slider(pagination, buttons)
         +e.dot
     if buttons
       +e.button._prev
+        +icon('arrow-large').__icon
       +e.button._next
+        +icon('arrow-large').__icon
 
-mixin slide()
-  .swiper-slide
-    +e.slide&attributes(attributes)
-      block
+mixin slide(addClass)
+  +e(class= "slide" + addClass + " swiper-slide")&attributes(attributes)
+    block

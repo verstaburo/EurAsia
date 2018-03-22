@@ -122,6 +122,8 @@
   &__news {
     position: relative;
     width: 25%;
+    overflow: hidden;
+    height: 100%;
 
     &::before {
       @include pseudo;
