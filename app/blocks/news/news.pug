@@ -1,0 +1,13 @@
+mixin news(type, img, video)
+  - var link = "#"
+  - if (type === 'video') { link = video }
+  - if (type === 'image') {link = img}
+  +b.news&attributes(attributes)
+    if type
+      +e.A.media.js-fancybox(href= link)
+        +e.IMG.image(src=img)
+        - if (type === 'video') {
+          +e.play
+            +icon('play').icon
+        - }
+    block

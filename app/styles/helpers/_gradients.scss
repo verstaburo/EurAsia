@@ -1,3 +1,7 @@
 @mixin gradient-main {
   background: linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
 }
+
+@mixin gradient-second {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}

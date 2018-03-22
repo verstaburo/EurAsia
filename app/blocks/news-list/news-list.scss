@@ -1,0 +1,44 @@
+.news-list {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 3vw $grid-gap/2;
+
+  &__title {
+    @include text-bigger;
+    font-family: $font-fourth;
+    font-weight: 700;
+    margin-bottom: 37px;
+    width: 100%;
+  }
+
+  &__list {
+    position: relative;
+    width: 100%;
+
+    &::before, &::after {
+      @include pseudo;
+      top: 0;
+      left: 0;
+    }
+
+    &::before {
+      width: 100%;
+      height: 1px;
+      background-color: $color-border;
+      z-index: 1;
+    }
+
+    &::after {
+      width: 18%;
+      height: 2px;
+      background-color: $color-main;
+      z-index: 2;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 30px;
+  }
+}

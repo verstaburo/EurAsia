@@ -1,0 +1,16 @@
+mixin news-list()
+  +b.news-list&attributes(attributes)
+    +e.title Новости Фонда
+    +e.list
+      +news(false).__item
+        +e.A.content(href="#")
+          +e.text Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с&nbsp;РФС
+      +news('video', 'assets/images/news-1.jpg', 'https://youtu.be/UA3OexmrSfs').__item
+        +e.A.content(href="#")
+          +e.text Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки
+      +news('video', 'assets/images/news-2.jpg', 'https://youtu.be/eZ2IHTd3G7g').__item
+        +e.A.content(href="#")
+          +e.text Хубулава Г.Г. Слово единомышленника
+      +news('image', 'assets/images/news-3.jpg').__item
+        +e.A.content(href="#")
+          +e.text Наш медиа партнер
