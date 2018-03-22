@@ -1,7 +1,8 @@
 mixin child(img, name, disease, age, town)
   +b.child&attributes(attributes)
     +e.media
-      +e.IMG.image(src=img)
+      +e.wrapper
+        +e.IMG.image(src=img)
     +e.name!= name
     +e.disease!= disease
     +table.child__info
@@ -15,4 +16,5 @@ mixin child(img, name, disease, age, town)
 mixin child-short(img)
   +b.A.child_short&attributes(attributes)
     +e.DIV.media
-      +e.IMG.image(src=img)
+      +e.wrapper
+        +e.IMG.image(src=img)

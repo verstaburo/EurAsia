@@ -9,10 +9,18 @@
 
   &__media {
     position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 38px;
+    box-sizing: border-box;
+  }
+
+  &__wrapper {
+    position: relative;
     width: 100%;
     padding-top: 100%;
+    box-sizing: border-box;
     overflow: hidden;
-    margin-bottom: 38px;
   }
 
   &__image {

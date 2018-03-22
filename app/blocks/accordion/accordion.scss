@@ -4,45 +4,47 @@
 
   .accordions & { margin-top: -1px; }
 
+  border-bottom: 1px solid $color-grey;
+
   &__header {
     position: relative;
     padding-right: 28px;
-    height: 40px;
-    border: 1px solid $color-border;
+    border-top: 1px solid $color-grey;
     width: 100%;
     box-sizing: border-box;
     line-height: 38px;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      width: 5px;
-      height: 5px;
-      border-width: 1px 1px 0 0;
-      border-style: solid;
-      border-color: $color-basic;
-      transform-origin: center;
-      transform: translateY(-50%) rotate(135deg);
-      transition: transform $ease-main;
+  &__toggle {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    transition: all $ease-main;
+    transform: translateY(-50%) rotate(90deg);
 
-      #{$b}.is-active & {
-        transform: translateY(-50%) rotate(-45deg);
-        margin-top: 2px;
-      }
+    #{$b}.is-active & {
+      transform: translateY(-50%) rotate(270deg);
     }
+  }
 
+  &__icon {
+    width: 14px;
+    height: 11px;
+    fill: $color-main;
   }
 
   &__button {
-    padding: 0 10px;
+    padding: 50px 0;
     cursor: pointer;
   }
 
   &__body {
-    padding: 10px;
-    border: 1px solid $color-border;
     border-top: 0;
     width: 100%;
     box-sizing: border-box;
