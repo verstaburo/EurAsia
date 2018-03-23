@@ -1,0 +1,64 @@
+.person {
+  display: block;
+
+  &__media {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: $color-charcoal-grey;
+    margin-bottom: 32px;
+  }
+
+  &__image {
+    @include fill-img;
+  }
+
+  &__name {
+    @include heading-4;
+    font-weight: 500;
+    line-height: 1.1;
+    font-family: $font-third;
+    width: 100%;
+    margin-bottom: 15px;
+    letter-spacing: -.008em;
+  }
+
+  &__describe {
+    color: $color-light-grey;
+    @include text-small;
+    font-family: $font-fourth;
+    line-height: 1.29;
+    letter-spacing: .029em;
+    width: 100%;
+  }
+
+  &__short-info {
+    width: 100%;
+    transition: all $ease-main;
+  }
+
+  &__full-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &__more {
+    color: $color-main;
+    @include text-small;
+    font-family: $font-fourth;
+    line-height: 1.29;
+    letter-spacing: .029em;
+    text-decoration: none;
+    background-color: $color-basic;
+
+    &:hover {
+      color: rgba($color-main, .7);
+    }
+  }
+}

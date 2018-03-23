@@ -1,0 +1,30 @@
+.page-section {
+  display: block;
+  width: 100%;
+  padding: 13.3vh 0;
+  box-sizing: border-box;
+
+  &__title {
+    @include heading-5;
+    font-family: $font-fourth;
+
+    &_big {
+      @include heading-big;
+      font-family: $font-second;
+      line-height: 1.017;
+    }
+  }
+
+  &__top {
+    margin-bottom: 8vh;
+  }
+
+  &_dark {
+    color: $color-white;
+    background-color: $color-basic;
+  }
+
+  &_light {
+    background-color: $color-bg;
+  }
+}

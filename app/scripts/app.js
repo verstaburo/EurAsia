@@ -12,6 +12,8 @@ import tabs from '../blocks/tabs/tabs';
 import maps from '../blocks/map/map';
 import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
+import headerResize from '../components/header/header';
+import showMore from '../blocks/person/person';
 
 const $ = window.$;
 
@@ -32,4 +34,6 @@ $(() => {
   numberinput();
   maps();
   scrollanimation();
+  headerResize();
+  showMore();
 });

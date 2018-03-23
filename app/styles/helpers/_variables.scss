@@ -8,7 +8,7 @@ $container-padding: 12.5vw; // Отступы слева и справа у ко
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
 $grid-gap: 6.25vw; // Расстояние между колонками
-$grid-gap-vertical: 6.25vw; // Расстояние между строками в сетке
+$grid-gap-vertical: 8vh; // Расстояние между строками в сетке
 $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной колонки
 
 // ##########
@@ -27,6 +27,7 @@ $color-light-grey: #a2a6b2;
 $color-middle-grey: #949599;
 $color-lighter-grey: #e5e3e0;
 $color-lightest-grey: #f2f2f2;
+$color-charcoal-grey: #383940;
 
 // ##########
 // Transitions

@@ -65,6 +65,20 @@
 }
 
 @font-face {
+  font-family: 'PFRegalTextPro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/pfregaltextpro-bold.eot');
+  src:
+    url('../fonts/pfregaltextpro-bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/pfregaltextpro-bold.woff2') format('woff2'),
+    url('../fonts/pfregaltextpro-bold.woff') format('woff'),
+    url('../fonts/pfregaltextpro-bold.otf')  format('opentype'),
+    url('../fonts/pfregaltextpro-bold.ttf')  format('truetype'),
+    url('../fonts/pfregaltextpro-bold.svg#pfregaltextpro-bold') format('svg');
+}
+
+@font-face {
   font-family: 'SFDisplay';
   font-style: normal;
   font-weight: 300;

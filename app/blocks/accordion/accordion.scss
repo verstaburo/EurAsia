@@ -1,10 +1,18 @@
 .accordion {
   $b: &;
-  @include text;
+  @include text-bigger;
+  color: $color-white;
 
   .accordions & { margin-top: -1px; }
 
-  border-bottom: 1px solid $color-grey;
+  &:last-of-type {
+    transition: border $ease-main;
+    border-bottom: 1px solid $color-grey;
+
+    &.is-active {
+      border-bottom: 1px solid transparent;
+    }
+  }
 
   &__header {
     position: relative;
@@ -40,7 +48,9 @@
   }
 
   &__button {
-    padding: 50px 0;
+    padding: 48px 0;
+    font-family: $font-fourth;
+    font-weight: 700;
     cursor: pointer;
   }
 
@@ -49,6 +59,7 @@
     width: 100%;
     box-sizing: border-box;
     display: none;
+    padding-bottom: 8vh;
 
     #{$b}.is-active & { display: block; }
   }
