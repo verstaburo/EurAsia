@@ -3,6 +3,7 @@
 
   &__title {
     @include heading-3;
+    font-weight: 500;
     font-family: $font-third;
     line-height: 1.17;
     margin-bottom: 14px;

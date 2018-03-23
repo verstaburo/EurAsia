@@ -1,0 +1,32 @@
+.text-block {
+  display: block;
+  @include text;
+  line-height: 1.45;
+  color: $color-basic;
+
+  p i {
+    color: $color-dirt;
+    font-style: normal;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 58px;
+    }
+  }
+
+  &_stylized {
+    position: relative;
+
+    p:first-child::first-letter {
+      padding: 0;
+      margin: 0;
+      padding-right: 12px;
+      float: left;
+      @include heading-big;
+      line-height: 1;
+      font-family: $font-second;
+      color: $color-dirt;
+    }
+  }
+}
