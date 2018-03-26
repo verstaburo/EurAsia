@@ -26,20 +26,20 @@
                         <span class="link__text">Зарегистрировать пациента</span>
                     </a>
                 </li>
-                <li class="block-list__item block-list__item_width">
+                <li class="block-list__item">
                     <a class="link link_dark js-popup" href="#donation">
-                        <span class="link__text">Отправьте смс на номер 7715 со словом «КОМАНДА» и сумму пожертвования</span>
+                        <span class="link__text">Поддержать Фонд</span>
                     </a>
                 </li>
                 <li class="block-list__item">
                     <a class="link link_dark js-popup" href="#contacts">
-                        <span class="link__text">+7 812 3244—855
-                            <br/>Welcome@eurasiaheart.ru</span>
+                        <span class="link__text">Связаться с нами</span>
                     </a>
                 </li>
             </ul>
         </nav>
     </div>
+    <div class="overlay"></div>
     <div class="page">
         <section class="main">
             <section class="main__content">
@@ -61,10 +61,10 @@
                         <div class="main__text">Благотворительная гуманитарная организация, специализирующаяся на лечении тяжелых пороков сердца и сердечно-сосудистых заболеваний у детей из Европы и Азии.</div>
                     </div>
                     <div class="main__col main__col_right">
-                        <a class="play js-fancybox" href="https://youtu.be/Cq9oYRRQeOc">
+                        <a class="play js-fancybox" href="https://youtu.be/gszwFaEKGzI">
                             <svg class="play__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
                         </a>
-                        <a class="link link_light main__play" href="https://youtu.be/Cq9oYRRQeOc">
+                        <a class="link link_light main__play" href="https://youtu.be/gszwFaEKGzI">
                             <span class="link__text">Смотреть видео</span>
                         </a>
                     </div>
@@ -76,7 +76,7 @@
                         <div class="news-list__title">Новости Фонда</div>
                         <div class="news-list__list">
                             <div class="news news-list__item">
-                                <a class="news__content" href="#">
+                                <a class="news__content js-popup" href="#news">
                                     <span class="news__text">Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с&nbsp;РФС</span>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                                         <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
                                     </span>
                                 </a>
-                                <a class="news__content" href="#">
+                                <a class="news__content js-popup" href="#news" data-target-news="news-2">
                                     <span class="news__text">Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки</span>
                                 </a>
                             </div>
@@ -98,7 +98,7 @@
                                         <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
                                     </span>
                                 </a>
-                                <a class="news__content" href="#">
+                                <a class="news__content js-popup" href="#news" data-target-news="news-3">
                                     <span class="news__text">Хубулава Г.Г. Слово единомышленника</span>
                                 </a>
                             </div>
@@ -106,7 +106,7 @@
                                 <a class="news__media js-fancybox" href="assets/images/news-3.jpg">
                                     <img class="news__image" src="assets/images/news-3.jpg" alt="" role="presentation" />
                                 </a>
-                                <a class="news__content" href="#">
+                                <a class="news__content js-popup" href="#news" data-target-news="news-4">
                                     <span class="news__text">Наш медиа партнер</span>
                                 </a>
                             </div>
@@ -203,7 +203,7 @@
                                 </div>
                             </div>
                             <div class="child__name">Колоев Дауд</div>
-                            <div class="child__disease">врожденный порок сердца</div>
+                            <div class="child__disease">Врожденный порок сердца</div>
                             <table class="table child__info" cellspacing="0">
                                 <tr>
                                     <td>Возраст</td>
@@ -521,7 +521,7 @@
                                 <p>– один из самых перспективных партнеров Фонда. Поддержка Президента и правительства, реализующаяся в национальном российском проекте «Здоровье» в сочетании с международной образовательной и научной деятельностью Сердца
                                     ЕврАзии может вывести российские федеральные центры сердечно-сосудистой хирургии на мировой уровень и прекратить отток пациентов за границу.</p>
                             </div>
-                            <a class="button" href="#news">Новости фонда</a>
+                            <a class="button js-popup" href="#news">Новости фонда</a>
                         </div>
                         <div class="grid__col grid__col_six">
                             <div class="text-block">
@@ -818,6 +818,155 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popups__close js-popup-close">
+            <svg class="popups__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.41 19.41">
+                <path d="M.71.71l18,18" stroke-width="2"></path>
+                <path d="M18.71.71l-18,18" stroke-width="2"></path>
+            </svg>
+        </div>
+        <div class="popups__wrapper js-scrollbar">
+            <div class="popup popup-news" id="news">
+                <div class="news-list news-list_full">
+                    <div class="news-list__title">Новости Фонда</div>
+                    <div class="news-list__list">
+                        <div class="news news-list__item" id="news-1">
+                            <div class="news__content">
+                                <div class="news__text">
+                                    <p>Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с&nbsp;РФС</p>
+                                    <p>23&nbsp;марта во&nbsp;время дружеского матча Россия-Бразилия будет подписан меморандум о&nbsp;сотрудничестве между Фондом &laquo;Сердце Евразии&raquo; и&nbsp;Российским Футбольным Союзом. Российские футболисты откликнулись
+                                        на&nbsp;беду малышей с&nbsp;врожденным пороком сердца и&nbsp;с&nbsp;огромным энтузиазмом готовы поддерживать деятельность Фонда в&nbsp;России. Все собранные средства будут адресно раходоваться на&nbsp;детские операции.</p>
+                                    <p>Наша искренняя благодарность Российскому Футбольному Союзу за&nbsp;эту инициативу!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news news-list__item" id="news-2">
+                            <a class="news__media js-fancybox" href="https://youtu.be/UA3OexmrSfs">
+                                <img class="news__image" src="assets/images/news-1.jpg" alt="" role="presentation" />
+                                <span class="news__play">
+                                    <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                                </span>
+                            </a>
+                            <div class="news__content">
+                                <div class="news__text">
+                                    <p>Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки Художественный руководитель и&nbsp;главный дирижер Академического симфонического оркестра Санкт-Петербургской филармонии.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news news-list__item" id="news-3">
+                            <a class="news__media js-fancybox" href="https://youtu.be/eZ2IHTd3G7g">
+                                <img class="news__image" src="assets/images/news-2.jpg" alt="" role="presentation" />
+                                <span class="news__play">
+                                    <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                                </span>
+                            </a>
+                            <div class="news__content">
+                                <div class="news__text">
+                                    <p>Хубулава Г.Г. Слово единомышленника Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиохирург, академик РАН, доктор медицинских наук.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news news-list__item" id="news-4">
+                            <a class="news__media js-fancybox" href="assets/images/news-3.jpg">
+                                <img class="news__image" src="assets/images/news-3.jpg" alt="" role="presentation" />
+                            </a>
+                            <div class="news__content">
+                                <div class="news__text">
+                                    <p>Наш медиа партнер: Swiss Health Magazine
+                                        <a href="https://www.swisshealth.ch">www.swisshealth.ch</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-registration" id="registration">
+                <h3 class="popup__title">
+                    <svg class="popup__title-icon"><use xlink:href="assets/images/icon.svg#icon_registration"></use></svg>
+                    <div class="popup__title-text">Зарегистрировать пациента</div>
+                </h3>
+                <div class="content-zone">
+                    <p>Если у вашего ребенка врожденный порок сердца, вы можете обратиться в наш Фонд для диагностики и лечения. Заполните формы и отправьте на электронную почту
+                        <a href="mailto:help@eurasiaheart.ru">help@eurasiaheart.ru.&nbsp;</a>Наши специалисты незамедлительно свяжутся с вами.</p>
+                </div>
+                <div class="popup-registration__documents">
+                    <a class="download-link" href="assets/files/statement.doc" title="Заявление">
+                        <span class="download-link__text">Заявление</span>
+                        <svg class="download-link__icon"><use xlink:href="assets/images/icon.svg#icon_download"></use></svg>
+                    </a>
+                    <a class="download-link" href="assets/files/appeal.docx" title="Обращение в фонд">
+                        <span class="download-link__text">Обращение в фонд</span>
+                        <svg class="download-link__icon"><use xlink:href="assets/images/icon.svg#icon_download"></use></svg>
+                    </a>
+                    <a class="download-link" href="assets/files/agreement-1.docx" title="Согласие на обработку персональных данных">
+                        <span class="download-link__text">Согласие на обработку персональных данных</span>
+                        <svg class="download-link__icon"><use xlink:href="assets/images/icon.svg#icon_download"></use></svg>
+                    </a>
+                    <a class="download-link" href="assets/files/agreement-2.docx" title="Согласие на передачу персональных данных">
+                        <span class="download-link__text">Согласие на передачу персональных данных</span>
+                        <svg class="download-link__icon"><use xlink:href="assets/images/icon.svg#icon_download"></use></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="popup popup-contacts" id="contacts">
+                <div class="popup-contacts__wrapper">
+                    <h3 class="popup__title">
+                        <svg class="popup__title-icon"><use xlink:href="assets/images/icon.svg#icon_contacts"></use></svg>
+                        <div class="popup__title-text">Связаться
+                            <br> с&nbsp;нами</div>
+                    </h3>
+                    <div class="contacts">
+                        <div class="contacts__item">
+                            <div class="contacts__name">Телефон</div>
+                            <a class="link link_dark contacts__link" href="tel:+78123244855">
+                                <span class="link__text">+7 812 3244—855</span>
+                            </a>
+                        </div>
+                        <div class="contacts__item">
+                            <div class="contacts__name">Email</div>
+                            <a class="link link_dark contacts__link" href="mailto:Welcome@eurasiaheart.ru">
+                                <span class="link__text">Welcome@eurasiaheart.ru</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-donation" id="donation">
+                <h3 class="popup__title">
+                    <svg class="popup__title-icon"><use xlink:href="assets/images/icon.svg#icon_heart"></use></svg>
+                    <div class="popup__title-text">Сделать
+                        <br> пожертвование</div>
+                </h3>
+                <div class="donate">
+                    <div class="donate__title">Телефон</div>
+                    <div class="donate__text">Отправьте смс на&nbsp;номер 7715&nbsp;со словом &laquo;КОМАНДА&raquo; и&nbsp;сумму пожертвования</div>
+                </div>
+                <div class="donate">
+                    <div class="donate__title">Банковский перевод</div>
+                    <div class="donate__item">
+                        <div class="donate__name">Наименование учреждения банка</div>
+                        <div class="donate__text donate__text_sfui">Филиал N&nbsp;7806&nbsp;ВТБ (ПАО) в&nbsp;г. Санкт-Петербурге</div>
+                    </div>
+                    <div class="donate__item">
+                        <div class="donate__name">Расчётный счёт</div>
+                        <div class="donate__text donate__text_sfui">40703810029060004163</div>
+                    </div>
+                    <div class="donate__item">
+                        <div class="donate__name">Реквизиты банка</div>
+                        <div class="donate__text donate__text_sfui donate__text_sfui_lh">Филиал N&nbsp;7806&nbsp;ВТБ (ПАО)
+                            <br/>К/с 30101810240300000707
+                            <br/>В&nbsp;СЕВЕРО-ЗАПАДНОЕ ГУ&nbsp;БАНКА РОССИИ
+                            <br/>БИК 044030707
+                            <br/>ИНН 7710353606
+                            <br/>КПП 783543012
+                            <br/>190000, г. Санкт-Петербург, ул. Б.&nbsp;Морская, д.&nbsp;29, лит. &laquo;А&raquo;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup popup-focus" id="focus"></div>
         </div>
     </div>
     <script src="assets/scripts/app.min.js"></script>
