@@ -60,15 +60,25 @@
     width: 100%;
     padding: 20px 0 24px;
     box-sizing: border-box;
+  }
 
-    &:hover {
-      opacity: .8;
-    }
+  a.news__content:hover {
+    opacity: .8;
   }
 
   &__text {
     @include text-middle;
     line-height: 1.44;
     width: 100%;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 31px;
+      }
+    }
+
+    a {
+      @include link-dirt;
+    }
   }
 }

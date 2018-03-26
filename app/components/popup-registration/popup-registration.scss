@@ -1,0 +1,29 @@
+.popup-registration {
+  .popup__title {
+    margin-bottom: 50px;
+  }
+
+  .content-zone {
+    margin-bottom: 130px;
+
+    p {
+      line-height: 1.45;
+    }
+  }
+
+  &__documents {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    box-sizing: border-box;
+
+    .download-link {
+      margin-right: 24px;
+      margin-bottom: 24px;
+      width: 150px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.popup-contacts {
+  padding-bottom: 15.2vh;
+  height: 100vh;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    height: 100%;
+  }
+}

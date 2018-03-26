@@ -1,0 +1,47 @@
+.donate {
+  display: block;
+  width: 100%;
+
+  &__title {
+    @include text-biggest;
+    line-height: 1.21;
+    font-weight: 500;
+    font-family: $font-third;
+    color: $color-dirt;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 14px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__name {
+    @include text-middle;
+    line-height: 1.94;
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  &__text {
+    line-height: 1.45;
+    width: 100%;
+
+    &_sfui {
+      @include text-big;
+      font-family: $font-fourth;
+      line-height: 1.33;
+      letter-spacing: .024em;
+      font-weight: 300;
+
+      &_lh {
+        line-height: 1.71;
+      }
+    }
+  }
+}

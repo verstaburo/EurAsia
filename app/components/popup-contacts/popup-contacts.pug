@@ -1,0 +1,11 @@
+mixin popup-contacts()
+  +popup.popup-contacts__&attributes(attributes)
+    +e.wrapper
+      +popup-title('contacts') Связаться <br> с&nbsp;нами
+      +contacts
+        +e.item
+          +e.name Телефон
+          +link(href="tel:+78123244855")._dark.__link +7 812 3244—855
+        +e.item
+          +e.name Email
+          +link(href="mailto:Welcome@eurasiaheart.ru")._dark.__link Welcome@eurasiaheart.ru

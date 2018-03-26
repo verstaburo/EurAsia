@@ -3,14 +3,38 @@ mixin news-list()
     +e.title Новости Фонда
     +e.list
       +news(false).__item
-        +e.A.content(href="#")
+        +e.A.content.js-popup(href="#news")
           +e.text Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с&nbsp;РФС
       +news('video', 'assets/images/news-1.jpg', 'https://youtu.be/UA3OexmrSfs').__item
-        +e.A.content(href="#")
+        +e.A.content.js-popup(href="#news"  data-target-news="news-2")
           +e.text Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки
       +news('video', 'assets/images/news-2.jpg', 'https://youtu.be/eZ2IHTd3G7g').__item
-        +e.A.content(href="#")
+        +e.A.content.js-popup(href="#news"  data-target-news="news-3")
           +e.text Хубулава Г.Г. Слово единомышленника
       +news('image', 'assets/images/news-3.jpg').__item
-        +e.A.content(href="#")
+        +e.A.content.js-popup(href="#news"  data-target-news="news-4")
           +e.text Наш медиа партнер
+
+mixin news-list-full()
+  +b.news-list_full&attributes(attributes)
+    +e.title Новости Фонда
+    +e.list
+      +news(false).__item#news-1
+        +e.content
+          +e.text
+            +e.P Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с&nbsp;РФС
+            +e.P 23&nbsp;марта во&nbsp;время дружеского матча Россия-Бразилия будет подписан меморандум о&nbsp;сотрудничестве между Фондом &laquo;Сердце Евразии&raquo; и&nbsp;Российским Футбольным Союзом. Российские футболисты откликнулись на&nbsp;беду малышей с&nbsp;врожденным пороком сердца и&nbsp;с&nbsp;огромным энтузиазмом готовы поддерживать деятельность Фонда в&nbsp;России. Все собранные средства будут адресно раходоваться на&nbsp;детские операции.
+            +e.P Наша искренняя благодарность Российскому Футбольному Союзу за&nbsp;эту инициативу!
+      +news('video', 'assets/images/news-1.jpg', 'https://youtu.be/UA3OexmrSfs').__item#news-2
+        +e.content
+          +e.text
+            +e.P Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки Художественный руководитель и&nbsp;главный дирижер Академического симфонического оркестра Санкт-Петербургской филармонии.
+      +news('video', 'assets/images/news-2.jpg', 'https://youtu.be/eZ2IHTd3G7g').__item#news-3
+        +e.content
+          +e.text
+            +e.P Хубулава Г.Г. Слово единомышленника Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиохирург, академик РАН, доктор медицинских наук.
+      +news('image', 'assets/images/news-3.jpg').__item#news-4
+        +e.content
+          +e.text
+            +e.P Наш медиа партнер: Swiss Health Magazine
+              +e.A(href="https://www.swisshealth.ch") www.swisshealth.ch

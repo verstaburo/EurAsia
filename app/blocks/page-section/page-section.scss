@@ -21,10 +21,17 @@
 
   &_dark {
     color: $color-white;
-    background-color: $color-basic;
+    background-color: $color-bg2;
   }
 
   &_light {
     background-color: $color-bg;
+  }
+
+  &_style {
+    background-image: url('../images/dust.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
   }
 }

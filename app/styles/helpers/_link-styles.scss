@@ -7,6 +7,10 @@
   }
 }
 
+@mixin link-dirt {
+  color: $color-dirt;
+}
+
 @mixin link-dark {
   color: $color-basic;
 }

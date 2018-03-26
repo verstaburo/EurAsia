@@ -108,5 +108,5 @@
 
   ol { @include ollist; }
 
-  a { @include link; }
+  a { @include link-dirt; }
 }

@@ -1,0 +1,12 @@
+mixin popup-registration()
+  +popup.popup-registration__&attributes(attributes)
+    +popup-title('registration') Зарегистрировать пациента
+    +content-zone
+      +e.P Если у вашего ребенка врожденный порок сердца, вы можете обратиться в наш Фонд для диагностики и лечения. Заполните формы и отправьте на электронную почту
+        +e.A(href="mailto:help@eurasiaheart.ru") help@eurasiaheart.ru.&nbsp;
+        | Наши специалисты незамедлительно свяжутся с вами.
+    +e.documents
+      +download-link(href="assets/files/statement.doc" title="Заявление") Заявление
+      +download-link(href="assets/files/appeal.docx" title="Обращение в фонд") Обращение в фонд
+      +download-link(href="assets/files/agreement-1.docx" title="Согласие на обработку персональных данных") Согласие на обработку персональных данных
+      +download-link(href="assets/files/agreement-2.docx" title="Согласие на передачу персональных данных") Согласие на передачу персональных данных

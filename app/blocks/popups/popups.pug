@@ -1,7 +1,19 @@
 mixin popups()
   +b.popups&attributes(attributes)
-    block
+    +e.close.js-popup-close
+      +e.SVG.icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.41 19.41")
+        +e.PATH(d="M.71.71l18,18" stroke-width="2")
+        +e.PATH(d="M18.71.71l-18,18" stroke-width="2")
+    +e.wrapper.js-scrollbar
+      block
 
 mixin popup()
   +b.popup&attributes(attributes)
     block
+
+mixin popup-title(icon)
+  h3.popup__title&attributes(attributes)
+    if icon
+      +icon(icon)(class=" popup__title-icon")
+    .popup__title-text
+      block

@@ -1,0 +1,8 @@
+.popup-donation {
+
+  .donate {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}

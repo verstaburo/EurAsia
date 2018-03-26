@@ -1,0 +1,40 @@
+.download-link {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include text-small;
+  font-weight: 700;
+  font-family: $font-fourth;
+  color: $color-basic;
+  letter-spacing: .029em;
+  line-height: 1.18;
+  height: 120px;
+  transition: all $ease-main;
+  background-color: $color-bg;
+  box-sizing: border-box;
+  padding: 22px 24px 25px;
+
+  &__text {
+    @include ellipsis(100%);
+  }
+
+  &__icon {
+    width: 18px;
+    height: 24px;
+    fill: $color-main;
+    transition: all $ease-main;
+    margin-left: 3px;
+  }
+
+  &:hover {
+    background-color: $color-main;
+    color: $color-white;
+
+    .download-link {
+      &__icon {
+        fill: $color-white;
+      }
+    }
+  }
+}

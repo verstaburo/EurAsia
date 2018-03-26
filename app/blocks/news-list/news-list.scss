@@ -30,7 +30,7 @@
     }
 
     &::after {
-      width: 18%;
+      width: 48px;
       height: 2px;
       background-color: $color-main;
       z-index: 2;
@@ -40,5 +40,23 @@
   &__item {
     border-bottom: 1px solid $color-border;
     margin-bottom: 30px;
+  }
+
+  &_full {
+    padding: 0;
+
+    .news {
+      &__media {
+        width: 269px;
+        height: 152px;
+        padding-top: 0;
+      }
+    }
+
+    .news-list {
+      &__item {
+        margin-bottom: 36px;
+      }
+    }
   }
 }

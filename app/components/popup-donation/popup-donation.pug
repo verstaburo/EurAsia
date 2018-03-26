@@ -1,0 +1,27 @@
+mixin popup-donation()
+  +popup.popup-donation__&attributes(attributes)
+    +popup-title('heart') Сделать <br> пожертвование
+    +donate('Телефон')
+      +e.text Отправьте смс на&nbsp;номер 7715&nbsp;со словом &laquo;КОМАНДА&raquo; и&nbsp;сумму пожертвования
+    +donate('Банковский перевод')
+      +e.item
+        +e.name Наименование учреждения банка
+        +e.text_sfui Филиал N&nbsp;7806&nbsp;ВТБ (ПАО) в&nbsp;г. Санкт-Петербурге
+      +e.item
+        +e.name Расчётный счёт
+        +e.text_sfui 40703810029060004163
+      +e.item
+        +e.name Реквизиты банка
+        +e.text_sfui._sfui_lh Филиал N&nbsp;7806&nbsp;ВТБ (ПАО)
+            +e.BR
+            | К/с 30101810240300000707
+            +e.BR
+            | В&nbsp;СЕВЕРО-ЗАПАДНОЕ ГУ&nbsp;БАНКА РОССИИ
+            +e.BR
+            | БИК 044030707
+            +e.BR
+            | ИНН 7710353606
+            +e.BR
+            | КПП 783543012
+            +e.BR
+            | 190000, г. Санкт-Петербург, ул. Б.&nbsp;Морская, д.&nbsp;29, лит. &laquo;А&raquo;

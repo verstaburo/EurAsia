@@ -1,9 +1,129 @@
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
 
 .popups {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+  transition: all $ease-main;
+  transform: translate3d(100%, 0, 0);
+  background-color: $color-white;
+  z-index: 120;
+  pointer-events: none;
+
+  @include screen('tablet') {
+    width: 62.5vw;
+  }
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+    pointer-events: all;
+
+    .popups__close {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: -65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 66px;
+    height: 66px;
+    background-color: $color-white;
+    transition: all $ease-main;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+
+    &:hover {
+
+      .popups__icon {
+        opacity: .5;
+      }
+    }
+  }
+
+  &__icon {
+    width: 19.4px;
+    height: 19.4px;
+    fill: none;
+    stroke: $color-dirt;
+    transition: all $ease-main;
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+.popup {
   display: none;
+  box-sizing: border-box;
+  padding: 6.67vw;
+  min-height: 100vh;
+
+  @include screen('tablet') {
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    @include heading-big;
+    line-height: 1.02;
+    font-weight: 700;
+    font-family: $font-second;
+    margin-bottom: 47px;
+  }
+
+  &__title-icon {
+    width: 83px;
+    height: 78px;
+    fill: $color-main;
+    margin-bottom: 52px;
+  }
+
+  &__title-text {
+    width: 100%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: all $ease-main;
+  z-index: 110;
+  background-color: rgba($color-overlay, .24);
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 .fancybox-close-small:focus::after { outline: none; }
 
 .fancybox-enabled { overflow: initial; }
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .24;
+}
+
+.fancybox-bg {
+  background-color: $color-overlay;
+}

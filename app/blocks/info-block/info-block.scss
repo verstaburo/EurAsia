@@ -1,0 +1,32 @@
+.info-block {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: $grid-gap;
+  border: 1px solid rgba($color-middle-grey, .16);
+
+  &__title {
+    font-family: $font-second;
+    @include heading-2;
+    color: $color-main;
+    line-height: 1;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .grid__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .text-block {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 30px;
+  }
+}

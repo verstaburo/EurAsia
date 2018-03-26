@@ -7,10 +7,22 @@
     border-width: 2px;
   }
 
+  tr {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
   td {
-    vertical-align: middle;
+    vertical-align: top;
     @include text-middle;
     line-height: 1.94;
+    @include ellipsis(100%);
+    box-sizing: border-box;
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &:first-child {
       width: 30%;
