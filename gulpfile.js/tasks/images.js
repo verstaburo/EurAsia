@@ -8,6 +8,6 @@ module.exports = () => (
   gulp.src('app/static/images/**/*')
   .pipe(plumber({ errorHandler: errorHandler('Error in icons task') }))
   .pipe(changed('dist/assets/images'))
-  .pipe(imagemin())
+  .pipe(imagemin([imagemin.jpegtran({ progressive: true })]))
   .pipe(gulp.dest('dist/assets/images'))
 );

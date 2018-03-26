@@ -16,7 +16,7 @@ export default function popups() {
     const self = $(evt.target).hasClass('.js-popup') ? $(evt.target) : $(evt.target).closest('.js-popup');
     const targetPopup = $(self).attr('href').split('#').pop();
     const currentPopup = $('.popups').attr('data-active-popup');
-    const targetLink = $(self).data('target-news');
+    const targetLink = $(self).attr('data-target-news');
     if ($('.popups').hasClass('is-active') && currentPopup !== targetPopup) {
       $(`#${currentPopup}`).fadeOut(300);
       $(`#${targetPopup}`).fadeIn(300);

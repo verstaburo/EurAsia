@@ -19,6 +19,17 @@
     margin-bottom: 8vh;
   }
 
+  &__map-describe {
+    position: relative;
+    width: 100%;
+    z-index: 4;
+    overflow: hidden;
+
+    @include screen('desktop') {
+      margin-top: -17vh;
+    }
+  }
+
   &_dark {
     color: $color-white;
     background-color: $color-bg2;
@@ -33,5 +44,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+  }
+
+  &_map {
+    padding-top: 0;
   }
 }

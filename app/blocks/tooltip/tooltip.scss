@@ -2,39 +2,50 @@
 
 .tooltipster-sidetip.tooltipster-borderless .tooltipster-box {
   border: none;
-  background: $color-basic;
+  background: $color-main;
   font-size: 12px;
   line-height: 1.4;
   border-radius: 0;
 }
 
+.tooltipster-base {
+  max-width: 396px;
+  width: 396px;
+}
+
+.tooltipster-sidetip .tooltipster-content {
+  padding: 0;
+}
+
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-box {
-  margin-top: 8px;
+  margin-top: 18px;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-box {
-  margin-right: 8px;
+  margin-right: 18px;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-box {
-  margin-left: 8px;
+  margin-left: 18px;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-box {
-  margin-bottom: 8px;
+  margin-bottom: 18px;
 }
 
 .tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow {
-  height: 8px;
-  margin-left: -8px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow, .tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow {
-  height: 16px;
+  height: 18px;
   margin-left: 0;
-  margin-top: -8px;
-  width: 8px;
+  width: 18px;
+}
+
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow, .tooltipster-sidetip.tooltipster-right .tooltipster-arrow {
+  margin-top: 0;
 }
 
 .tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-background {
@@ -46,27 +57,31 @@
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-border {
-  border-bottom-color: $color-basic;
+  border-bottom-color: $color-main;
+  border-left-color: $color-main;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-left .tooltipster-arrow-border {
-  border-left-color: $color-basic;
+  border-left-color: $color-main;
+  border-top-color: $color-main;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-border {
-  border-right-color: $color-basic;
+  border-right-color: $color-main;
+  border-top-color: $color-main;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-top .tooltipster-arrow-border {
-  border-top-color: $color-basic;
+  border-top-color: $color-main;
+  border-left-color: $color-main;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-bottom .tooltipster-arrow-uncropped {
-  top: -8px;
+  top: 2px;
 }
 
 .tooltipster-sidetip.tooltipster-borderless.tooltipster-right .tooltipster-arrow-uncropped {
-  left: -8px;
+  left: 2px;
 }
 
 // Анимации
@@ -81,4 +96,24 @@
 .tooltipster-fade.tooltipster-show {
   opacity: 1;
   transform: scale(1) translate3d(0, 0, 0);
+}
+
+.tooltip-content {
+  box-sizing: border-box;
+  padding: 46px 48px;
+
+  &__title {
+    @include heading-3;
+    font-family: $font-third;
+    line-height: 1.17;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    @include text;
+    font-family: $font-main;
+    line-height: 1.45;
+    font-weight: 400;
+  }
 }

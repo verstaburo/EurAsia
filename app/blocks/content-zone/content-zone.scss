@@ -2,56 +2,92 @@
 
   h1 {
 
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 32px;
     }
 
     @include heading-1;
+    font-family: $font-fourth;
+    font-weight: 700;
   }
 
   h2 {
 
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 32px;
     }
 
     @include heading-2;
+    font-family: $font-fourth;
+    font-weight: 700;
   }
 
   h3 {
 
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 32px;
     }
 
     @include heading-3;
+    font-family: $font-fourth;
+    font-weight: 700;
   }
 
   h4 {
 
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 32px;
     }
 
     @include heading-4;
+    font-family: $font-fourth;
+    font-weight: 700;
   }
 
   h5 {
 
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 32px;
     }
 
     @include heading-5;
+    font-family: $font-fourth;
+    font-weight: 700;
   }
 
   h6 {
 
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 32px;
     }
 
     @include heading-6;
+    font-family: $font-fourth;
+    font-weight: 700;
   }
 
   p {
@@ -66,6 +102,7 @@
     }
 
     @include text;
+    line-height: 1.45;
   }
 
   blockquote {
@@ -109,4 +146,13 @@
   ol { @include ollist; }
 
   a { @include link-dirt; }
+
+  &_no-mg {
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

@@ -1,0 +1,218 @@
+.pin {
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: $color-main;
+
+  &::before {
+    @include pseudo;
+    width: 1px;
+    left: 4px;
+    background-color: rgba($color-main, .65);
+  }
+
+  &__label {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    left: 4px;
+    min-width: 200px;
+    transform: translateX(-50%) translateZ(0);
+    @include text-small;
+    line-height: 1.65;
+    font-family: $font-fourth;
+    font-weight: 400;
+    text-align: center;
+
+    &.is-open {
+
+      .pin__mark {
+        transform: rotate(45deg) translateZ(0);
+      }
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .tooltip-content {
+    display: none;
+  }
+
+  &__mark {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    transform: rotate(0) translateZ(0);
+    transition: all $ease-main;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: $color-main;
+  }
+
+  &_inter {
+
+    .pin {
+
+      &__label {
+        @include text-large;
+        font-weight: 700;
+        line-height: 1.8;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_right {
+
+    .pin__label {
+      text-align: left;
+      justify-content: flex-start;
+      left: 0;
+      transform: translateX(0) translateZ(0);
+    }
+  }
+
+  &_left {
+
+    .pin__label {
+      text-align: right;
+      justify-content: flex-end;
+      right: 0;
+      transform: translateX(0) translateZ(0);
+    }
+  }
+
+  &_top {
+
+    &::before {
+      bottom: 1px;
+      height: 105px;
+    }
+
+    .pin {
+
+      &__label {
+        bottom: 119px;
+      }
+    }
+
+    &_short {
+      &::before {
+        height: 40px;
+      }
+
+      .pin {
+
+        &__label {
+          bottom: 63px;
+        }
+      }
+    }
+
+    &_long {
+      &::before {
+        height: 126px;
+      }
+
+      .pin {
+
+        &__label {
+          bottom: 140px;
+        }
+      }
+    }
+  }
+
+  &_bottom {
+
+    &::before {
+      top: 1px;
+      height: 105px;
+    }
+
+    .pin {
+
+      &__label {
+        top: 119px;
+      }
+    }
+
+    &_short {
+
+      &::before {
+        height: 40px;
+      }
+
+      .pin {
+
+        &__label {
+          top: 56px;
+        }
+      }
+    }
+  }
+
+  &_ukr {
+    top: 35.3%;
+    left: 31.2%;
+  }
+
+  &_arm {
+    top: 36.8%;
+    left: 36.6%;
+  }
+
+  &_uzb {
+    top: 38.3%;
+    left: 43%;
+  }
+
+  &_rus {
+    top: 24.1%;
+    left: 53.8%;
+  }
+
+  &_mmr {
+    top: 52%;
+    left: 56.4%;
+  }
+
+  &_bgr {
+    top: 38.3%;
+    left: 30.3%;
+  }
+
+  &_eri {
+    top: 54.9%;
+    left: 34.8%;
+  }
+
+  &_khm {
+    top: 56.6%;
+    left: 58.2%;
+  }
+
+  &_vnm {
+    top: 56.5%;
+    left: 61%;
+  }
+
+  &_chn {
+    top: 38.6%;
+    left: 66.8%;
+  }
+}

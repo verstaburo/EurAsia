@@ -1,3 +1,35 @@
 mixin map()
   +b.map&attributes(attributes)
-    block
+    +e.IMG.image(src="assets/images/map.jpg")
+    +pin._top._top_short._ukr
+      +e.label Украина
+    +pin._top._top_long._arm
+      +e.label Армения
+    +pin._top._uzb
+      +e.label Узбекистан
+    +pin._top._inter._rus
+      +e.label.js-tooltip
+        +e.SPAN.text Россия
+        +pin-mark
+        +tooltip-content('2005 г. — Россия') Фонд проводит гуманитарные миссии в России с 2005 года. Проведено более 600 операций. Осуществлено 2400 консультаций.
+    +pin._top._inter._mmr
+      +e.label.js-tooltip
+        +e.SPAN.text Мьянма
+        +pin-mark
+        +tooltip-content('2009 г. — Мьянма') За семь лет (2009 — 2016) было проведено 350 операций. Летальность снизилась с 50% до 2%.
+    +pin._bottom._bgr
+      +e.label Болгария
+    +pin._bottom._eri
+      +e.label Эритрея
+    +pin._bottom._inter._khm
+      +e.label.js-tooltip
+        +e.SPAN.text Камбоджа
+        +pin-mark
+        +tooltip-content('2014 г. — Камбоджа') 8 миссий
+    +pin._bottom._bottom_short._right._vnm
+      +e.label Вьетнам
+    +pin._bottom._inter._chn
+      +e.label.js-tooltip
+        +e.SPAN.text Китай
+        +pin-mark
+        +tooltip-content('2000 г. — Китай') Профессор медицины Пауль Фогт, инициатор и&nbsp;учредитель Фонда, начал проводить первые благотворительные миссии в&nbsp;2000 году в&nbsp;Китая, затем во&nbsp;Вьетнаме и&nbsp;Мьянме. Сегодня в&nbsp;год в&nbsp;Азии проводится более&nbsp;3000 сложнейших оперативных вмешательств.
