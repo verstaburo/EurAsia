@@ -3,7 +3,7 @@
 
   &__title {
     @include heading-3;
-    font-weight: 500;
+    font-weight: 700;
     font-family: $font-third;
     line-height: 1.17;
     margin-bottom: 14px;
@@ -14,5 +14,20 @@
     @include text;
     line-height: 1.45;
     width: 100%;
+  }
+
+  &_note {
+    color: $color-dirt;
+
+    .stat-data {
+
+      &__title {
+        @include heading-5;
+        font-weight: 700;
+        font-family: $font-main;
+        line-height: 1.08;
+        margin-bottom: 3px;
+      }
+    }
   }
 }

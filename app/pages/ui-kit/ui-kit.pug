@@ -148,7 +148,7 @@ block content
             td Ячейка
 
     //- Кнопки
-    +ui-section
+    +ui-section._dark
       +ui-section-head
         h2 Кнопки
         p Блок: blocks/button
@@ -264,14 +264,14 @@ block content
         h2 Попапы
         p Блок: blocks/popups
       +ui-section-content()
-        +ui-description .js-fancybox
-        +link()(href="#testpopup").js-fancybox Открыть попап
-        +ui-description Верстка попапов:
-        +link()(onclick="$('.popups').toggle()") Показать попапы
-        +popups.__ui-popups
-          +popup#testpopup
+        +ui-description Попапы для видео и картинок .js-fancybox
+        +link()(href="https://youtu.be/gszwFaEKGzI").js-fancybox Открыть попап
+        +ui-description Боковые попапы .js-popup
+        +link()(href="#test").js-popup Показать попапы
+        +popups
+          +popup#test
+            +popup-title Тестовый попап
             +content-zone
-              h2 Тестовый попап
               p С тестовым контентом
 
     //- Ссылки
@@ -325,7 +325,7 @@ block content
         +button()(href="#" title="Пример подсказки").js-tooltip Пример подсказки
 
     //- Карты
-    +ui-section
+    +ui-section._dark
       +ui-section-head
         h2 Карты
         p Блок: blocks/map/map
@@ -345,7 +345,7 @@ block content
           h4.js-sr.js-sr_2 .js-sr_2
 
     //- Аккордион
-    +ui-section
+    +ui-section._dark
       +ui-section-head
         h2 Аккордион
         p Блок: blocks/accordion/accordion

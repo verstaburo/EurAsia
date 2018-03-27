@@ -1,0 +1,21 @@
+.gallery {
+  display: block;
+  font-size: 0;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 70%;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__image {
+    @include fill-img;
+  }
+}
