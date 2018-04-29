@@ -12,7 +12,7 @@ import tabs from '../blocks/tabs/tabs';
 import maps from '../blocks/map/map';
 import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
-import headerResize from '../components/header/header';
+import { headerResize, openMenu } from '../components/header/header';
 import showMore from '../blocks/person/person';
 
 const $ = window.$;
@@ -36,4 +36,5 @@ $(() => {
   scrollanimation();
   headerResize();
   showMore();
+  openMenu();
 });

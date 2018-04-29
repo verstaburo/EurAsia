@@ -1,0 +1,46 @@
+.burger {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 16px;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+
+    span, span::before, span::after {
+      background: $color-main;
+    }
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    top: 7px;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    pointer-events: none;
+    background: $color-dirt;
+    transition: all $ease-main;
+
+    &::after, &::before {
+      @include pseudo;
+
+      left: 0;
+      width: 100%;
+      height: 2px;
+      pointer-events: none;
+      background: $color-dirt;
+      transition: all $ease-main;
+    }
+
+    &::after {
+      top: -7px;
+    }
+
+    &::before {
+      bottom: -7px;
+    }
+  }
+}

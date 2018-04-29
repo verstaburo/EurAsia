@@ -11,7 +11,7 @@ export default function popups() {
     afterClose: unfreeze,
   });
 
-  $(document).on('click touchstart', '.js-popup', (evt) => {
+  $(document).on('click', '.js-popup', (evt) => {
     evt.preventDefault();
     const self = $(evt.target).hasClass('.js-popup') ? $(evt.target) : $(evt.target).closest('.js-popup');
     const targetPopup = $(self).attr('href').split('#').pop();
@@ -32,12 +32,14 @@ export default function popups() {
         }, 1000, 'swing');
       }
     }
+    $('.header__navigation').removeClass('is-active');
   });
-  $(document).on('click touchstart', '.js-popup-close,.overlay', (evt) => {
+  $(document).on('click', '.js-popup-close,.overlay', (evt) => {
     evt.preventDefault();
     unfreeze();
     $('.popup').fadeOut();
     $('.popups').removeClass('is-active').attr('data-active-popup', '');
     $('.overlay').removeClass('is-active');
+    $('.header__navigation').removeClass('is-active');
   });
 }

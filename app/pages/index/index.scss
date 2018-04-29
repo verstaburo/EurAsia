@@ -1,6 +1,10 @@
 .page {
-  padding-top: 78px;
+  padding-top: 66px;
   display: block;
   box-sizing: border-box;
   width: 100%;
+
+  @include screen('desktop-small') {
+    padding-top: 78px;
+  }
 }

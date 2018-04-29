@@ -1,6 +1,8 @@
 .accordion {
   $b: &;
+
   @include text-bigger;
+
   color: $color-white;
 
   .accordions & { margin-top: -1px; }

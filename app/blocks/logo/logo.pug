@@ -1,5 +1,15 @@
-mixin logo()
+mixin logo(tag)
+  +b(tag || 'a').logo&attributes(attributes)
+    +e.IMG.image(src="assets/images/logo.svg")
+    +e.text
+      +e.top Сердце ЕврАзии
+      +e.bottom Благотворительный Фонд
+      
+mixin logo-full()
   +b.A.logo&attributes(attributes)
     +e.IMG.image(src="assets/images/logo.svg")
     +e.text
-      block
+      +e.top Сердце ЕврАзии
+      +e.bottom 
+        +e.hidden Российско-Швейцарский
+        | Благотворительный Фонд

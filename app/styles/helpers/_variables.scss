@@ -5,10 +5,11 @@
 // ##########
 $container-width: 100%; // Максимальная ширина контейнера контента
 $container-padding: 12.5vw; // Отступы слева и справа у контейнера
+$container-padding-mobile: 22px; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
 $grid-gap: 6.25vw; // Расстояние между колонками
-$grid-gap-vertical: 8vh; // Расстояние между строками в сетке
+$grid-gap-vertical: 6.25vw; // Расстояние между строками в сетке
 $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной колонки
 
 // ##########

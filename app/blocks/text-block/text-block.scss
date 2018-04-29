@@ -27,5 +27,11 @@
       font-family: $font-second;
       color: $color-dirt;
     }
+
+    &_black {
+      p:first-child::first-letter {
+        color: $color-basic;
+      }
+    }
   }
 }

@@ -1,11 +1,19 @@
 mixin header()
   +b.header&attributes(attributes)
-    +logo.__logo(href="index.html") Сердце ЕврАзии
+    +logo.__logo(href="index.html")
+    +burger.js-menu
     +e.NAV.navigation
       +block-list
         +e.LI.item
           +link._dark.js-popup(href="#registration") Зарегистрировать пациента
+          +icon('arrow-small').icon
         +e.LI.item
           +link._dark.js-popup(href="#donation") Поддержать Фонд
+          +icon('arrow-small').icon
         +e.LI.item
           +link._dark.js-popup(href="#contacts") Связаться с нами
+          +icon('arrow-small').icon
+      +e.close-panel
+        +logo('div')
+        +close.js-close-menu
+      

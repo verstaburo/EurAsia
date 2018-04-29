@@ -6,19 +6,62 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
-  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.03);
-  height: 78px;
+  align-items: center;
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, .03);
+  height: 66px;
   background-color: $color-white;
-  z-index: 50;
+  z-index: 111;
   transition: all $ease-main;
 
+  @include screen('desktop-small') {
+    align-items: stretch;
+    height: 78px;
+    z-index: 50;
+  }
+
+  .burger {
+    margin-right: $container-padding-mobile;
+
+    @include screen('desktop-small') {
+      display: none;
+    }
+  }
+
   .logo {
-    padding-left: 36px;
+    padding-left: $container-padding-mobile;
+
+    @include screen('desktop-small') {
+      padding-left: 36px;
+    }
   }
 
   &__navigation {
-    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, -100%, 0);
+    pointer-events: none;
+    opacity: 0;
+    transition: all $ease-main;
+    background: $color-white;
+    z-index: 10;
+
+    @include screen('desktop-small') {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      pointer-events: auto;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.is-active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate3d(0, 0, 0);
+    }
 
     .block-list {
       height: 100%;
@@ -28,5 +71,26 @@
 
   &.is-small {
     height: 68px;
+  }
+
+  &__close-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $color-border;
+    box-sizing: border-box;
+
+    @include screen('desktop-small') {
+      display: none;
+    }
+
+    .logo {
+      opacity: .3;
+
+      &__bottom {
+        display: none;
+      }
+    }
   }
 }

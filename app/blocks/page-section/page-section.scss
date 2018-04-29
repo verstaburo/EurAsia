@@ -6,12 +6,14 @@
 
   &__title {
     @include heading-5;
+
     font-family: $font-fourth;
     font-weight: 700;
     margin-bottom: 74px;
 
     &_big {
       @include heading-big;
+
       font-family: $font-second;
       line-height: 1.017;
       margin-bottom: 0;

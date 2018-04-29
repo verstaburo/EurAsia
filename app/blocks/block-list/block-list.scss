@@ -1,15 +1,49 @@
 .block-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
 
+  @include screen('desktop-small') {
+    flex-direction: row;
+  }
+
   &__item {
+    position: relative;
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    border-left: 1px solid $color-border;
+    padding: 22px 0 24px;
+
+    @include screen('desktop-small') {
+      position: static;
+      padding: 0;
+      border-left: 1px solid $color-border;
+    }
+
+    &:hover {
+
+      .block-list__icon {
+        opacity: .5;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 7.1px;
+    height: 11.4px;
+    fill: $color-main;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: opacity $ease-main;
+
+    @include screen('desktop-small') {
+      display: none;
+    }
   }
 
   .link {
@@ -17,12 +51,18 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 36px;
+    padding: 0 $container-padding-mobile;
     vertical-align: middle;
     box-sizing: border-box;
-    padding-bottom: 6px;
+    width: 100%;
+
+    @include screen('desktop-small') {
+      width: auto;
+      padding: 0 36px 6px;
+    }
 
     @include text-small;
+
     line-height: 1.2;
     letter-spacing: .03em;
     font-weight: 700;

@@ -1,0 +1,26 @@
+.close {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+  height: 66px;
+  background-color: $color-white;
+  transition: all $ease-main;
+  cursor: pointer;
+
+  &:hover {
+
+    .close__icon {
+      opacity: .5;
+    }
+  }
+
+  &__icon {
+    width: 19.4px;
+    height: 19.4px;
+    fill: none;
+    stroke: $color-dirt;
+    transition: all $ease-main;
+  }
+}
