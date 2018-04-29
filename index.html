@@ -17,26 +17,50 @@
     <div class="header">
         <a class="logo header__logo" href="index.html">
             <img class="logo__image" src="assets/images/logo.svg" alt="" role="presentation" />
-            <span class="logo__text">Сердце ЕврАзии</span>
+            <span class="logo__text">
+                <span class="logo__top">Сердце ЕврАзии</span>
+                <span class="logo__bottom">Благотворительный Фонд</span>
+            </span>
         </a>
+        <button class="burger js-menu" type="button">
+            <span></span>
+        </button>
         <nav class="header__navigation">
             <ul class="block-list">
                 <li class="block-list__item">
                     <a class="link link_dark js-popup" href="#registration">
                         <span class="link__text">Зарегистрировать пациента</span>
                     </a>
+                    <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
                 </li>
                 <li class="block-list__item">
                     <a class="link link_dark js-popup" href="#donation">
                         <span class="link__text">Поддержать Фонд</span>
                     </a>
+                    <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
                 </li>
                 <li class="block-list__item">
                     <a class="link link_dark js-popup" href="#contacts">
                         <span class="link__text">Связаться с нами</span>
                     </a>
+                    <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
                 </li>
             </ul>
+            <div class="header__close-panel">
+                <div class="logo">
+                    <img class="logo__image" src="assets/images/logo.svg" alt="" role="presentation" />
+                    <div class="logo__text">
+                        <div class="logo__top">Сердце ЕврАзии</div>
+                        <div class="logo__bottom">Благотворительный Фонд</div>
+                    </div>
+                </div>
+                <div class="close js-close-menu">
+                    <svg class="close__icon" viewBox="0 0 19.41 19.41">
+                        <path d="M.71.71l18,18" stroke-width="2"></path>
+                        <path d="M18.71.71l-18,18" stroke-width="2"></path>
+                    </svg>
+                </div>
+            </div>
         </nav>
     </div>
     <div class="overlay"></div>
@@ -696,6 +720,28 @@
                 </div>
             </div>
         </div>
+        <div class="page-section">
+            <div class="container">
+                <div class="grid">
+                    <div class="grid__col grid__col_eight">
+                        <h3 class="page-section__title">Наши достижения</h3>
+                        <div class="text-block text-block_stylized text-block_stylized_black">
+                            <p>Впрограммах и&nbsp;миссиях Фонда задействовано около 120 специалистов со&nbsp;всего мира&nbsp;&mdash; кардиохирурги, кардиологи, анестезиологи, реаниматология, электрофизиологией, неонатологи, перфузиологи, бактериологи и&nbsp;многие
+                                другие специалисты.</p>
+                            <p>Мы&nbsp;осуществили и&nbsp;осуществляем образовательную программу, включающую в&nbsp;себя мастер-классы по&nbsp;обмену опытом, консультации и&nbsp;обследования пациентов, доклады и&nbsp;лекции на&nbsp;актуальные темы.</p>
+                        </div>
+                        <h3 class="page-section__title">Наши партнеры</h3>
+                        <div class="text-block">
+                            <p>Специалисты нашего Фонда работали в&nbsp;18&nbsp;странах Европы и&nbsp;Азии. Сегодня мы&nbsp;осуществляем научную и&nbsp;исследовательскую деятельность, участвуем в&nbsp;разработках новейших методов лечения в&nbsp;области взрослой
+                                и&nbsp;детской сердечно-сосудистой хирургии и&nbsp;кардиологии.</p>
+                            <p>Результаты работы Фонда&nbsp;&mdash; спасенные жизни и&nbsp;высокий профессионализм врачей на&nbsp;местах. Мы&nbsp;передаем знания, опыт, навыки и&nbsp;новые технологии коллегам и&nbsp;специалистам по&nbsp;всему миру. Мы&nbsp;развиваем
+                                эффективную, а&nbsp;не&nbsp;дорогостоящую инфраструктуру госпиталей. Благодаря этому повышается качество лечения и&nbsp;количество выздоровевших пациентов.</p>
+                        </div>
+                    </div>
+                    <div class="grid__col grid__col_four"></div>
+                </div>
+            </div>
+        </div>
         <div class="page-section page-section_dark">
             <div class="container">
                 <div class="grid page-section__top">
@@ -983,8 +1029,8 @@
         </div>
     </div>
     <div class="popups">
-        <div class="popups__close js-popup-close">
-            <svg class="popups__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.41 19.41">
+        <div class="close popups__close js-popup-close">
+            <svg class="close__icon" viewBox="0 0 19.41 19.41">
                 <path d="M.71.71l18,18" stroke-width="2"></path>
                 <path d="M18.71.71l-18,18" stroke-width="2"></path>
             </svg>
