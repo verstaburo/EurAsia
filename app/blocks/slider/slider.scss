@@ -5,23 +5,30 @@
 
   &__slide {
     width: auto;
-    height: 100vh;
     box-sizing: border-box;
-    padding-top: 11vh;
-    padding-bottom: 11vh;
-    border-right: 1px solid $color-border;
+    padding-top: 0;
+    padding-bottom: 13.75vw;
+
+    @include screen('tablet-wide') {
+      padding-top: 6.7vw;
+      padding-bottom: 3.2vw;
+      border-right: 1px solid $color-border;
+    }
 
     &_statistic {
-      width: 42.2vw;
+      //width: 42.2vw;
     }
 
     &_child {
-      width: 25vw;
+      //width: 25vw;
     }
 
     &_list {
       border-right: none;
-      padding-bottom: 0;
+    }
+
+    .child, .child-list {
+      height: 100%;
     }
   }
 
@@ -97,5 +104,9 @@
     width: 11px;
     height: 19px;
     fill: $color-white;
+  }
+
+  .swiper-slide {
+    height: auto;
   }
 }

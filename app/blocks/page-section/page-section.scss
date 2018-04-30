@@ -1,8 +1,12 @@
 .page-section {
   display: block;
   width: 100%;
-  padding: 13.3vh 0;
+  padding: 12.5vw 0;
   box-sizing: border-box;
+
+  @include screen('tablet') {
+    padding: 8.33vw 0;
+  }
 
   &__title {
     @include heading-5;
@@ -14,9 +18,28 @@
     &_big {
       @include heading-big;
 
-      font-family: $font-second;
       line-height: 1.017;
       margin-bottom: 0;
+    }
+
+    &_style {
+      font-family: $font-second;
+    }
+
+    &_small {
+      @include heading-3;
+
+      color: $color-main;
+      line-height: 1;
+      margin-bottom: 12px;
+
+      @include screen('tablet-wide') {
+        @include heading-2;
+
+        line-height: 1;
+        margin-bottom: 32px;
+        width: 100%;
+      }
     }
   }
 
@@ -32,6 +55,37 @@
     margin-top: -9.2vh;
   }
 
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    @include screen('tablet-wide') {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__column {
+    width: 100%;
+    box-sizing: border-box;
+
+    &_left {
+      @include screen('tablet-wide') {
+        width: 68%;
+        padding-right: $grid-gap/2;
+      }
+    }
+
+    &_right {
+      @include screen('tablet-wide') {
+        width: 32%;
+        padding-left: $grid-gap/2;
+      }
+    }
+  }
+
   &_dark {
     color: $color-white;
     background-color: $color-bg2;
@@ -41,11 +95,12 @@
     background-color: $color-bg;
   }
 
-  &_style {
-    background-image: url('../images/dust.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+  &_small {
+    padding: 11.875vw 0 10vw;
+
+    @include screen('tablet-wide') {
+      padding: 6.7vw 0 6.1vw;
+    }
   }
 
   &_map {

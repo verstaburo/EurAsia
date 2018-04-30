@@ -41,4 +41,16 @@
   &:active {
     background-color: rgba($color-dirt, .9);
   }
+
+  &_big {
+    width: 140px;
+    height: 140px;
+    padding: 37px;
+    border: 1px solid rgba($color-white, .2);
+
+    .play__icon {
+      top: 60px;
+      left: 63px;
+    }
+  }
 }

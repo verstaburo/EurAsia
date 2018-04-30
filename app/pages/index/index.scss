@@ -7,4 +7,11 @@
   @include screen('desktop-small') {
     padding-top: 78px;
   }
+
+  &__mission {
+
+    .text-switcher {
+      margin-top: -8px;
+    }
+  }
 }

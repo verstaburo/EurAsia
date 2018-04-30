@@ -14,6 +14,9 @@ import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
 import { headerResize, openMenu } from '../components/header/header';
 import showMore from '../blocks/person/person';
+import ffDetect from '../blocks/text-block/text-block';
+import switchText from '../blocks/text-switcher/text-switcher';
+import moveStatistic from '../components/patients/patients';
 
 const $ = window.$;
 
@@ -37,4 +40,7 @@ $(() => {
   headerResize();
   showMore();
   openMenu();
+  ffDetect();
+  switchText();
+  moveStatistic();
 });

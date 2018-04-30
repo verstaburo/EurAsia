@@ -1,0 +1,39 @@
+.text-switcher {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+
+  @include text-small;
+
+  line-height: 1;
+  color: $color-dirt;
+
+  @include screen('tablet') {
+    display: none;
+  }
+
+  &__toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+    margin-left: 3px;
+  }
+
+  &__icon {
+    width: 7.1px;
+    height: 11.4px;
+    fill: $color-dirt;
+  }
+}
+
+[data-hidden-text] {
+  @include screen('tablet', max) {
+    display: none;
+  }
+}

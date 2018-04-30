@@ -55,12 +55,12 @@ export default function slider() {
   $(window).on('resize', () => {
     if (document.body.clientWidth < 1024) {
       if (scrollSlider) {
-        scrollSlider.destroy(true, true);
+        scrollSlider.destroy();
       }
       newsSlider = new Swiper('.js-slider-news', newsSliderOptions);
     } else {
       if (newsSlider) {
-        newsSlider.destroy(true, true);
+        newsSlider.destroy();
       }
       scrollSlider = new Swiper('.js-slider-scroll', scrollSliderOptions);
     }

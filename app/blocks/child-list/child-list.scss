@@ -6,8 +6,18 @@
   height: 100%;
 
   &__item {
-    width: 18.75vw;
-    margin-left: 3.125vw;
-    margin-bottom: 6.6vh;
+    margin-left: $container-padding-mobile;
+
+    @include screen('tablet-wide') {
+      margin-left: 3.125vw;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $container-padding-mobile;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 30px;
+      }
+    }
   }
 }

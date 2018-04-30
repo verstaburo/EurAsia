@@ -11,6 +11,13 @@ $grid-cols: 12; // Количество колонок в сетке
 $grid-gap: 6.25vw; // Расстояние между колонками
 $grid-gap-vertical: 6.25vw; // Расстояние между строками в сетке
 $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной колонки
+$breakgrid: (
+  'xl': 1440px,
+  'lg': 1140px,
+  'md': 1024px,
+  'sm': 768px,
+  'xs': 480px
+);
 
 // ##########
 // Цвета
@@ -32,6 +39,8 @@ $color-charcoal-grey: #383940;
 $color-bg2: #303342;
 $color-overlay: #0c0d10;
 $color-warm-grey: #9b9b9b;
+$color-dark-grey: #373d4d;
+$color-silver-grey: #d4d4d4;
 
 // ##########
 // Transitions

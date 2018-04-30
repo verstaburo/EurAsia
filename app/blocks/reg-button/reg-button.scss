@@ -1,13 +1,18 @@
 .reg-button {
   position: relative;
   display: block;
-  width: 100%;
+  width: 240px;
   padding-top: 100%;
   background-color: $color-main;
   transition: all $ease-main;
 
+  @include screen('tablet-wide') {
+    width: 18.75vw;
+  }
+
   &::before {
     @include pseudo;
+
     top: -12px;
     left: -12px;
     right: -12px;
@@ -38,6 +43,7 @@
 
   &__text {
     @include text-big;
+
     font-family: $font-fourth;
     text-align: center;
     color: $color-white;

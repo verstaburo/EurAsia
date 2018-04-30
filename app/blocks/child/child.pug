@@ -1,17 +1,15 @@
-mixin child(img, name, disease, age, town)
+mixin child(img, name, title, video)
   +b.child&attributes(attributes)
     +e.media
       +e.wrapper
         +e.IMG.image(src=img)
-    +e.name!= name
-    +e.disease!= disease
-    +table.child__info
-      +e.TR
-        +e.TD Возраст
-        +e.TD!= age
-      +e.TR
-        +e.TD Город
-        +e.TD!= town
+      if video
+        +play._big.js-fancybox(href=video)
+    +e.title!= title
+    +e.info
+      +e.name!= name
+      +e.text
+        block
 
 mixin child-short(img)
   +b.A.child_short&attributes(attributes)

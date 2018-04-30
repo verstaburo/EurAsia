@@ -1,14 +1,11 @@
 mixin patients()
   +b.patients&attributes(attributes)
+    .container
+      +e.mobile-stat
     +slider(false, true).js-slider
       +slide('_statistic')
         +statistic('Наши пациенты')._patients
-          +e.info 28 миссий в Россию
-            +e.BR
-            | за 24 месяца
-          +e.subtitle За 4 года
-            +e.BR
-            | в России:
+          +e.subtitle За 4 года в&nbsp;России:
           +e.UL.list
             +e.item
               +stat-data('364') операции, 64% новорожденных
@@ -19,17 +16,20 @@ mixin patients()
             +e.item
               +stat-data('412') консилиумов сложных пациентов
       +slide('_child')
-        +child('assets/images/child-1.jpg', 'Поваго Вероника', 'Тотальный аномальный дренаж лёгочных вен', '2 года', 'Санкт-Петербург')
+        +child('', '', 'Видеоинтервью с родителями пациентов', 'https://youtu.be/gszwFaEKGzI')  
+          +link.js-fancybox(href="https://youtu.be/gszwFaEKGzI") Смотреть видео
       +slide('_child')
-        +child('assets/images/child-2.jpg', 'Колоев Дауд', 'Врожденный порок сердца', '17 лет', 'Ингушетия')
+        +child('assets/images/child-1.jpg', 'Поваго Вероника', 'Тотальный аномальный дренаж лёгочных вен') 2 года, Санкт-Петербург 
       +slide('_child')
-        +child('assets/images/child-3.jpg', 'Ложкина Алиса', 'Дефект межжелудочковой перегородки. Лёгочная артериальная гипертензия', '2,5 года', 'Ленинградская область')
+        +child('assets/images/child-2.jpg', 'Колоев Дауд', 'Врожденный порок сердца') 17 лет, Ингушетия
       +slide('_child')
-        +child('assets/images/child-4.jpg', 'Ярослав Дьяконов', 'Коарктация аорты. Дефект межжелудочковой перегородки', '2 года', 'Москва')
+        +child('assets/images/child-3.jpg', 'Ложкина Алиса', 'Дефект меж&shy;желудоч&shy;ковой перегородки. Лёгочная артериальная гипертензия') 2,5 года, Ленинградская область
+      +slide('_child')
+        +child('assets/images/child-4.jpg', 'Ярослав Дьяконов', 'Коарктация аорты. Дефект меж&shy;желудоч&shy;ковой перегородки') 2 года, Москва
       +slide('_list')
         +child-list
           +e.LI.item
-            +reg-button
+            +reg-button.js-popup(href="#registration")
           +e.LI.item
             +child-short('assets/images/child-5.jpg')
       +slide('_list')

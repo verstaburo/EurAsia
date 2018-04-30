@@ -28,3 +28,15 @@
 .js-sr {
   visibility: hidden;
 }
+
+.desktop-hide {
+  @include screen('tablet-wide') {
+    display: none;
+  }
+}
+
+.mobile-hide {
+  @include screen('tablet-wide', max) {
+    display: none;
+  }
+}

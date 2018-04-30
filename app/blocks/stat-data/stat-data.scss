@@ -2,18 +2,34 @@
   display: block;
 
   &__title {
-    @include heading-3;
+    @include heading-5;
+
     font-weight: 700;
     font-family: $font-third;
-    line-height: 1.17;
-    margin-bottom: 14px;
+    line-height: 1.21;
+    margin-bottom: 12px;
     width: 100%;
+
+    @include screen('tablet-wide') {
+      @include heading-3;
+
+      font-weight: 700;
+      line-height: 1.17;
+      margin-bottom: 14px;
+    }
   }
 
   &__text {
-    @include text;
-    line-height: 1.45;
+    @include text-small;
+
+    line-height: 1.47;
     width: 100%;
+
+    @include screen('tablet-wide') {
+      @include text;
+
+      line-height: 1.45;
+    }
   }
 
   &_note {
@@ -22,11 +38,32 @@
     .stat-data {
 
       &__title {
-        @include heading-5;
-        font-weight: 700;
+        @include text-mobile;
+
         font-family: $font-main;
-        line-height: 1.08;
-        margin-bottom: 3px;
+        line-height: 1.4;
+
+        @include screen('tablet-wide') {
+          @include heading-5;
+
+          font-weight: 700;
+          font-family: $font-main;
+          line-height: 1.45;
+        }
+      }
+
+      &__text {
+        @include text-mobile;
+
+        font-family: $font-main;
+        line-height: 1.13;
+
+        @include screen('tablet-wide') {
+          @include text;
+
+          line-height: 1.08;
+          width: 100%;
+        }
       }
     }
   }
