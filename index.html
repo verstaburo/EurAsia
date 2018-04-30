@@ -73,13 +73,11 @@
                 <div class="main__top">
                     <a class="link link_language link_light main__language" href="https://www.eurasiaheart.ch/en">
                         <img class="link__icon" src="assets/images/english.png" alt="" role="presentation" />
-                        <span class="link__text">English</span>
+                        <span class="link__text">English </span>
                     </a>
                 </div>
-                <div class="main__middle">
-                    <div class="main__subtitle">EurAsia Heart Foundation</div>
-                </div>
                 <div class="main__bottom">
+                    <div class="main__subtitle">EurAsia Heart Foundation</div>
                     <div class="main__col main__col_left">
                         <h1 class="main__title">Российско-швейцарский фонд Сердце ЕврАзии</h1>
                         <div class="main__text">Благотворительная гуманитарная организация, специализирующаяся на лечении тяжелых пороков сердца и сердечно-сосудистых заболеваний у детей из Европы и Азии.</div>
@@ -94,49 +92,79 @@
                     </div>
                 </div>
             </section>
-            <aside class="main__news">
-                <div class="main__wrapper js-scrollbar">
+            <aside class="main__news js-slider-scroll">
+                <div class="main__wrapper">
                     <div class="news-list">
                         <div class="news-list__title">Новости Фонда</div>
-                        <div class="news-list__list">
-                            <div class="news news-list__item">
-                                <a class="news__content js-popup" href="#news">
-                                    <span class="news__text">Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с&nbsp;РФС</span>
-                                </a>
+                        <div class="slider swiper-container js-slider-news">
+                            <div class="swiper-wrapper">
+                                <div class="slider__slide swiper-slide">
+                                    <div class="news news_short news-list__item">
+                                        <a class="news__media js-fancybox" href="assets/images/news-0.jpg">
+                                            <img class="news__image" src="assets/images/news-0.jpg" alt="" role="presentation" />
+                                        </a>
+                                        <a class="news__content js-popup" href="#news">
+                                            <span class="news__text">Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с РФС</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slider__slide swiper-slide">
+                                    <div class="news news_short news-list__item">
+                                        <a class="news__media js-fancybox" href="https://youtu.be/UA3OexmrSfs">
+                                            <img class="news__image" src="assets/images/news-1.jpg" alt="" role="presentation" />
+                                            <span class="news__play">
+                                                <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                                            </span>
+                                        </a>
+                                        <a class="news__content js-popup" href="#news" data-target-news="news-2">
+                                            <span class="news__text">Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slider__slide swiper-slide">
+                                    <div class="news news_short news-list__item">
+                                        <a class="news__media js-fancybox" href="https://youtu.be/eZ2IHTd3G7g">
+                                            <img class="news__image" src="assets/images/news-2.jpg" alt="" role="presentation" />
+                                            <span class="news__play">
+                                                <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                                            </span>
+                                        </a>
+                                        <a class="news__content js-popup" href="#news" data-target-news="news-3">
+                                            <span class="news__text">Хубулава Г.Г. Слово единомышленника</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slider__slide swiper-slide">
+                                    <div class="news news_short news-list__item">
+                                        <a class="news__media js-fancybox" href="assets/images/news-3.jpg">
+                                            <img class="news__image" src="assets/images/news-3.jpg" alt="" role="presentation" />
+                                        </a>
+                                        <a class="news__content js-popup" href="#news" data-target-news="news-4">
+                                            <span class="news__text">По&nbsp;зову сердца. Мария-Анна Лэммли</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slider__slide swiper-slide">
+                                    <div class="news news_short news-list__item">
+                                        <a class="news__media js-fancybox" href="assets/images/news-3.jpg">
+                                            <img class="news__image" src="assets/images/news-3.jpg" alt="" role="presentation" />
+                                        </a>
+                                        <a class="news__content js-popup" href="#news" data-target-news="news-5">
+                                            <span class="news__text">Смерть на&nbsp;игровом поле. Вита Мач</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="news news-list__item">
-                                <a class="news__media js-fancybox" href="https://youtu.be/UA3OexmrSfs">
-                                    <img class="news__image" src="assets/images/news-1.jpg" alt="" role="presentation" />
-                                    <span class="news__play">
-                                        <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
-                                    </span>
-                                </a>
-                                <a class="news__content js-popup" href="#news" data-target-news="news-2">
-                                    <span class="news__text">Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки</span>
-                                </a>
+                            <div class="slider__button slider__button_prev">
+                                <svg class="slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-large"></use></svg>
                             </div>
-                            <div class="news news-list__item">
-                                <a class="news__media js-fancybox" href="https://youtu.be/eZ2IHTd3G7g">
-                                    <img class="news__image" src="assets/images/news-2.jpg" alt="" role="presentation" />
-                                    <span class="news__play">
-                                        <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
-                                    </span>
-                                </a>
-                                <a class="news__content js-popup" href="#news" data-target-news="news-3">
-                                    <span class="news__text">Хубулава Г.Г. Слово единомышленника</span>
-                                </a>
-                            </div>
-                            <div class="news news-list__item">
-                                <a class="news__media js-fancybox" href="assets/images/news-3.jpg">
-                                    <img class="news__image" src="assets/images/news-3.jpg" alt="" role="presentation" />
-                                </a>
-                                <a class="news__content js-popup" href="#news" data-target-news="news-4">
-                                    <span class="news__text">Наш медиа партнер</span>
-                                </a>
+                            <div class="slider__button slider__button_next">
+                                <svg class="slider__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-large"></use></svg>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-scrollbar"></div>
             </aside>
         </section>
         <div class="page-section page-section_light">
@@ -1037,61 +1065,119 @@
         </div>
         <div class="popups__wrapper js-scrollbar">
             <div class="popup popup-news" id="news">
+                <div class="popup__header">
+                    <div class="popup__mobile-title">Новости Фонда</div>
+                </div>
                 <div class="news-list news-list_full">
                     <div class="news-list__title">Новости Фонда</div>
                     <div class="news-list__list">
                         <div class="news news-list__item" id="news-1">
+                            <div class="news__media-wrapper">
+                                <a class="news__media js-fancybox" href="assets/images/news-0.jpg">
+                                    <img class="news__image" src="assets/images/news-0.jpg" alt="" role="presentation" />
+                                </a>
+                            </div>
                             <div class="news__content">
+                                <div class="news__title">Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с РФС</div>
                                 <div class="news__text">
-                                    <p>Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с&nbsp;РФС</p>
                                     <p>23&nbsp;марта во&nbsp;время дружеского матча Россия-Бразилия будет подписан меморандум о&nbsp;сотрудничестве между Фондом &laquo;Сердце Евразии&raquo; и&nbsp;Российским Футбольным Союзом. Российские футболисты откликнулись
-                                        на&nbsp;беду малышей с&nbsp;врожденным пороком сердца и&nbsp;с&nbsp;огромным энтузиазмом готовы поддерживать деятельность Фонда в&nbsp;России. Все собранные средства будут адресно раходоваться на&nbsp;детские операции.</p>
+                                        на&nbsp;беду малышей с&nbsp;врожденным пороком сердца и&nbsp;с&nbsp;огромным энтузиазмом готовы поддерживать деятельность Фонда в&nbsp;России. Все собранные средства будут адресно раходоваться на&nbsp;детские операции.
+                                        </p>
                                     <p>Наша искренняя благодарность Российскому Футбольному Союзу за&nbsp;эту инициативу!</p>
                                 </div>
                             </div>
                         </div>
                         <div class="news news-list__item" id="news-2">
-                            <a class="news__media js-fancybox" href="https://youtu.be/UA3OexmrSfs">
-                                <img class="news__image" src="assets/images/news-1.jpg" alt="" role="presentation" />
-                                <span class="news__play">
-                                    <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
-                                </span>
-                            </a>
+                            <div class="news__media-wrapper">
+                                <a class="news__media js-fancybox" href="https://youtu.be/UA3OexmrSfs">
+                                    <img class="news__image" src="assets/images/news-1.jpg" alt="" role="presentation" />
+                                    <span class="news__play">
+                                        <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                                    </span>
+                                </a>
+                            </div>
                             <div class="news__content">
+                                <div class="news__title">Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки</div>
                                 <div class="news__text">
-                                    <p>Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки Художественный руководитель и&nbsp;главный дирижер Академического симфонического оркестра Санкт-Петербургской филармонии.</p>
+                                    <p>Видеоинтервью художественного руководителя и&nbsp;главного дирижера Академического симфонического оркестра Санкт-Петербургской филармонии.</p>
                                 </div>
+                                <a class="link js-fancybox" href="https://youtu.be/UA3OexmrSfs">
+                                    <span class="link__text">Смотреть видео</span>
+                                </a>
                             </div>
                         </div>
                         <div class="news news-list__item" id="news-3">
-                            <a class="news__media js-fancybox" href="https://youtu.be/eZ2IHTd3G7g">
-                                <img class="news__image" src="assets/images/news-2.jpg" alt="" role="presentation" />
-                                <span class="news__play">
-                                    <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
-                                </span>
-                            </a>
+                            <div class="news__media-wrapper">
+                                <a class="news__media js-fancybox" href="https://youtu.be/eZ2IHTd3G7g">
+                                    <img class="news__image" src="assets/images/news-2.jpg" alt="" role="presentation" />
+                                    <span class="news__play">
+                                        <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                                    </span>
+                                </a>
+                            </div>
                             <div class="news__content">
+                                <div class="news__title">Хубулава Г.Г. Слово единомышленника</div>
                                 <div class="news__text">
-                                    <p>Хубулава Г.Г. Слово единомышленника Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиохирург, академик РАН, доктор медицинских наук.</p>
+                                    <p>Видеоинтервью главного кардиохирурга СЗФО, заведующего кафедрой факультетской хирургии.</p>
                                 </div>
+                                <a class="link js-fancybox" href="https://youtu.be/eZ2IHTd3G7g">
+                                    <span class="link__text">Смотреть видео</span>
+                                </a>
                             </div>
                         </div>
                         <div class="news news-list__item" id="news-4">
-                            <a class="news__media js-fancybox" href="assets/images/news-3.jpg">
-                                <img class="news__image" src="assets/images/news-3.jpg" alt="" role="presentation" />
-                            </a>
+                            <div class="news__media-wrapper">
+                                <a class="news__media js-fancybox" href="assets/images/news-3.jpg">
+                                    <img class="news__image" src="assets/images/news-3.jpg" alt="" role="presentation" />
+                                </a>
+                            </div>
                             <div class="news__content">
+                                <div class="news__title">По&nbsp;зову сердца.
+                                    <br/>Мария-Анна Лэммли</div>
                                 <div class="news__text">
-                                    <p>Наш медиа партнер: Swiss Health Magazine
-                                        <a href="https://www.swisshealth.ch">www.swisshealth.ch</a>
-                                    </p>
+                                    <p>Пауль Р. Фогт Доктор медицины, профессор в&nbsp;области сердечно-сосудистой хирургии, прези- дент фонда EurAsia Heart</p>
                                 </div>
+                                <div class="partner">
+                                    <div class="partner__text">Наш медиа партнер SHM</div>
+                                    <a class="partner__link">
+                                        <img class="partner__image" src="assets/images/sh-logo.png" alt="" role="presentation" />
+                                    </a>
+                                </div>
+                                <a class="link js-fancybox" href="#">
+                                    <span class="link__text">Читать статью</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="news news-list__item" id="news-5">
+                            <div class="news__media-wrapper">
+                                <a class="news__media js-fancybox" href="assets/images/news-3.jpg">
+                                    <img class="news__image" src="assets/images/news-3.jpg" alt="" role="presentation" />
+                                </a>
+                            </div>
+                            <div class="news__content">
+                                <div class="news__title">Смерть на игровом поле.
+                                    <br/>Вита Мач</div>
+                                <div class="news__text">
+                                    <p>Cмертельных случаев в спорте гораздо больше, чем мы узнаем из новостей</p>
+                                </div>
+                                <div class="partner">
+                                    <div class="partner__text">Наш медиа партнер SHM</div>
+                                    <a class="partner__link">
+                                        <img class="partner__image" src="assets/images/sh-logo.png" alt="" role="presentation" />
+                                    </a>
+                                </div>
+                                <a class="link js-fancybox" href="#">
+                                    <span class="link__text">Читать статью</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="popup popup-registration" id="registration">
+                <div class="popup__header">
+                    <div class="popup__mobile-title">Зарегистрировать пациента</div>
+                </div>
                 <h3 class="popup__title">
                     <svg class="popup__title-icon"><use xlink:href="assets/images/icon.svg#icon_registration"></use></svg>
                     <div class="popup__title-text">Зарегистрировать пациента</div>
@@ -1120,6 +1206,9 @@
                 </div>
             </div>
             <div class="popup popup-contacts" id="contacts">
+                <div class="popup__header">
+                    <div class="popup__mobile-title">Связаться с нами</div>
+                </div>
                 <div class="popup-contacts__wrapper">
                     <h3 class="popup__title">
                         <svg class="popup__title-icon"><use xlink:href="assets/images/icon.svg#icon_contacts"></use></svg>
@@ -1143,6 +1232,9 @@
                 </div>
             </div>
             <div class="popup popup-donation" id="donation">
+                <div class="popup__header">
+                    <div class="popup__mobile-title">Поддержать Фонд</div>
+                </div>
                 <h3 class="popup__title">
                     <svg class="popup__title-icon"><use xlink:href="assets/images/icon.svg#icon_heart"></use></svg>
                     <div class="popup__title-text">Сделать
@@ -1208,6 +1300,16 @@
                     <p>Подготовка молодых российских специалистов, работающих в наиболее сложной сфере — кардиохирургии новорожденных и детей раннего возраста, непосредственно в лечебных учреждениях по наиболее сложным разделам, является одним из приоритетных
                         направлений деятельности Сердца ЕврАзии. Передача практических навыков, знаний и опыта происходит непосредственно в операционной, а также отделении кардиореанимации Перинатального Центра Санкт-Петебургского Педиатрического Университета.
                         Такой подход не только повышает эффективность образования, но и экономит Университету сотни тысяч рублей, предотвращает отток молодых специалистов за границу, так как они получают высококачественное образование у себя на родине.</p>
+                </div>
+            </div>
+            <div class="popup popup-experts" id="experts">
+                <div class="popup__header">
+                    <div class="popup__mobile-title">Международная группа экспертов</div>
+                </div>
+            </div>
+            <div class="popup popup-trustees" id="trustees">
+                <div class="popup__header">
+                    <div class="popup__mobile-title">Попечительский комитет</div>
                 </div>
             </div>
         </div>
