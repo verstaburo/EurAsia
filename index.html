@@ -167,37 +167,42 @@
                 <div class="swiper-scrollbar"></div>
             </aside>
         </section>
-        <div class="page-section page-section_light">
+        <div class="page-section page-section_light page__mission">
             <div class="container">
                 <div class="grid">
-                    <div class="grid__col grid__col_six">
+                    <div class="grid__col grid__col_sm_12 grid__col_xl_6">
                         <div class="text-block text-block_stylized">
-                            <p>Наша главная задача — повышение квалификации и обучение специалистов в сфере кардиологии и сердечно-сосудистой хирургии новорождённых, детей и взрослых. Мы реализуем эту задачу посредством тесного сотрудничества швейцарских
-                                и российских специалистов.</p>
-                            <p>
-                                <i>Наша миссия —&nbsp;</i>сохранение здоровья молодого поколения и предотвращение преждевременной смертности детей и подростков из-за сердечно-сосудистых заболеваний.</p>
+                            <p>Наша главная задача — повышение квалификации и обучение специалистов в сфере кардиологии и сердечно-сосудистой хирургии новорождённых, детей и взрослых. Мы реализуем эту задачу посредством тесного сотрудничества
+                                <br> швейцарских и российских специалистов.</p>
+                            <p data-hidden-text="mission">
+                                <b>Наша миссия —&nbsp;</b>сохранение здоровья молодого поколения и предотвращение преждевременной смертности детей и подростков из-за сердечно-сосудистых заболеваний.</p>
                         </div>
                     </div>
-                    <div class="grid__col grid__col_six">
+                    <div class="grid__col grid__col_sm_12 grid__col_xl_6" data-hidden-text="mission">
                         <div class="text-block">
                             <p>
-                                <i>Наша цель —&nbsp;</i>спасти как можно больше детей. В этом нам помогает налаженная система передачи медицинских знаний в области диагностики, лечения и профилактики сердечно-сосудистых заболеваний, а также практических
+                                <b>Наша цель —&nbsp;</b>спасти как можно больше детей. В этом нам помогает налаженная система передачи медицинских знаний в области диагностики, лечения и профилактики сердечно-сосудистых заболеваний, а также практических
                                 навыков в кардиологии, хирургии и ряде смежных специальностей.</p>
                         </div>
+                    </div>
+                </div>
+                <div class="text-switcher js-text-switcher" data-target-text="mission">Наша миссия
+                    <div class="text-switcher__toggle">
+                        <svg class="text-switcher__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
                     </div>
                 </div>
             </div>
         </div>
         <div class="patients">
+            <div class="container">
+                <div class="patients__mobile-stat"></div>
+            </div>
             <div class="slider swiper-container js-slider">
                 <div class="swiper-wrapper">
                     <div class="slider__slide slider__slide_statistic swiper-slide">
                         <div class="statistic statistic_patients">
                             <div class="statistic__title">Наши пациенты</div>
-                            <div class="statistic__info">28 миссий в Россию
-                                <br/>за 24 месяца</div>
-                            <div class="statistic__subtitle">За 4 года
-                                <br/>в России:</div>
+                            <div class="statistic__subtitle">За 4 года в&nbsp;России:</div>
                             <ul class="statistic__list">
                                 <li class="statistic__item">
                                     <div class="stat-data">
@@ -230,21 +235,35 @@
                         <div class="child">
                             <div class="child__media">
                                 <div class="child__wrapper">
+                                    <img class="child__image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" role="presentation" />
+                                </div>
+                                <a class="play play_big js-fancybox" href="https://youtu.be/gszwFaEKGzI">
+                                    <svg class="play__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                                </a>
+                            </div>
+                            <div class="child__title">Видеоинтервью с родителями пациентов</div>
+                            <div class="child__info">
+                                <div class="child__name"></div>
+                                <div class="child__text">
+                                    <a class="link js-fancybox" href="https://youtu.be/gszwFaEKGzI">
+                                        <span class="link__text">Смотреть видео</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide slider__slide_child swiper-slide">
+                        <div class="child">
+                            <div class="child__media">
+                                <div class="child__wrapper">
                                     <img class="child__image" src="assets/images/child-1.jpg" alt="" role="presentation" />
                                 </div>
                             </div>
-                            <div class="child__name">Поваго Вероника</div>
-                            <div class="child__disease">Тотальный аномальный дренаж лёгочных вен</div>
-                            <table class="table child__info" cellspacing="0">
-                                <tr>
-                                    <td>Возраст</td>
-                                    <td>2 года</td>
-                                </tr>
-                                <tr>
-                                    <td>Город</td>
-                                    <td>Санкт-Петербург</td>
-                                </tr>
-                            </table>
+                            <div class="child__title">Тотальный аномальный дренаж лёгочных вен</div>
+                            <div class="child__info">
+                                <div class="child__name">Поваго Вероника</div>
+                                <div class="child__text">2 года, Санкт-Петербург </div>
+                            </div>
                         </div>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
@@ -254,18 +273,11 @@
                                     <img class="child__image" src="assets/images/child-2.jpg" alt="" role="presentation" />
                                 </div>
                             </div>
-                            <div class="child__name">Колоев Дауд</div>
-                            <div class="child__disease">Врожденный порок сердца</div>
-                            <table class="table child__info" cellspacing="0">
-                                <tr>
-                                    <td>Возраст</td>
-                                    <td>17 лет</td>
-                                </tr>
-                                <tr>
-                                    <td>Город</td>
-                                    <td>Ингушетия</td>
-                                </tr>
-                            </table>
+                            <div class="child__title">Врожденный порок сердца</div>
+                            <div class="child__info">
+                                <div class="child__name">Колоев Дауд</div>
+                                <div class="child__text">17 лет, Ингушетия</div>
+                            </div>
                         </div>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
@@ -275,18 +287,11 @@
                                     <img class="child__image" src="assets/images/child-3.jpg" alt="" role="presentation" />
                                 </div>
                             </div>
-                            <div class="child__name">Ложкина Алиса</div>
-                            <div class="child__disease">Дефект межжелудочковой перегородки. Лёгочная артериальная гипертензия</div>
-                            <table class="table child__info" cellspacing="0">
-                                <tr>
-                                    <td>Возраст</td>
-                                    <td>2,5 года</td>
-                                </tr>
-                                <tr>
-                                    <td>Город</td>
-                                    <td>Ленинградская область</td>
-                                </tr>
-                            </table>
+                            <div class="child__title">Дефект меж&shy;желудоч&shy;ковой перегородки. Лёгочная артериальная гипертензия</div>
+                            <div class="child__info">
+                                <div class="child__name">Ложкина Алиса</div>
+                                <div class="child__text">2,5 года, Ленинградская область</div>
+                            </div>
                         </div>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
@@ -296,24 +301,17 @@
                                     <img class="child__image" src="assets/images/child-4.jpg" alt="" role="presentation" />
                                 </div>
                             </div>
-                            <div class="child__name">Ярослав Дьяконов</div>
-                            <div class="child__disease">Коарктация аорты. Дефект межжелудочковой перегородки</div>
-                            <table class="table child__info" cellspacing="0">
-                                <tr>
-                                    <td>Возраст</td>
-                                    <td>2 года</td>
-                                </tr>
-                                <tr>
-                                    <td>Город</td>
-                                    <td>Москва</td>
-                                </tr>
-                            </table>
+                            <div class="child__title">Коарктация аорты. Дефект меж&shy;желудоч&shy;ковой перегородки</div>
+                            <div class="child__info">
+                                <div class="child__name">Ярослав Дьяконов</div>
+                                <div class="child__text">2 года, Москва</div>
+                            </div>
                         </div>
                     </div>
                     <div class="slider__slide slider__slide_list swiper-slide">
                         <ul class="child-list">
                             <li class="child-list__item">
-                                <a class="reg-button">
+                                <a class="reg-button js-popup" href="#registration">
                                     <span class="reg-button__content">
                                         <svg class="reg-button__icon"><use xlink:href="assets/images/icon.svg#icon_registration"></use></svg>
                                         <span class="reg-button__text">
@@ -563,30 +561,43 @@
                 </div>
             </div>
         </div>
-        <div class="page-section page-section_dark page-section_style">
+        <div class="page-section page-section_dark page-section_small">
             <div class="container">
-                <div class="info-block">
-                    <h3 class="info-block__title">Россия</h3>
-                    <div class="grid">
-                        <div class="grid__col grid__col_six">
-                            <div class="text-block">
-                                <p>– один из самых перспективных партнеров Фонда. Поддержка Президента и правительства, реализующаяся в национальном российском проекте «Здоровье» в сочетании с международной образовательной и научной деятельностью Сердца
-                                    ЕврАзии может вывести российские федеральные центры сердечно-сосудистой хирургии на мировой уровень и прекратить отток пациентов за границу.</p>
-                            </div>
-                            <a class="button js-popup" href="#news">Новости фонда</a>
-                        </div>
-                        <div class="grid__col grid__col_six">
-                            <div class="text-block">
-                                <p>С 2005 года Фонд сотрудничает с российскими партнерами. Миссии проходят в Санкт-Петербурге, Новосибирске, Екатеринбурге, Пензе, Петрозаводске, Томске, Ярославле, Воронеже. В числе партнерских организаций Фонда — Первый
-                                    Санкт-Петербургский государственный медицинский университет им. академика И.П. Павлова, Военно-медицинская академия, Санкт-Петербургский Государственный Педиатрический Медицинский Университет, Новосибирский Институт
-                                    Патологии Кровообращения им. Е.Н. Мешалкина, Томский центр детского сердца РАН, Ярославский медицинский университет и др.</p>
-                            </div>
+                <div class="page-section__column page-section__column_left">
+                    <div class="page-section__title page-section__title_style page-section__title_small">Россия</div>
+                    <div class="text-block">
+                        <p>– один из самых перспективных партнеров Фонда. Поддержка Президента и правительства, реализующаяся в национальном российском проекте «Здоровье» в сочетании с международной образовательной и научной деятельностью Сердца ЕврАзии
+                            может вывести российские федеральные центры сердечно-сосудистой хирургии на мировой уровень и прекратить отток пациентов за границу.</p>
+                        <p data-hidden-text="focus">С 2005 года Фонд сотрудничает с российскими партнерами. Миссии проходят в Санкт-Петербурге, Новосибирске, Екатеринбурге, Пензе, Петрозаводске, Томске, Ярославле, Воронеже. В числе партнерских организаций Фонда — Первый Санкт-Петербургский
+                            государственный медицинский университет им. академика И.П. Павлова, Военно-медицинская академия, Санкт-Петербургский Государственный Педиатрический Медицинский Университет, Новосибирский Институт Патологии Кровообращения им.
+                            Е.Н. Мешалкина, Томский центр детского сердца РАН, Ярославский медицинский университет и др.</p>
+                    </div>
+                    <div class="text-switcher js-text-switcher" data-target-text="focus">Россия
+                        <div class="text-switcher__toggle">
+                            <svg class="text-switcher__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
                         </div>
                     </div>
                 </div>
+                <div class="page-section__column page-section__column_right" data-fbd-place="focus">
+                    <div class="focus" data-float-block="focus">
+                        <img class="focus__image" src="assets/images/russia-small.jpg" alt="" role="presentation" />
+                        <div class="focus__header">
+                            <div class="focus__subtitle">Фокус:</div>
+                            <div class="focus__title">Россия</div>
+                        </div>
+                        <a class="focus__link js-popup" href="#focus">
+                            <span class="focus__text">Подробнее</span>
+                            <span class="focus__icon">
+                                <svg class="focus__angle"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <!-- +info-block-->
             </div>
         </div>
         <div class="page-section page-section_dark page-section_map">
+            <div class="page-section__title desktop-hide">Фонд активно работает</div>
             <div class="map">
                 <img class="map__image" src="assets/images/map.jpg" alt="" role="presentation" />
                 <div class="pin pin_top pin_top_short pin_ukr">
@@ -659,30 +670,19 @@
             </div>
             <div class="page-section__map-describe">
                 <div class="container">
-                    <div class="grid">
-                        <div class="grid__col grid__col_six">
-                            <div class="content-zone">
-                                <p>Сегодня Фонд наиболее активно работает в&nbsp;России, а&nbsp;также в&nbsp;Украине, Узбекистане, Армении, Болгарии, Мьянме, Камбодже, Китае, Эритрее и&nbsp;Вьетнаме. По&nbsp;запросам руководства этих стран Сердце ЕврАзии
-                                    занимается образованием и&nbsp;обучением персонала непосредственно в&nbsp;лечебных учреждениях: получение практических знаний, технических навыков и&nbsp;их&nbsp;применение в&nbsp;операционных, а&nbsp;также в&nbsp;отделениях
-                                    кардиореанимаций.</p>
-                            </div>
-                        </div>
-                        <div class="grid__col grid__col_six">
-                            <div class="focus">
-                                <img class="focus__image" src="assets/images/russia-small.jpg" alt="" role="presentation" />
-                                <div class="focus__header">
-                                    <div class="focus__subtitle">Фокус:</div>
-                                    <div class="focus__title">Россия</div>
-                                </div>
-                                <a class="focus__link js-popup" href="#focus">
-                                    <span class="focus__text">Подробнее</span>
-                                    <span class="focus__icon">
-                                        <svg class="focus__angle"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
-                                    </span>
-                                </a>
-                            </div>
+                    <div class="page-section__column page-section__column_left">
+                        <div class="text-block">
+                            <p class="desktop-hide">а также в Украине, Узбекистане, Армении, Болгарии, Камбодже, Эритрее и Вьетнаме.</p>
+                            <p>По запросам руководства заинтересованных в сотрудничестве с Фондом стран Сердце ЕврАзии занимается образованием и обучением персонала непосредственно в лечебных учреждениях: получение практических знаний, технических навыков
+                                и их применение в операционных, а также в отделениях кардиореанимаций.</p>
                         </div>
                     </div>
+                    <div class="page-section__column page-section__column_right">
+                        <div class="text-block text-block_big-style mobile-hide">
+                            <p>Фонд активно работает в России, Украине, Узбекистане, Армении, Болгарии, Мьянме, Камбодже, Китае, Эритрее и Вьетнаме</p>
+                        </div>
+                    </div>
+                    <div class="page-section__mobile-focus desktop-hide" data-fbm-place="focus"></div>
                 </div>
             </div>
         </div>
@@ -690,7 +690,7 @@
             <div class="container">
                 <h3 class="page-section__title">Статистика</h3>
                 <div class="grid">
-                    <div class="grid__col grid__col_eight">
+                    <div class="grid__col grid__col_xl_8">
                         <div class="statistic statistic_list">
                             <ul class="statistic__list">
                                 <li class="statistic__item">
@@ -732,7 +732,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="grid__col grid__col_four">
+                    <div class="grid__col grid__col_xl_4">
                         <ul class="gallery">
                             <li class="gallery__item js-fancybox" data-src="assets/images/statistic-1.jpg">
                                 <img class="gallery__image" src="assets/images/statistic-1.jpg" alt="" role="presentation" />
@@ -751,7 +751,7 @@
         <div class="page-section">
             <div class="container">
                 <div class="grid">
-                    <div class="grid__col grid__col_eight">
+                    <div class="grid__col grid__col_xl_8">
                         <h3 class="page-section__title">Наши достижения</h3>
                         <div class="text-block text-block_stylized text-block_stylized_black">
                             <p>Впрограммах и&nbsp;миссиях Фонда задействовано около 120 специалистов со&nbsp;всего мира&nbsp;&mdash; кардиохирурги, кардиологи, анестезиологи, реаниматология, электрофизиологией, неонатологи, перфузиологи, бактериологи и&nbsp;многие
@@ -766,17 +766,17 @@
                                 эффективную, а&nbsp;не&nbsp;дорогостоящую инфраструктуру госпиталей. Благодаря этому повышается качество лечения и&nbsp;количество выздоровевших пациентов.</p>
                         </div>
                     </div>
-                    <div class="grid__col grid__col_four"></div>
+                    <div class="grid__col grid__col_xl_4"></div>
                 </div>
             </div>
         </div>
         <div class="page-section page-section_dark">
             <div class="container">
                 <div class="grid page-section__top">
-                    <div class="grid__col grid__col_three">
-                        <h3 class="page-section__title page-section__title_big">Люди фонда</h3>
+                    <div class="grid__col grid__col_xl_3">
+                        <h3 class="page-section__title page-section__title_style page-section__title_big">Люди фонда</h3>
                     </div>
-                    <div class="grid__col grid__col_three">
+                    <div class="grid__col grid__col_xl_3">
                         <div class="person">
                             <div class="person__media">
                                 <img class="person__image" src="assets/images/member-1.jpg" alt="" role="presentation" />
@@ -787,7 +787,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid__col grid__col_three">
+                    <div class="grid__col grid__col_xl_3">
                         <div class="person">
                             <div class="person__media">
                                 <img class="person__image" src="assets/images/member-2.jpg" alt="" role="presentation" />
@@ -798,7 +798,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid__col grid__col_three">
+                    <div class="grid__col grid__col_xl_3">
                         <div class="person">
                             <div class="person__media">
                                 <img class="person__image" src="assets/images/member-3.jpg" alt="" role="presentation" />
@@ -820,7 +820,7 @@
                         </div>
                         <div class="accordion__body">
                             <div class="grid">
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-4.jpg" alt="" role="presentation" />
@@ -834,7 +834,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-5.jpg" alt="" role="presentation" />
@@ -845,7 +845,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-6.jpg" alt="" role="presentation" />
@@ -859,7 +859,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-7.jpg" alt="" role="presentation" />
@@ -874,7 +874,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-8.jpg" alt="" role="presentation" />
@@ -888,7 +888,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-9.jpg" alt="" role="presentation" />
@@ -902,7 +902,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-1.jpg" alt="" role="presentation" />
@@ -916,7 +916,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-11.jpg" alt="" role="presentation" />
@@ -931,7 +931,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-12.jpg" alt="" role="presentation" />
@@ -942,9 +942,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three"></div>
-                                <div class="grid__col grid__col_three"></div>
-                                <div class="grid__col grid__col_three"></div>
+                                <div class="grid__col grid__col_xl_3"></div>
+                                <div class="grid__col grid__col_xl_3"></div>
+                                <div class="grid__col grid__col_xl_3"></div>
                             </div>
                         </div>
                     </div>
@@ -957,7 +957,7 @@
                         </div>
                         <div class="accordion__body">
                             <div class="grid">
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-1.jpg" alt="" role="presentation" />
@@ -968,7 +968,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-2.jpg" alt="" role="presentation" />
@@ -979,7 +979,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-3.jpg" alt="" role="presentation" />
@@ -990,7 +990,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-14.jpg" alt="" role="presentation" />
@@ -1004,7 +1004,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-4.jpg" alt="" role="presentation" />
@@ -1018,7 +1018,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-13.jpg" alt="" role="presentation" />
@@ -1029,7 +1029,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media"></div>
                                         <div class="person__name">Сергей Слагода</div>
@@ -1038,7 +1038,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__col grid__col_three">
+                                <div class="grid__col grid__col_xl_3">
                                     <div class="person">
                                         <div class="person__media">
                                             <img class="person__image" src="assets/images/member-15.jpg" alt="" role="presentation" />
