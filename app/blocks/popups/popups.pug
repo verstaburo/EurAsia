@@ -4,8 +4,11 @@ mixin popups()
     +e.wrapper.js-scrollbar
       block
 
-mixin popup()
+mixin popup(title)
   +b.popup&attributes(attributes)
+    if title
+      .popup__header
+        .popup__mobile-title!=title
     block
 
 mixin popup-title(icon)

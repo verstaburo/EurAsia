@@ -5,22 +5,32 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 140px;
-  height: 140px;
-  padding: 37px;
-  border: 1px solid rgba($color-white, .2);
+  width: 54px;
+  height: 54px;
   background-color: $color-main;
   background-clip: content-box;
   transition: all $ease-main;
 
+  @include screen('desktop-small') {
+    width: 140px;
+    height: 140px;
+    padding: 37px;
+    border: 1px solid rgba($color-white, .2);
+  }
+
   &__icon {
     position: absolute;
-    top: 60px;
-    left: 63px;
+    top: 18px;
+    left: 20px;
     width: 16px;
     height: 20px;
     fill: $color-white;
     transition: all $ease-main;
+
+    @include screen('desktop-small') {
+      top: 60px;
+      left: 63px;
+    }
   }
 
   &:hover {

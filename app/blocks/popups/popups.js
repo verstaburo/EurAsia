@@ -26,7 +26,7 @@ export default function popups() {
       $(`#${targetPopup}`).fadeIn(300);
       $('.popups').addClass('is-active');
       $('.overlay').addClass('is-active');
-      if (targetLink.length > 0) {
+      if (targetLink) {
         $('.popups__wrapper').stop().animate({
           scrollTop: ($(`#${targetLink}`).offset().top - 60),
         }, 1000, 'swing');

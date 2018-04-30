@@ -32,7 +32,7 @@
     right: 0;
     opacity: 0;
     pointer-events: none;
-    z-index: 2;
+    z-index: 12;
 
     @include screen('desktop-small') {
       top: 0;
@@ -50,8 +50,38 @@
 .popup {
   display: none;
   box-sizing: border-box;
-  padding: 6.67vw;
+  padding: 0 $container-padding-mobile;
   min-height: 100%;
+
+  @include screen('desktop-wide') {
+    padding: 6.67vw;
+  }
+
+  &__header {
+    width: calc(100% + 2 * 6.875vw);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: $color-white;
+    padding: 22px $container-padding-mobile;
+    margin-left: -$container-padding-mobile;
+    margin-right: -$container-padding-mobile;
+    border-bottom: 1px solid $color-border;
+
+    @include screen('desktop-small') {
+      display: none;
+    }
+  }
+
+  &__mobile-title {
+    @include text-small;
+
+    font-family: $font-fourth;
+    letter-spacing: .029em;
+    font-weight: 700;
+  }
 
   &__title {
     display: flex;

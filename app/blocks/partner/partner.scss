@@ -1,0 +1,41 @@
+.partner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 10px 0 0;
+
+  @include screen('tablet-wide') {
+    border-top: 1px solid $color-border;
+  }
+
+  &__text {
+    @include text-mobile;
+
+    font-family: $font-fourth;
+    line-height: 1.47;
+    letter-spacing: .026em;
+    color: $color-warm-grey;
+    margin-right: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    display: block;
+    transition: all $ease-main;
+    margin-bottom: 10px;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  &__image {
+    width: 123px;
+    height: 24px;
+  }
+}

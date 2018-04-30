@@ -20,9 +20,12 @@
   }
 
   .burger {
+    margin-left: auto;
     margin-right: $container-padding-mobile;
 
     @include screen('desktop-small') {
+      margin-left: 0;
+      margin-right: 0;
       display: none;
     }
   }

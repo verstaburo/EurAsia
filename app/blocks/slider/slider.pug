@@ -1,10 +1,9 @@
-mixin slider(pagination, buttons)
-  +b.slider&attributes(attributes).swiper-container.js-slider
+mixin slider(scrollbar, buttons)
+  +b.slider&attributes(attributes).swiper-container
     .swiper-wrapper
       block
-    if pagination
-      +e.dots
-        +e.dot
+    if scrollbar
+      .swiper-scrollbar
     if buttons
       +e.button._prev
         +icon('arrow-large').__icon
@@ -12,5 +11,7 @@ mixin slider(pagination, buttons)
         +icon('arrow-large').__icon
 
 mixin slide(addClass)
-  +e(class= "slide" + addClass + " swiper-slide")&attributes(attributes)
+  - var slClass = '';
+  - if (addClass) { slClass = addClass}
+  +e(class= "slide" + slClass + " swiper-slide")&attributes(attributes)
     block

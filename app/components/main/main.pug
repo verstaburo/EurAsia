@@ -4,16 +4,16 @@ mixin main()
       +e.bg
         +e.image(src="assets/images/main.jpg")
       +e.top
-        +link-language('assets/images/english.png')._light.__language(href="https://www.eurasiaheart.ch/en") English
-      +e.middle
-        +e.subtitle EurAsia Heart Foundation
+        +link-language('assets/images/english.png')._light.__language(href="https://www.eurasiaheart.ch/en") English        
       +e.bottom
+        +e.subtitle EurAsia Heart Foundation
         +e.col_left
           +e.H1.title Российско-швейцарский фонд Сердце ЕврАзии
           +e.text Благотворительная гуманитарная организация, специализирующаяся на лечении тяжелых пороков сердца и сердечно-сосудистых заболеваний у детей из Европы и Азии.
         +e.col_right
           +play(href="https://youtu.be/gszwFaEKGzI").js-fancybox
           +link._light(href="https://youtu.be/gszwFaEKGzI").__play Смотреть видео
-    +e.ASIDE.news
-      +e.wrapper.js-scrollbar
-        +news-list
+    +e.ASIDE.news.js-slider-scroll
+      +e.wrapper
+        +news-list-slider
+      .swiper-scrollbar

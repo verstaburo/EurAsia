@@ -2,10 +2,17 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: stretch;
-  height: calc(100vh - 78px);
+  align-items: flex-start;
+  flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
+  height: auto;
+
+  @include screen('tablet-wide') {
+    align-items: stretch;
+    flex-wrap: nowrap;
+    height: calc(100vh - 78px);
+  }
 
   &__content {
     position: relative;
@@ -14,8 +21,15 @@
     justify-content: flex-start;
     align-items: stretch;
     box-sizing: border-box;
-    padding: 0 6.25vw;
-    width: 75%;
+    padding: 0 6.875vw;
+    width: 100%;
+    height: auto;
+
+    @include screen('tablet-wide') {
+      height: 100%;
+      width: 75%;
+      padding: 0 6.25vw;
+    }
   }
 
   &__bg {
@@ -29,12 +43,14 @@
 
     &::before {
       @include pseudo;
+
       bottom: 0;
       left: 0;
       width: 100%;
       height: 82%;
 
       @include gradient-main;
+
       background-size: 100% 100%;
       z-index: 2;
     }
@@ -51,12 +67,16 @@
   }
 
   &__top {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 52px;
     margin-bottom: auto;
+
+    @include screen('desktop-small') {
+      display: flex;
+    }
   }
 
   &__language {
@@ -65,54 +85,143 @@
 
   &__bottom {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     box-sizing: border-box;
-    padding-bottom: 11vh;
+    padding-top: 22px;
+    padding-bottom: 40px;
+    height: 100%;
+
+    @include screen('desktop-small') {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: flex-end;
+      flex-wrap: wrap;
+      padding-top: 0;
+      padding-bottom: 11vh;
+      height: auto;
+    }
   }
 
   &__subtitle {
-    @include heading-5;
+    @include heading-6;
+
     font-weight: 700;
+    width: 100%;
     color: $color-main;
     font-family: $font-fourth;
-    margin-bottom: 32px;
+    letter-spacing: .03em;
+    margin-bottom: 15px;
+    order: 2;
+
+    @include screen('tablet-wide') {
+      @include heading-5;
+
+      font-weight: 700;
+      letter-spacing: normal;
+      margin-bottom: 32px;
+    }
+
+    @include screen('desktop-small') {
+      order: 1;
+    }
+
+    @media (max-height: 700px) {
+      @include heading-6;
+
+      font-weight: 700;
+      letter-spacing: .03em;
+      margin-bottom: 32px;
+    }
   }
 
   &__title {
-    @include heading-1;
+    @include heading-3;
+
     font-family: $font-second;
     line-height: 1;
     width: 100%;
     color: $color-white;
-    margin-bottom: 28px;
+    margin-bottom: 15px;
+
+    @include screen('tablet-wide') {
+      @include heading-1;
+
+      margin-bottom: 28px;
+    }
+
+    @media (max-height: 700px) {
+      @include heading-3;
+
+      line-height: 1;
+      margin-bottom: 28px;
+    }
   }
 
   &__text {
-    @include text-large;
+    @include text-big;
+
     font-family: $font-fourth;
     font-weight: 300;
     color: $color-white;
+    line-height: 1.35;
+    letter-spacing: .024em;
+
+    @include screen('tablet-wide') {
+      @include text-large;
+
+      font-weight: 300;
+      letter-spacing: normal;
+    }
+
+    @media (max-height: 700px) {
+      @include text-big;
+
+      font-weight: 300;
+      line-height: 1.35;
+      letter-spacing: .024em;
+    }
   }
 
   &__col {
+    width: 100%;
 
     &_left {
-      width: 70%;
+      order: 3;
+
+      @include screen('desktop-small') {
+        width: 70%;
+        order: 2;
+      }
     }
 
     &_right {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
-      align-items: flex-end;
-      width: 30%;
+      align-items: center;
+      order: 1;
+      margin-bottom: 53.125vw;
+
+      @include screen('tablet-wide') {
+        margin-bottom: auto;
+      }
+
+      @include screen('desktop-small') {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 30%;
+        order: 3;
+        margin-bottom: 0;
+      }
     }
   }
 
   &__play {
     @include text-small;
+
     font-family: $font-fourth;
     line-height: 1.17;
     letter-spacing: .03em;
@@ -121,23 +230,71 @@
 
   &__news {
     position: relative;
-    width: 25%;
+    width: 100%;
     overflow: hidden;
-    height: 100%;
+
+    @include screen('tablet-wide') {
+      width: 25%;
+      height: 100%;
+    }
 
     &::before {
       @include pseudo;
+
+      display: none;
       bottom: 0;
       left: 0;
       width: 100%;
       height: 140px;
+
       @include gradient-second;
+
       z-index: 2;
       pointer-events: none;
+
+      @include screen('tablet-wide') {
+        display: block;
+      }
+    }
+
+    .swiper-scrollbar {
+      right: 0;
+      width: 4px;
+      background-color: $color-lightest-grey;
+      z-index: 8;
+
+      @include screen('tablet-wide', max) {
+        display: none;
+      }
+    }
+
+    .swiper-scrollbar-drag {
+      width: 4px;
+      background-color: $color-main;
+    }
+  }
+
+  .news-list {
+    @include screen('tablet-wide') {
+      height: auto;
+    }
+  }
+
+  .slider {
+    height: auto;
+    width: 100%;
+
+    @include screen('tablet-wide') {
+      height: 100%;
     }
   }
 
   &__wrapper {
-    max-height: 100%;
+    height: auto;
+    width: 100%;
+
+    @include screen('tablet-wide') {
+      height: 100%;
+    }
   }
 }

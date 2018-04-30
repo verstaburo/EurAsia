@@ -22,5 +22,48 @@ export default function slider() {
     },
     roundLengths: true,
   });
+  const scrollSliderOptions = {
+    direction: 'vertical',
+    wrapperClass: 'main__wrapper',
+    slideClass: 'news-list',
+    slidesPerView: 'auto',
+    freeMode: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+    },
+    mousewheel: true,
+    roundLengths: true,
+  };
+  const newsSliderOptions = {
+    speed: 700,
+    slidesPerView: 'auto',
+    freeMode: true,
+    navigation: {
+      nextEl: '.slider__button_next',
+      prevEl: '.slider__button_prev',
+    },
+  };
+  let newsSlider;
+  let scrollSlider;
+  if (document.body.clientWidth < 1024) {
+    newsSlider = new Swiper('.js-slider-news', newsSliderOptions);
+  } else {
+    scrollSlider = new Swiper('.js-slider-scroll', scrollSliderOptions);
+  }
+
+  $(window).on('resize', () => {
+    if (document.body.clientWidth < 1024) {
+      if (scrollSlider) {
+        scrollSlider.destroy(true, true);
+      }
+      newsSlider = new Swiper('.js-slider-news', newsSliderOptions);
+    } else {
+      if (newsSlider) {
+        newsSlider.destroy(true, true);
+      }
+      scrollSlider = new Swiper('.js-slider-scroll', scrollSliderOptions);
+    }
+  });
 }
 /* eslint-enable no-unused-vars */

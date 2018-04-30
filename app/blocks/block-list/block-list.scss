@@ -33,7 +33,7 @@
   &__icon {
     position: absolute;
     top: 50%;
-    right: 22px;
+    right: $container-padding-mobile;
     width: 7.1px;
     height: 11.4px;
     fill: $color-main;

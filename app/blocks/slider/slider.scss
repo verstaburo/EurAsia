@@ -62,14 +62,19 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 66px;
-    height: 66px;
+    width: 54px;
+    height: 54px;
     transition: all $ease-main;
     z-index: 2;
     cursor: pointer;
     background-color: $color-main;
     box-sizing: border-box;
     padding-left: 4px;
+
+    @include screen('tablet-wide') {
+      width: 66px;
+      height: 66px;
+    }
 
     &:hover { opacity: .8; }
 
