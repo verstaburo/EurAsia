@@ -21,8 +21,17 @@
     &:not(:last-child) {
       margin-bottom: $grid-gap;
 
-      @include screen('tablet') {
+      @include screen('tablet-wide') {
         margin-bottom: 58px;
+      }
+    }
+  }
+
+  &_small-mg {
+
+    p:not(:last-child) {
+      @include screen('tablet-wide') {
+        margin-bottom: 30px;
       }
     }
   }
@@ -61,6 +70,23 @@
 
       p:first-child::first-letter {
         color: $color-basic;
+      }
+    }
+  }
+
+  &_big-style {
+    @include screen('tablet-wide') {
+      box-sizing: border-box;
+
+      @include text-biggest;
+
+      font-family: $font-third;
+      font-weight: 500;
+      line-height: 1.21;
+
+      p:first-child {
+        padding-top: 30px;
+        border-top: 2px solid $color-main;
       }
     }
   }

@@ -17,6 +17,7 @@ import showMore from '../blocks/person/person';
 import ffDetect from '../blocks/text-block/text-block';
 import switchText from '../blocks/text-switcher/text-switcher';
 import moveStatistic from '../components/patients/patients';
+import floatBlocks from '../blocks/js-functions/floatblocks';
 
 const $ = window.$;
 
@@ -43,4 +44,5 @@ $(() => {
   ffDetect();
   switchText();
   moveStatistic();
+  floatBlocks();
 });

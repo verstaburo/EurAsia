@@ -3,16 +3,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
   min-height: 100%;
   box-sizing: border-box;
-  padding: 44px 48px;
+  padding: 7.5vw $container-padding-mobile;
   overflow: hidden;
   color: $color-white;
 
+  @include screen('tablet-wide') {
+    padding: 50px 46px 56px;
+  }
+
   &::before {
     @include pseudo;
+
     width: 100%;
     height: 100%;
     top: 0;
@@ -23,6 +28,7 @@
 
   &__image {
     @include fill-img;
+
     z-index: 1;
   }
 
@@ -30,38 +36,61 @@
     position: relative;
     width: 100%;
     z-index: 3;
-    margin-bottom: 80px;
+    margin-bottom: auto;
   }
 
   &__title {
-    @include heading-big;
+    @include heading-3;
+
+    width: 100%;
     font-family: $font-second;
-    line-height: 1;
     font-weight: 700;
+
+    @include screen('tablet-wide') {
+      @include heading-2;
+
+      font-weight: 700;
+    }
   }
 
   &__subtitle {
-    @include text-bigger;
+    @include heading-6;
+
+    width: 100%;
     font-family: $font-fourth;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+
+    @include screen('tablet-wide') {
+      @include heading-2;
+
+      font-family: $font-second;
+      font-weight: 700;
+      margin-bottom: -4px;
+    }
   }
 
   &__link {
     position: relative;
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     z-index: 3;
-    width: 100%;
+
     @include text-small;
+
     color: $color-white;
     text-decoration: none;
     font-family: $font-fourth;
     letter-spacing: .029em;
     font-weight: 700;
     transition: all $ease-main;
+    margin-top: 24vw;
+
+    @include screen('tablet-wide') {
+      margin-top: 80px;
+    }
 
     &:hover {
       opacity: .5;
@@ -75,7 +104,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: -6px;
+    margin-left: 6px;
   }
 
   &__angle {

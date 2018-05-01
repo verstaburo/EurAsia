@@ -102,18 +102,54 @@
   box-sizing: border-box;
   padding: 46px 48px;
 
+  @include screen('tablet-wide', max) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 7.4vw $container-padding-mobile;
+    background-color: $color-main;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity $ease-main;
+  }
+
   &__title {
-    @include heading-3;
-    font-family: $font-third;
+    @include heading-6;
+
+    font-family: $font-fourth;
     line-height: 1.17;
     font-weight: 700;
-    margin-bottom: 12px;
+    letter-spacing: .029em;
+    margin-bottom: 18px;
+
+    @include screen('tablet-wide') {
+      @include heading-3;
+
+      font-family: $font-third;
+      line-height: 1.17;
+      font-weight: 700;
+      letter-spacing: normal;
+      margin-bottom: 12px;
+    }
   }
 
   &__text {
-    @include text;
+    @include text-small;
+
     font-family: $font-main;
-    line-height: 1.45;
+    line-height: 1.5;
     font-weight: 400;
+    box-sizing: border-box;
+    padding-right: 20px;
+    letter-spacing: .004em;
+
+    @include screen('tablet-wide') {
+      @include text;
+
+      line-height: 1.45;
+      font-weight: 400;
+      padding-right: 0;
+    }
   }
 }

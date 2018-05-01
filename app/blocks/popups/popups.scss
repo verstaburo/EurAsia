@@ -50,7 +50,7 @@
 .popup {
   display: none;
   box-sizing: border-box;
-  padding: 0 $container-padding-mobile;
+  padding: 0 $container-padding-mobile 15vw;
   min-height: 100%;
 
   @include screen('desktop-wide') {
@@ -90,12 +90,19 @@
     align-items: flex-start;
     width: 100%;
 
-    @include heading-big;
+    @include heading-3;
 
-    line-height: 1.02;
     font-weight: 700;
     font-family: $font-second;
-    margin-bottom: 47px;
+    margin-bottom: 6.25vw;
+
+    @include screen('tablet-wide') {
+      @include heading-big;
+
+      line-height: 1.02;
+      font-weight: 700;
+      margin-bottom: 47px;
+    }
   }
 
   &__title-icon {

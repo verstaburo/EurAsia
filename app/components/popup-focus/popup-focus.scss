@@ -1,8 +1,16 @@
 .popup-focus {
-  padding-top: calc(6.2vw + 360px);
+  padding-top: calc(11vw + 240px);
+
+  @include screen('tablet-wide') {
+    padding-top: calc(6.2vw + 360px);
+  }
 
   .popup__title {
-    margin-bottom: 48px;
+    margin-bottom: 6.25vw;
+
+    @include screen('tablet-wide') {
+      margin-bottom: 48px;
+    }
   }
 
   &__wall {
@@ -10,11 +18,16 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 360px;
+    height: 240px;
     overflow: hidden;
+
+    @include screen('tablet-wide') {
+      height: 360px;
+    }
 
     &::before {
       @include pseudo;
+
       width: 100%;
       height: 100%;
       left: 0;
@@ -26,6 +39,7 @@
 
   &__image {
     @include fill-img;
+
     z-index: 1;
   }
 }

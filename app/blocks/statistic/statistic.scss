@@ -76,6 +76,24 @@
   &_list {
     height: 100%;
 
+    .stat-data {
+
+      &__title {
+        @include screen('tablet-wide') {
+          margin-bottom: 10px;
+        }
+      }
+
+      &_note {
+
+        .stat-data__title {
+          @include screen('tablet-wide') {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
     .statistic {
 
       &__list {

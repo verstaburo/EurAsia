@@ -1,5 +1,6 @@
 @mixin list {
   @include text;
+
   line-height: 1.45;
 
   ul, ol {
@@ -8,8 +9,12 @@
   }
 
   li {
-    padding-left: 36px;
+    padding-left: 20px;
     position: relative;
+
+    @include screen('tablet-wide') {
+      padding-left: 36px;
+    }
   }
 }
 
@@ -17,9 +22,13 @@
 
   li::before {
     position: absolute;
-    left: 10px;
+    left: 0;
     top: 0;
     content: '•';
+
+    @include screen('tablet-wide') {
+      left: 10px;
+    }
   }
 }
 

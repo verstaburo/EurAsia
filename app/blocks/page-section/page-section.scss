@@ -14,6 +14,7 @@
     font-family: $font-fourth;
     font-weight: 700;
     margin-bottom: 74px;
+    width: 100%;
 
     &_big {
       @include heading-big;
@@ -43,6 +44,17 @@
     }
   }
 
+  &__subtitle {
+    @include heading-6;
+
+    line-height: 1.47;
+    margin-bottom: 22px;
+
+    @include screen('tablet-wide') {
+      margin-bottom: 0;
+    }
+  }
+
   &__top {
     margin-bottom: 8vh;
   }
@@ -50,40 +62,19 @@
   &__map-describe {
     position: relative;
     width: 100%;
-    z-index: 4;
-    overflow: hidden;
-    margin-top: -9.2vh;
   }
 
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: wrap;
+  &__mobile-focus {
+    width: 100%;
+    margin-top: 6vw;
 
     @include screen('tablet-wide') {
-      flex-wrap: nowrap;
+      margin-top: 0;
     }
   }
 
-  &__column {
-    width: 100%;
-    box-sizing: border-box;
-
-    &_left {
-      @include screen('tablet-wide') {
-        width: 68%;
-        padding-right: $grid-gap/2;
-      }
-    }
-
-    &_right {
-      @include screen('tablet-wide') {
-        width: 32%;
-        padding-left: $grid-gap/2;
-      }
-    }
+  &__accent {
+    position: relative;
   }
 
   &_dark {
@@ -101,9 +92,5 @@
     @include screen('tablet-wide') {
       padding: 6.7vw 0 6.1vw;
     }
-  }
-
-  &_map {
-    padding-top: 0;
   }
 }

@@ -1,49 +1,125 @@
 .pin {
-  position: absolute;
-  display: block;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: $color-main;
+  display: none;
+  width: 100%;
+  padding: 0 $container-padding-mobile;
+  box-sizing: border-box;
+  position: relative;
+  transition: background $ease-main;
+
+  @include screen('tablet-wide') {
+    position: absolute;
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: $color-main;
+    padding: 0;
+  }
 
   &::before {
     @include pseudo;
+
+    display: none;
     width: 1px;
     left: 4px;
     background-color: rgba($color-main, .65);
+
+    @include screen('tablet-wide') {
+      display: block;
+    }
+  }
+
+  &.is-opened {
+    @include screen('tablet-wide', max) {
+      background-color: $color-main;
+
+      .pin__label {
+        border-color: transparent;
+      }
+
+      .pin__text, {
+        opacity: 0;
+      }
+
+      .pin__mark_hidden {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
   }
 
   &__label {
-    position: absolute;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    left: 4px;
+    justify-content: space-between;
+    align-items: center;
     min-width: 200px;
-    transform: translateX(-50%) translateZ(0);
+    box-sizing: border-box;
+    padding: 14px 0 12px;
+    border-bottom: 1px solid rgba($color-white, .1);
+    transition: all $ease-main;
+
+    &:first-of-type {
+      border-top: 1px solid rgba($color-white, .1);
+
+      @include screen('tablet-wide') {
+        border-top: none;
+      }
+    }
+
     @include text-small;
+
     line-height: 1.65;
     font-family: $font-fourth;
-    font-weight: 400;
-    text-align: center;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: .029em;
+
+    @include screen('tablet-wide') {
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+      align-items: baseline;
+      position: absolute;
+      left: 4px;
+      transform: translateX(-50%) translateZ(0);
+      font-weight: 400;
+      letter-spacing: normal;
+      text-align: center;
+      border-bottom: none;
+    }
 
     &.is-open {
 
       .pin__mark {
         transform: rotate(45deg) translateZ(0);
       }
+
+      .tooltip-content {
+        @include screen('tablet-wide', max) {
+          opacity: 1;
+        }
+      }
+
+      @include screen('tablet-wide', max) {
+        pointer-events: none;
+      }
     }
   }
 
   &__text {
+
     &:not(:last-child) {
       margin-right: 10px;
     }
   }
 
   .tooltip-content {
-    display: none;
+    display: block;
+
+    @include screen('tablet-wide') {
+      display: none;
+    }
   }
 
   &__mark {
@@ -55,23 +131,55 @@
     height: 18px;
     transform: rotate(0) translateZ(0);
     transition: all $ease-main;
+    z-index: 5;
+
+    @include screen('tablet-wide', max) {
+      margin-left: auto;
+    }
+
+    &_hidden {
+      position: absolute;
+      right: $container-padding-mobile;
+      top: 54px;
+      transform: rotate(45deg) translateZ(0);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity;
+      cursor: pointer;
+
+      @include screen('tablet-wide') {
+        display: none;
+      }
+    }
   }
 
   &__icon {
     width: 18px;
     height: 18px;
     fill: $color-main;
+    transition: fill $ease-main;
+
+    .pin__mark_hidden & {
+      @include screen('tablet-wide', max) {
+        fill: $color-white;
+      }
+    }
   }
 
   &_inter {
+    display: block;
 
     .pin {
 
       &__label {
-        @include text-large;
-        font-weight: 700;
-        line-height: 1.8;
         cursor: pointer;
+
+        @include screen('tablet-wide') {
+          @include text-large;
+
+          font-weight: 700;
+          line-height: 1.8;
+        }
       }
     }
   }
@@ -79,20 +187,24 @@
   &_right {
 
     .pin__label {
-      text-align: left;
-      justify-content: flex-start;
-      left: 0;
-      transform: translateX(0) translateZ(0);
+      @include screen('tablet-wide') {
+        text-align: left;
+        justify-content: flex-start;
+        left: 0;
+        transform: translateX(0) translateZ(0);
+      }
     }
   }
 
   &_left {
 
     .pin__label {
-      text-align: right;
-      justify-content: flex-end;
-      right: 0;
-      transform: translateX(0) translateZ(0);
+      @include screen('tablet-wide') {
+        text-align: right;
+        justify-content: flex-end;
+        right: 0;
+        transform: translateX(0) translateZ(0);
+      }
     }
   }
 
@@ -106,11 +218,14 @@
     .pin {
 
       &__label {
-        bottom: 119px;
+        @include screen('tablet-wide') {
+          bottom: 119px;
+        }
       }
     }
 
     &_short {
+
       &::before {
         height: 40px;
       }
@@ -118,12 +233,15 @@
       .pin {
 
         &__label {
-          bottom: 63px;
+          @include screen('tablet-wide') {
+            bottom: 63px;
+          }
         }
       }
     }
 
     &_long {
+
       &::before {
         height: 126px;
       }
@@ -131,7 +249,9 @@
       .pin {
 
         &__label {
-          bottom: 140px;
+          @include screen('tablet-wide') {
+            bottom: 140px;
+          }
         }
       }
     }
@@ -147,7 +267,9 @@
     .pin {
 
       &__label {
-        top: 119px;
+        @include screen('tablet-wide') {
+          top: 119px;
+        }
       }
     }
 
@@ -160,59 +282,81 @@
       .pin {
 
         &__label {
-          top: 56px;
+          @include screen('tablet-wide') {
+            top: 56px;
+          }
         }
       }
     }
   }
 
   &_ukr {
-    top: 35.3%;
-    left: 31.2%;
+    @include screen('tablet-wide') {
+      top: 35.3%;
+      left: 31.2%;
+    }
   }
 
   &_arm {
-    top: 36.8%;
-    left: 36.6%;
+    @include screen('tablet-wide') {
+      top: 36.8%;
+      left: 36.6%;
+    }
   }
 
   &_uzb {
-    top: 38.3%;
-    left: 43%;
+    @include screen('tablet-wide') {
+      top: 38.3%;
+      left: 43%;
+    }
   }
 
   &_rus {
-    top: 24.1%;
-    left: 53.8%;
+    @include screen('tablet-wide') {
+      top: 24.1%;
+      left: 53.8%;
+    }
   }
 
   &_mmr {
-    top: 52%;
-    left: 56.4%;
+    @include screen('tablet-wide') {
+      top: 52%;
+      left: 56.4%;
+    }
   }
 
   &_bgr {
-    top: 38.3%;
-    left: 30.3%;
+    @include screen('tablet-wide') {
+      top: 38.3%;
+      left: 30.3%;
+    }
   }
 
   &_eri {
-    top: 54.9%;
-    left: 34.8%;
+    @include screen('tablet-wide') {
+      top: 54.9%;
+      left: 34.8%;
+    }
   }
 
   &_khm {
-    top: 56.6%;
-    left: 58.2%;
+    @include screen('tablet-wide') {
+      top: 56.6%;
+      left: 58.2%;
+    }
   }
 
   &_vnm {
-    top: 56.5%;
-    left: 61%;
+    @include screen('tablet-wide') {
+      top: 56.5%;
+      left: 61%;
+    }
   }
 
   &_chn {
-    top: 38.6%;
-    left: 66.8%;
+    @include screen('tablet-wide') {
+      top: 38.2%;
+      left: 62.8%;
+    }
   }
 }

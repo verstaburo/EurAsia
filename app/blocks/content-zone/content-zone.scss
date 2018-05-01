@@ -3,94 +3,188 @@
   h1 {
 
     &:not(:first-child) {
-      margin-top: 48px;
+      margin-top: 20px;
+
+      @include screen('tablet-wide') {
+        margin-top: 48px;
+      }
     }
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 17px;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 32px;
+      }
     }
 
-    @include heading-1;
+    @include heading-2;
+
     font-family: $font-fourth;
     font-weight: 700;
+
+    @include screen('tablet-wide') {
+      @include heading-1;
+
+      font-weight: 700;
+    }
   }
 
   h2 {
 
     &:not(:first-child) {
-      margin-top: 48px;
+      margin-top: 20px;
+
+      @include screen('tablet-wide') {
+        margin-top: 48px;
+      }
     }
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 17px;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 32px;
+      }
     }
 
-    @include heading-2;
+    @include heading-3;
+
     font-family: $font-fourth;
     font-weight: 700;
+
+    @include screen('tablet-wide') {
+      @include heading-2;
+
+      font-weight: 700;
+    }
   }
 
   h3 {
 
     &:not(:first-child) {
-      margin-top: 48px;
+      margin-top: 20px;
+
+      @include screen('tablet-wide') {
+        margin-top: 48px;
+      }
     }
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 17px;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 32px;
+      }
     }
 
-    @include heading-3;
+    @include heading-4;
+
     font-family: $font-fourth;
     font-weight: 700;
+
+    @include screen('tablet-wide') {
+      @include heading-3;
+
+      font-weight: 700;
+    }
   }
 
   h4 {
 
     &:not(:first-child) {
-      margin-top: 48px;
+      margin-top: 20px;
+
+      @include screen('tablet-wide') {
+        margin-top: 48px;
+      }
     }
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 17px;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 32px;
+      }
     }
 
-    @include heading-4;
+    @include heading-5;
+
     font-family: $font-fourth;
     font-weight: 700;
+
+    @include screen('tablet-wide') {
+      @include heading-4;
+
+      font-weight: 700;
+    }
   }
 
   h5 {
 
     &:not(:first-child) {
-      margin-top: 48px;
+      margin-top: 20px;
+
+      @include screen('tablet-wide') {
+        margin-top: 48px;
+      }
     }
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 17px;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 32px;
+      }
     }
 
-    @include heading-5;
+    @include heading-6;
+
     font-family: $font-fourth;
     font-weight: 700;
+    letter-spacing: .029em;
+
+    @include screen('tablet-wide') {
+      @include heading-5;
+
+      font-weight: 700;
+      letter-spacing: normal;
+    }
   }
 
   h6 {
 
     &:not(:first-child) {
-      margin-top: 48px;
+      margin-top: 20px;
+
+      @include screen('tablet-wide') {
+        margin-top: 48px;
+      }
     }
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 17px;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 32px;
+      }
     }
 
-    @include heading-6;
+    @include text-mobile;
+
     font-family: $font-fourth;
     font-weight: 700;
+
+    @include screen('tablet-wide') {
+      @include heading-6;
+
+      font-weight: 700;
+      letter-spacing: .029em;
+    }
   }
 
   p {
+
     &:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -98,11 +192,22 @@
     small {
       display: block;
 
-      @include text-small;
+      @include text-mobile-small;
+
+      @include screen('tablet-wide') {
+        @include text-small;
+      }
     }
 
-    @include text;
-    line-height: 1.45;
+    @include text-small;
+
+    line-height: 1.5;
+
+    @include screen('tablet-wide') {
+      @include text;
+
+      line-height: 1.45;
+    }
   }
 
   blockquote {
@@ -139,7 +244,18 @@
     }
   }
 
-  ul, ol { @include list; }
+  ul, ol {
+    @include list;
+    @include text-small;
+
+    line-height: 1.47;
+
+    @include screen('tablet-wide') {
+      @include text;
+
+      line-height: 1.45;
+    }
+  }
 
   ul { @include ullist; }
 
@@ -150,6 +266,7 @@
   &_no-mg {
 
     p {
+
       &:not(:last-child) {
         margin-bottom: 0;
       }

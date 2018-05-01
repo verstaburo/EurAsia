@@ -10,7 +10,7 @@
   line-height: 1;
   color: $color-dirt;
 
-  @include screen('tablet') {
+  @include screen('tablet-wide') {
     display: none;
   }
 
@@ -33,7 +33,7 @@
 }
 
 [data-hidden-text] {
-  @include screen('tablet', max) {
+  @include screen('tablet-wide', max) {
     display: none;
   }
 }

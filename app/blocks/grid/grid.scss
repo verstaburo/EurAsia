@@ -18,6 +18,7 @@ $new-breakpoints: map_remove($breakgrid, $default-breakpoit-name);
     margin: 0;
 
     @for $i from 1 through 15 {
+
       &_#{$default-breakpoit-name}_#{$i} {
         width: $i * $grid-col-width;
       }
@@ -25,7 +26,6 @@ $new-breakpoints: map_remove($breakgrid, $default-breakpoit-name);
 
     @each $key, $val in $new-breakpoints {
       @for $i from 1 through 15 {
-
         @media screen and (max-width: #{$val}) {
 
           &_#{$key}_#{$i} {
