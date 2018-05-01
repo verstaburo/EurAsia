@@ -65,5 +65,26 @@ export default function slider() {
       scrollSlider = new Swiper('.js-slider-scroll', scrollSliderOptions);
     }
   });
+
+  const galleryOption = {
+    speed: 700,
+    slidesPerView: 1,
+    wrapperClass: 'gallery',
+    slideClass: 'gallery__item',
+  };
+
+  let gallerySlider;
+
+  function mobileGallery() {
+    if (document.body.clientWidth < 1024) {
+      gallerySlider = new Swiper('.js-slider-gal', galleryOption);
+    } else if (gallerySlider) {
+      gallerySlider.destroy();
+    }
+  }
+
+  mobileGallery();
+
+  $(window).on('resize', mobileGallery);
 }
 /* eslint-enable no-unused-vars */

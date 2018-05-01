@@ -67,6 +67,21 @@
     &-images {
       @include screen('tablet-wide', max) {
         order: 1;
+        margin-bottom: 9px;
+      }
+    }
+
+    &-slider {
+      margin-left: -$container-padding-mobile/2;
+      margin-right: -$container-padding-mobile/2;
+      width: calc(100% + 6.875vw);
+      overflow: hidden;
+
+      @include screen('tablet-wide') {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        overflow: auto;
       }
     }
   }

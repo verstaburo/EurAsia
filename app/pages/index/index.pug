@@ -66,41 +66,67 @@ block content
                 +e.item
                   +stat-data('1 место *') Ишемическая болезнь сердца (12,2) и инсульт (9,7) занимают ведущие места по причинам смерти в мире.
                 +e.item_note
-                  +stat-data('**')._note По данным Фонда
-                +e.item_note
                   +stat-data('*')._note По данным Всемирной организации здравоохранения
+                +e.item_note
+                  +stat-data('**')._note По данным Фонда                
           +col({md: 12, xl: 4}).page__statistic-images
-            +gallery
+            .page__statistic-slider.js-slider-gal
+              +gallery
     +page-section.page__achievements
       .container
+        +e.H3.title Наши достижения
         +grid
           +col({ md: 12, xl: 8 })
-            +e.H3.title Наши достижения
+            +e.A.media_long.js-fancybox(href="assets/images/achievments-1.jpg") 
+              +e.IMG.image(src="assets/images/achievments-1.jpg")
+            +e.page__achievements-info-mobile.desktop-hide(data-fbm-place="achievements-info")
+            +e.page__achievements-stat-mobile.desktop-hide(data-fbm-place="achievements-stat")
             +text-block._stylized._stylized_black
               +e.P Впрограммах и&nbsp;миссиях Фонда задействовано около 120 специалистов со&nbsp;всего мира&nbsp;&mdash; кардиохирурги, кардиологи, анестезиологи, реаниматология, электрофизиологией, неонатологи, перфузиологи, бактериологи и&nbsp;многие другие специалисты.
-              +e.P Мы&nbsp;осуществили и&nbsp;осуществляем образовательную программу, включающую в&nbsp;себя мастер-классы по&nbsp;обмену опытом, консультации и&nbsp;обследования пациентов, доклады и&nbsp;лекции на&nbsp;актуальные темы.
-            +e.H3.title Наши партнеры
-            +text-block
+              +e.P(data-hidden-text="achievements") Мы&nbsp;осуществили и&nbsp;осуществляем образовательную программу, включающую в&nbsp;себя мастер-классы по&nbsp;обмену опытом, консультации и&nbsp;обследования пациентов, доклады и&nbsp;лекции на&nbsp;актуальные темы.
+          +col({ md: 12, xl: 4 }).mobile-hide
+            +e.page__achievements-stat(data-fbd-place="achievements-stat")
+              +e.side-wrapper(data-float-block="achievements-stat")
+                +e.side-title_bold За 17 лет напряженной работы фонд EurAsia Heart Foundation:
+                +e.statistic
+                  +stat-data('3300')._achievment детей успешно прооперировано
+                  +stat-data('13000')._achievment детей обследовано и назначено им соответствующая схема лечения
+            +e.page__achievements-stat(data-fbd-place="achievements-info")
+              +e.side-wrapper(data-float-block="achievements-info")
+                +text-block._big-style За последние 4 года  было осуществлено свыше 1800 операций и проведено более 5000 консультаций в клиниках по всему миру.
+        +text-switcher(data-target-text="achievements") Читать далее
+    +page-section.page__partners  
+      .container
+        +e.H3.title Наши партнеры
+        .grid
+          +col({ md: 12, xl: 8 })
+            +partners
+          +col({ md: 12, xl: 4 })
+            +e.A.media.js-fancybox.mobile-hide(href="assets/images/achievments-2.jpg") 
+              +e.IMG.image(src="assets/images/achievments-2.jpg")
+          +col({ md: 12, xl: 8 })
+            +text-block.mobile-hide
               +e.P Специалисты нашего Фонда работали в&nbsp;18&nbsp;странах Европы и&nbsp;Азии. Сегодня мы&nbsp;осуществляем научную и&nbsp;исследовательскую деятельность, участвуем в&nbsp;разработках новейших методов лечения в&nbsp;области взрослой и&nbsp;детской сердечно-сосудистой хирургии и&nbsp;кардиологии.
+            +e.H3.title Результаты работы Фонда
+            +text-block
               +e.P Результаты работы Фонда&nbsp;&mdash; спасенные жизни и&nbsp;высокий профессионализм врачей на&nbsp;местах. Мы&nbsp;передаем знания, опыт, навыки и&nbsp;новые технологии коллегам и&nbsp;специалистам по&nbsp;всему миру. Мы&nbsp;развиваем эффективную, а&nbsp;не&nbsp;дорогостоящую инфраструктуру госпиталей. Благодаря этому повышается качество лечения и&nbsp;количество выздоровевших пациентов.
           +col({ md: 12, xl: 4 })
-    +page-section._dark
+            +e.side-title Документы
+            +e.links 
+              +download-link(href="assets/files/statement.doc" title="Учредительные документы") Учредительные документы
+              +download-link(href="assets/files/statement.doc" title="Отчет") Отчет
+    +page-section.page__members
       .container
-        +grid.page-section__top
-          +col(3)
-            +e.H3.title_style._big Люди фонда
-          +col(3)
-            +person('assets/images/member-1.jpg', 'Пауль Фогт')
-              +e.short-info Учредитель Фонда Ведущий кардиохирург Швейцарии
-          +col(3)
-            +person('assets/images/member-2.jpg', 'Герхард Шредер')
-              +e.short-info Сопредседатель Попечительского Совета Фонда, Экс-канцлер Германии
-          +col(3)
-            +person('assets/images/member-3.jpg', 'Дёлф Оги')
-              +e.short-info Сопредседатель Попечительского Совета Фонда, Экс-президент Швейцарии
-        +accordions(true)
-          +accordion-experts
-          +accordion-trustees
+        +e.head
+          +e.IMG.image(src="assets/images/members.jpg")
+          +e.H3.title_style._big Люди фонда
+        +e.panel 
+          +e.panel-button_gold
+            +e.side-title_bold Международная группа экспертов
+            +link-arrow(href="#experts")._light.js-popup Показать
+          +e.panel-button
+            +e.side-title_bold Попечительский комитет
+            +link-arrow(href="#trustees")._light.js-popup Показать
   +popups
     +popup-news#news
     +popup-registration#registration

@@ -41,7 +41,12 @@
         @include text-mobile;
 
         font-family: $font-main;
-        line-height: 1.4;
+        line-height: 1.13;
+        margin-bottom: 0;
+
+        @include screen('tablet') {
+          margin-bottom: 12px;
+        }
 
         @include screen('tablet-wide') {
           @include heading-5;
@@ -56,7 +61,7 @@
         @include text-mobile;
 
         font-family: $font-main;
-        line-height: 1.13;
+        line-height: 1.4;
 
         @include screen('tablet-wide') {
           @include text;

@@ -1,18 +1,33 @@
 .gallery {
-  display: block;
+  display: flex;
+  flex-direction: row;
   font-size: 0;
+  width: 100%;
+
+  @include screen('tablet-wide') {
+    flex-direction: column;
+  }
 
   &__item {
-    position: relative;
     display: inline-block;
     overflow: hidden;
-    width: 100%;
-    padding-top: 70%;
     cursor: pointer;
+    width: 100%;
+    min-width: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 6px;
+      @include screen('tablet-wide') {
+        margin-bottom: 6px;
+      }
     }
+  }
+
+  &__media {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 70%;
+    overflow: hidden;
   }
 
   &__image {

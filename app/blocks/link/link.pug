@@ -9,6 +9,13 @@ mixin link-icon(iconname)
     +e.SPAN.text
       block
 
+mixin link-arrow()
+  +b.A.link&attributes(attributes)._icon
+    +e.SPAN.text
+      block
+    +e.SPAN.arrow
+      +icon('arrow-small').arrow-icon
+
 mixin link-language(img)
   +b.A.link_language&attributes(attributes)
     +e.IMG.icon(src=img)

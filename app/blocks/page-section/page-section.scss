@@ -9,12 +9,21 @@
   }
 
   &__title {
-    @include heading-5;
+    @include heading-6;
 
     font-family: $font-fourth;
     font-weight: 700;
-    margin-bottom: 74px;
     width: 100%;
+    letter-spacing: .029em;
+    margin-bottom: 8.125vw;
+
+    @include screen('tablet-wide') {
+      @include heading-5;
+
+      font-weight: 700;
+      margin-bottom: 5.13vw;
+      letter-spacing: normal;
+    }
 
     &_big {
       @include heading-big;
@@ -73,8 +82,66 @@
     }
   }
 
+  &__media {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 58%;
+    overflow: hidden;
+  }
+
+  &__image {
+    @include fill-img;
+  }
+
   &__accent {
     position: relative;
+  }
+
+  &__head {
+    position: relative;
+    margin-left: -$container-padding-mobile;
+    margin-right: -$container-padding-mobile;
+    width: calc(100% + 2 * 6.875vw);
+    height: 83.125vw;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @include screen('tablet-wide') {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      height: 46.18vw;
+      padding: $grid-gap;
+    }
+
+    .page-section__title {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &__panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    &-button {
+      width: 100%;
+      color: $color-white;
+      background-color: $color-charcoal-grey-2;
+
+      @include screen('tablet') {
+        width: 50%;
+      }
+
+      &_gold {
+        background-color: $color-main;
+      }
+    }
   }
 
   &_dark {
