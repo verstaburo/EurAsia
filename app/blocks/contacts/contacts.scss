@@ -5,20 +5,33 @@
     width: 100%;
 
     &:not(:last-child) {
-      margin-bottom: 44px;
+      margin-bottom: 30px;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 44px;
+      }
     }
   }
 
   &__name {
     @include text;
+
     line-height: 1.45;
     margin-bottom: 6px;
+    color: $color-dirt;
   }
 
   &__link {
     @include text-large;
+
     font-family: $font-third;
     line-height: 1.17;
     font-weight: 700;
+
+    br {
+      @include screen('phone') {
+        display: none;
+      }
+    }
   }
 }

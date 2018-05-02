@@ -1,32 +1,32 @@
 mixin popup-trustees()
-  +popup('Попечительский комитет').popup-trustees__&attributes(attributes)
-    +popup-title.mobile-hide Международная группа экспертов
-    +grid 
-      +col({ xs: 12, md: 6, xl: 4 })
+  +popup('Попечительский комитет')._memb.popup-trustees__&attributes(attributes)
+    +popup-title.tablet-hide Попечительский комитет
+    +grid.grid_members 
+      +col({ sm: 12, md: 6, xl: 4 })
         +person('assets/images/member-1.jpg', 'Пауль Фогт')
           +e.short-info Учредитель Фонда Ведущий кардиохирург Швейцарии
-      +col({ xs: 12, md: 6, xl: 4 })
+      +col({ sm: 12, md: 6, xl: 4 })
         +person('assets/images/member-3.jpg', 'Дёлф Оги')
           +e.short-info Сопредседатель Попечительского Совета Фонда, Экс-президент Швейцарии
-      +col({ xs: 12, md: 6, xl: 4 })
+      +col({ sm: 12, md: 6, xl: 4 })
         +person('assets/images/member-2.jpg', 'Герхард Шредер')
           +e.short-info Сопредседатель Попечительского Совета Фонда, Экс-канцлер Германии
-      +col({ xs: 12, md: 6, xl: 4 })
+      +col({ sm: 12, md: 6, xl: 4 })
         +person('assets/images/member-14.jpg', 'Александр Дмитриев')
           +e.short-info Художественный руководитель и главный дирижер Академического симфо…
             +e.A(href='#').more.js-show-more еще
           +e.full-info Художественный руководитель и главный дирижер Академического симфонического оркестра Санкт-Петербургской филармонии
-      +col({ xs: 12, md: 6, xl: 4 })
+      +col({ sm: 12, md: 6, xl: 4 })
         +person('assets/images/member-4.jpg', 'Геннадий Хубулава')
           +e.short-info Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиох…
             +e.A(href='#').more.js-show-more еще
           +e.full-info Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиохирург, академик РАН, доктор медицинских наук.
-      +col({ xs: 12, md: 6, xl: 4 })
+      +col({ sm: 12, md: 6, xl: 4 })
         +person('assets/images/member-13.jpg', 'Андрей Фоменко')
           +e.short-info Российский предприниматель в сфере недвижимости и биотехнологий
-      +col({ xs: 12, md: 6, xl: 4 })
+      +col({ sm: 12, md: 6, xl: 4 })
         +person('assets/images/member-16.jpg', 'Сергей Слагода')
           +e.short-info Адвокат
-      +col({ xs: 12, md: 6, xl: 4 })
+      +col({ sm: 12, md: 6, xl: 4 })
         +person('assets/images/member-15.jpg', 'Элла Толмачева')
           +e.short-info Директор проекта

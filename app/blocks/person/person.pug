@@ -1,8 +1,9 @@
 mixin person(img, name)
   +b.person&attributes(attributes)
-    +e.media
-      if img
-        +e.IMG.image(src=img)
-    +e.name!= name
+    +e.wrapper
+      +e.media
+        if img
+          +e.IMG.image(src=img)
+      +e.name!= name
     +e.describe
       block

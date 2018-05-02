@@ -1,9 +1,14 @@
 .partners {
   display: block;
   width: 100%;
+  margin-bottom: 41px;
+
+  @include screen('tablet-wide') {
+    margin-bottom: 37px;
+  }
 
   &__item {
-    display: inline-block;
+    display: block;
     width: 100%;
     border: 1px solid $color-border;
     padding: 14px 22px;
@@ -18,7 +23,7 @@
     color: $color-basic;
 
     @include screen('tablet-wide') {
-      padding: 20px 30px 23px;
+      padding: 19px 135px 23px 30px;
 
       @include text-big;
 
@@ -28,6 +33,14 @@
 
     &:not(:last-child) {
       border-bottom: none;
+    }
+
+    &[data-visible] {
+      display: none;
+    }
+
+    &[data-visible='always'] {
+      display: block;
     }
   }
 
@@ -51,6 +64,8 @@
     background-color: $color-bg;
     box-sizing: border-box;
     color: $color-dirt;
+    cursor: pointer;
+    transition: background $ease-main;
 
     @include text-small;
 
@@ -59,8 +74,24 @@
     letter-spacing: .029em;
 
     @include screen('tablet-wide') {
-      padding: 24px 30px 27px;
+      padding: 24px 30px 25px;
     }
+
+    &:hover, &.active {
+      background-color: $color-main;
+      color: $color-white;
+    }
+
+    &.active {
+
+      .partners__toggle {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  &__text {
+    transition: color $ease-main;
   }
 
   &__toggle {
@@ -72,6 +103,8 @@
     align-items: center;
     transform: rotate(90deg);
     margin-left: 10px;
+    margin-right: -6px;
+    transition: transform $ease-main;
 
     @include screen('phone-wide', max) {
       display: none;
@@ -82,5 +115,6 @@
     width: 7.1px;
     height: 11.4px;
     fill: currentColor;
+    transition: all $ease-main;
   }
 }

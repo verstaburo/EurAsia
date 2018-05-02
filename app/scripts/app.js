@@ -18,6 +18,7 @@ import ffDetect from '../blocks/text-block/text-block';
 import switchText from '../blocks/text-switcher/text-switcher';
 import moveStatistic from '../components/patients/patients';
 import floatBlocks from '../blocks/js-functions/floatblocks';
+import showPartners from '../blocks/partners/partners';
 
 const $ = window.$;
 
@@ -45,4 +46,5 @@ $(() => {
   switchText();
   moveStatistic();
   floatBlocks();
+  showPartners();
 });

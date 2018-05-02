@@ -69,9 +69,11 @@
     margin-left: -$container-padding-mobile;
     margin-right: -$container-padding-mobile;
     border-bottom: 1px solid $color-border;
+    margin-bottom: 38px;
 
     @include screen('desktop-small') {
       display: none;
+      margin-bottom: 0;
     }
   }
 
@@ -94,14 +96,16 @@
 
     font-weight: 700;
     font-family: $font-second;
-    margin-bottom: 6.25vw;
+    margin-bottom: 32px;
+    line-height: 1.02;
 
-    @include screen('tablet-wide') {
+    @include screen('desktop-small') {
       @include heading-big;
 
       line-height: 1.02;
       font-weight: 700;
       margin-bottom: 47px;
+      margin-bottom: 6.25vw;
     }
   }
 
@@ -110,10 +114,34 @@
     height: 78px;
     fill: $color-main;
     margin-bottom: 52px;
+
+    @include screen('desktop-small', max) {
+      display: none;
+    }
   }
 
   &__title-text {
     width: 100%;
+  }
+
+  &_memb {
+    @include screen('desktop-wide') {
+      padding: 6.2vw 6.67vw;
+    }
+
+    .popup__title {
+      @include screen('desktop-wide') {
+        margin-bottom: 57px;
+      }
+    }
+
+    .popup__header {
+      margin-bottom: 24px;
+
+      @include screen('desktop-small') {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 

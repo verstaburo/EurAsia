@@ -35,4 +35,37 @@ $new-breakpoints: map_remove($breakgrid, $default-breakpoit-name);
       }
     }
   }
+
+  &_members {
+    margin-top: -34px;
+    margin-left: -$container-padding-mobile;
+    margin-right: -$container-padding-mobile;
+
+    @include screen('tablet-small') {
+      margin-top: -34px;
+      margin-left: -25px;
+      margin-right: -25px;
+    }
+
+    @include screen('tablet-wide') {
+      margin-top: -70px;
+      margin-left: -25px;
+      margin-right: -25px;
+    }
+
+    .grid {
+
+      &__col {
+        padding: 34px $container-padding-mobile 0;
+
+        @include screen('tablet-small') {
+          padding: 34px 25px 0;
+        }
+
+        @include screen('tablet-wide') {
+          padding: 70px 25px 0;
+        }
+      }
+    }
+  }
 }

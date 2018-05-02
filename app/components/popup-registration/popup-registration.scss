@@ -1,13 +1,27 @@
 .popup-registration {
+
   .popup__title {
-    margin-bottom: 50px;
+    margin-bottom: 14px;
+
+    @include screen('tablet-wide') {
+      margin-bottom: 50px;
+    }
   }
 
   .content-zone {
     margin-bottom: 130px;
 
+    @include screen('tablet-small', max) {
+      @include text-small;
+      margin-bottom: 41px;
+    }
+
     p {
-      line-height: 1.45;
+      line-height: 1.5;
+
+      @include screen('tablet-small') {
+        line-height: 1.45;
+      }
     }
   }
 
@@ -21,9 +35,19 @@
     box-sizing: border-box;
 
     .download-link {
-      margin-right: 24px;
-      margin-bottom: 24px;
-      width: 150px;
+      margin-bottom: 12px;
+      width: 100%;
+
+      @include screen('phone') {
+        width: 276px;
+        margin-right: 12px;
+      }
+
+      @include screen('tablet-wide') {
+        margin-right: 24px;
+        margin-bottom: 24px;
+        width: 150px;
+      }
     }
   }
 }

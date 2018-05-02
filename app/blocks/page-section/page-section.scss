@@ -30,9 +30,8 @@
       @include heading-3;
 
       @include screen('tablet-wide') {
-        @include heading-big;
+        @include heading-1;
 
-        line-height: 1.017;
         margin-bottom: 0;
         letter-spacing: 0;
       }
@@ -96,7 +95,7 @@
       margin-top: 14px;
 
       @include screen('tablet-wide') {
-        margin-top: 65px;
+        margin-top: 100px;
         margin-bottom: 38px;
       }
     }
@@ -139,6 +138,8 @@
     margin-right: -$container-padding-mobile/2;
     height: 100%;
     overflow: hidden;
+    font-size: 0;
+    line-height: 0;
 
     @include screen('tablet-wide') {
       width: 100%;
@@ -167,10 +168,20 @@
         padding-top: 61.6%;
       }
     }
+
+    &_h452 {
+      @include screen('tablet-wide') {
+        height: 452px;
+      }
+    }
   }
 
   &__image {
     @include fill-img;
+
+    display: block;
+    font-size: 0;
+    line-height: 0;
   }
 
   &__accent {
@@ -181,6 +192,10 @@
 
   &__statistic {
     margin-bottom: 11vw;
+
+    @include screen('tablet-wide') {
+      margin-bottom: 58px;
+    }
 
     .stat-data {
       margin-bottom: 23px;
@@ -212,6 +227,7 @@
       @include screen('tablet-wide') {
         margin-right: 0;
         width: 100%;
+        max-width: none;
       }
 
       &:not(:last-child) {
@@ -246,7 +262,7 @@
 
       @include screen('tablet-wide') {
         top: 0;
-        padding: $grid-gap;
+        padding: 81px $grid-gap;
       }
     }
   }
@@ -261,6 +277,9 @@
     width: 100%;
 
     &-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       width: 100%;
       color: $color-white;
       background-color: $color-charcoal-grey-2;
@@ -272,7 +291,7 @@
       }
 
       @include screen('tablet-wide') {
-        padding: 34px 45px 40px;
+        padding: 35px 45px 40px;
       }
 
       &_gold {
@@ -282,6 +301,13 @@
       .page-section__side-title {
         margin-top: 0;
         margin-bottom: 22px;
+
+        @include screen('tablet-wide') {
+          @include heading-3;
+
+          line-height: 1.17;
+          margin-bottom: 30px;
+        }
       }
 
       .link {
@@ -290,6 +316,7 @@
         font-family: $font-fourth;
         letter-spacing: .029em;
         font-weight: 700;
+        margin-top: auto;
       }
     }
   }

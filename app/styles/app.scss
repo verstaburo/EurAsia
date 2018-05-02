@@ -40,3 +40,9 @@
     display: none;
   }
 }
+
+.tablet-hide {
+  @include screen('desktop-small', max) {
+    display: none;
+  }
+}

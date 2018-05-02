@@ -1,6 +1,10 @@
 .popup-contacts {
-  padding-bottom: 15.2vh;
+  padding-bottom: 12.5vw;
   height: 100vh;
+
+  @include screen('desktop-small') {
+    padding-bottom: 15.2vh;
+  }
 
   &__wrapper {
     display: flex;
@@ -8,6 +12,10 @@
     justify-content: space-between;
     align-items: flex-start;
     box-sizing: border-box;
-    height: 100%;
+    height: calc(100% - 105px);
+
+    @include screen('desktop-small') {
+      height: 100%;
+    }
   }
 }
