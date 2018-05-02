@@ -1,3 +1,86 @@
 .partners {
   display: block;
+  width: 100%;
+
+  &__item {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid $color-border;
+    padding: 14px 22px;
+    box-sizing: border-box;
+
+    @include text-small;
+
+    font-family: $font-fourth;
+    font-weight: 300;
+    line-height: 1.65;
+    letter-spacing: .024em;
+    color: $color-basic;
+
+    @include screen('tablet-wide') {
+      padding: 20px 30px 23px;
+
+      @include text-big;
+
+      font-weight: 300;
+      line-height: 1.33;
+    }
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+  }
+
+  &__visible-list {
+    display: block;
+    width: 100%;
+  }
+
+  &__hidden-list {
+    width: 100%;
+    display: none;
+  }
+
+  &__switcher {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 19px 18px;
+    background-color: $color-bg;
+    box-sizing: border-box;
+    color: $color-dirt;
+
+    @include text-small;
+
+    font-family: $font-fourth;
+    font-weight: 700;
+    letter-spacing: .029em;
+
+    @include screen('tablet-wide') {
+      padding: 24px 30px 27px;
+    }
+  }
+
+  &__toggle {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    margin-left: 10px;
+
+    @include screen('phone-wide', max) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 7.1px;
+    height: 11.4px;
+    fill: currentColor;
+  }
 }

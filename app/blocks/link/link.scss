@@ -25,12 +25,30 @@
     fill: $color-main;
   }
 
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+
+    &-icon {
+      width: 7.1px;
+      height: 11.4px;
+      fill: currentColor;
+    }
+  }
+
   &_language {
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
     @include text-small;
+
     font-family: $font-fourth;
     line-height: 1.17;
     letter-spacing: .03em;
@@ -44,7 +62,7 @@
         margin-right: 12px;
       }
 
-      &__text {
+      &__text, &__arrow {
         color: $color-basic;
       }
     }
@@ -52,16 +70,23 @@
 
   &_dark {
 
-    .link__text {
+    .link__text, .link__arrow {
       @include link-dark;
     }
   }
 
   &_light {
 
-    .link__text {
+    .link__text, .link__arrow {
       @include link-light;
     }
+  }
+
+  &_arrow {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
   }
 
   &.disabled {

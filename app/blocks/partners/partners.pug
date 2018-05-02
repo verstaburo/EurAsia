@@ -1,6 +1,11 @@
 mixin partners()
   +b.partners&attributes(attributes)
-    +e.visibl-list
+    +e.visible-list
+      +e.item(data-index="1") Венский Университетский Госпиталь, Австрия
+      +e.item(data-index="2") Йельская Медицинская Школа, Нью-Хейвен, США
+      +e.item(data-index="3") Детский Госпиталь Цюрих, Швейцария
+      +e.item(data-index="4") Детский Университетский Госпиталь Базель, Швейцария
+      +e.item(data-index="5") Клиника Harley Street Лондон,
     +e.hidden-list
       +e.item(data-index="1") Венский Университетский Госпиталь, Австрия
       +e.item(data-index="2") Йельская Медицинская Школа, Нью-Хейвен, США
@@ -19,6 +24,6 @@ mixin partners()
       +e.item(data-index="15") Ярославская Государственная Медицинская Академия, Ярославль, Россия
       +e.item(data-index="16") Университетская Больница Св. Марина, Варна, Болгария
     +e.switcher
+      +e.text Показать еще 11 партнеров
       +e.toggle
-        +e.text Показать еще 11 партнеров
         +icon('arrow-small').icon

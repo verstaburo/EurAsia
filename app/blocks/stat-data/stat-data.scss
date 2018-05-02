@@ -72,4 +72,18 @@
       }
     }
   }
+
+  &_achievment {
+
+    .stat-data {
+
+      &__title {
+        margin-bottom: 9px;
+
+        @include screen('tablet-wide') {
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
 }

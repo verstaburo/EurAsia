@@ -83,11 +83,8 @@
       font-family: $font-third;
       font-weight: 500;
       line-height: 1.21;
-
-      p:first-child {
-        padding-top: 30px;
-        border-top: 2px solid $color-main;
-      }
+      padding-top: 30px;
+      border-top: 2px solid $color-main;
     }
   }
 }

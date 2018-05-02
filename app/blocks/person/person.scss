@@ -17,6 +17,7 @@
 
   &__name {
     @include heading-4;
+
     font-weight: 500;
     line-height: 1.1;
     font-family: $font-third;
@@ -27,7 +28,9 @@
 
   &__describe {
     color: $color-light-grey;
+
     @include text-small;
+
     font-family: $font-fourth;
     line-height: 1.29;
     letter-spacing: .029em;
@@ -50,12 +53,13 @@
 
   &__more {
     color: $color-main;
+
     @include text-small;
+
     font-family: $font-fourth;
     line-height: 1.29;
     letter-spacing: .029em;
     text-decoration: none;
-    background-color: $color-basic;
 
     &:hover {
       color: rgba($color-main, .7);
