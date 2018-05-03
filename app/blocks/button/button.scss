@@ -1,8 +1,8 @@
 .button {
   display: inline-block;
   padding: 22px 20px;
-  border: 1px solid $color-dirt;
-  border-bottom-width: 2px;
+  border: 1px solid rgba($color-dirt, .7);
+  border-bottom: 2px solid $color-dirt;
   vertical-align: middle;
   text-align: center;
   box-sizing: border-box;
@@ -12,19 +12,18 @@
   cursor: pointer;
 
   @include text-small;
+
   line-height: 1.17;
   letter-spacing: .03em;
   font-family: $font-fourth;
   font-weight: 700;
 
-  &:disabled,
-  &.is-disabled {
+  &:disabled, &.is-disabled {
     opacity: .5;
     cursor: not-allowed;
   }
 
-  &:hover,
-  &.is-active { opacity: .5; }
+  &:hover,  &.is-active { opacity: .5; }
 
   &_dark {
     color: $color-basic;

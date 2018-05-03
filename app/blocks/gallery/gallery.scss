@@ -20,6 +20,12 @@
         margin-bottom: 6px;
       }
     }
+
+    &.mobile-hide {
+      @include screen('tablet-wide', max) {
+        display: none;
+      }
+    }
   }
 
   &__media {
@@ -49,7 +55,6 @@
     .gallery {
 
       &__item {
-        display: inline-block;
         width: 100%;
         min-width: 100%;
         box-sizing: border-box;

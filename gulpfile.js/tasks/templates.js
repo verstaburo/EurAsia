@@ -21,9 +21,8 @@ module.exports = () => (
       wrapLineLength: 120,
       maxPreserveNewlines: 50,
       wrapAttributesIndentSize: 1,
-      unformatted: ['use'],
+      unformatted: ['use', 'br'],
     }))
     .pipe(rename({ dirname: '.' }))
     .pipe(gulp.dest('dist'))
 );
-

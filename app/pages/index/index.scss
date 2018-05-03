@@ -132,6 +132,11 @@
   &__members {
     padding-top: 0;
     overflow: hidden;
+    padding-bottom: 0;
+
+    @include screen('tablet-wide') {
+      padding-bottom: 6.7vw;
+    }
 
     &-wrapper {
       position: relative;
@@ -163,10 +168,32 @@
   }
 
   &__working {
+    padding-bottom: 15vw;
+
+    @include screen('tablet-wide') {
+      padding-bottom: 6.7vw;
+    }
+
+    .container {
+      @include screen('tablet-wide', max) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .page-scetion__title {
+      @include screen('tablet-wide', max) {
+        order: 1;
+      }
+    }
 
     &-describe {
       @include screen('tablet-wide', max) {
-        order: 2;
+        order: 3;
+      }
+
+      @include screen('tablet-wide') {
+        margin-bottom: 5vw;
       }
     }
 
@@ -175,15 +202,15 @@
       margin-right: -$container-padding-mobile/2;
       width: calc(100% + 6.875vw);
       overflow: hidden;
+      margin-bottom: 24px;
 
       @include screen('tablet-wide') {
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0;
         width: 100%;
       }
 
       @include screen('tablet-wide', max) {
-        order: 1;
+        order: 2;
       }
     }
   }

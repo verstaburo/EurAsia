@@ -19,9 +19,10 @@
 
   &__media {
     position: relative;
-    display: inline-block;
-    width: 37%;
-    padding-top: 37%;
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    min-height: 100%;
     overflow: hidden;
     box-sizing: border-box;
     background-color: $color-charcoal-grey;
@@ -29,7 +30,16 @@
     @include screen('tablet-wide') {
       width: 100%;
       padding-top: 100%;
-      margin-bottom: 20px;
+    }
+
+    &-wrapper {
+      display: block;
+      width: 37%;
+
+      @include screen('tablet-wide') {
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
   }
 

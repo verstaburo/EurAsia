@@ -25,42 +25,48 @@ mixin accordion-body
 
 mixin accordion-working()
   +grid
-    +col({xs: 12, xl: 6})
+    +col({md: 12, xl: 6})
       +accordion.is-active
         +accordion-header
           +accordion-button(data-target="acc1") Передаем опыт
         +e.content(data-fbm-place="acc1")
           +accordion-body.is-active(data-float-block="acc1" data-body="acc1")
-            +text-block._stylized Блок 1
+            +text-block._stylized 
+              p Наши специалисты делятся опытом непосредственно в операционной, отделении реанимации и стационаре. Специалисты Фонда приезжают в заинтересованные страны для сотрудничества с местными специалистами на благотворительной основе. Мы делимся опытом и помогаем коллегам адекватно осуществлять диагностику и лечение сердечно-сосудистых заболеваний, а также осуществлять профилактику этих заболеваний.
       +accordion
         +accordion-header
           +accordion-button(data-target="acc2") Объединяем специалистов
         +e.content(data-fbm-place="acc2")
           +accordion-body(data-float-block="acc2" data-body="acc2")
-            +text-block._stylized Блок 2
+            +text-block._stylized 
+              p Мы&nbsp;формируем команду профессионалов из&nbsp;местных и&nbsp;зарубежных специалистов для углубленного взаимодействия. Мы&nbsp;обучаем специалистов на&nbsp;местах, используя существующую инфраструктуру госпиталя.
       +accordion
         +accordion-header
           +accordion-button(data-target="acc3") Налаживаем связи
         +e.content(data-fbm-place="acc3")
           +accordion-body(data-float-block="acc3" data-body="acc3")
-            +text-block._stylized Блок 3
+            +text-block._stylized 
+              p Мы&nbsp;сотрудничаем с&nbsp;клиниками, заинтересованными в&nbsp;обмене опытом и&nbsp;повышении квалификации своих сотрудников.
       +accordion
         +accordion-header
           +accordion-button(data-target="acc4") Находим пациетов
         +e.content(data-fbm-place="acc4")
           +accordion-body(data-float-block="acc4" data-body="acc4")
-            +text-block._stylized Блок 4
+            +text-block._stylized 
+              p Мы&nbsp;помогаем пациентам с&nbsp;врожденными пороками сердца, требующими привлечения опытной международной команды врачей в&nbsp;силу тяжести диагноза.
       +accordion
         +accordion-header
           +accordion-button(data-target="acc5") Вырабатываем стратегию
         +e.content(data-fbm-place="acc5")
           +accordion-body(data-float-block="acc5" data-body="acc5")
-            +text-block._stylized Блок 5
+            +text-block._stylized 
+              p Мы выстраиваем стратегию диагностики и лечения каждого пациента
       +accordion
         +accordion-header
           +accordion-button(data-target="acc6") Контролируем результат
         +e.content(data-fbm-place="acc6")
           +accordion-body(data-float-block="acc6" data-body="acc6")
-            +text-block._stylized Блок 6
-    +col({xs: 12, xl: 6})
+            +text-block._stylized 
+              p Мы контролируем качество лечения и поддерживаем связь с нашими пациентами в течение длительного периода времени
+    +col({md: 12, xl: 6}).mobile-hide
       div.accordion__content-desktop(data-fbd-place="acc1 acc2 acc3 acc4 acc5 acc6")
