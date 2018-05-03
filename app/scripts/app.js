@@ -28,7 +28,6 @@ $(() => {
   anchor();
   freezebuttons();
   selects();
-  sliders();
   popups();
   scrollbar();
   slider();
@@ -47,4 +46,5 @@ $(() => {
   moveStatistic();
   floatBlocks();
   showPartners();
+  sliders();
 });

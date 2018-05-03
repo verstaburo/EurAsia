@@ -8,7 +8,7 @@ export default function floatBlocks() {
       const parentDesktopBlock = $(`[data-fbd-place*=${nameBlock}]`);
       const parentMobileBlock = $(`[data-fbm-place*=${nameBlock}]`);
 
-      if (document.body.clientWidth < 1024) {
+      if ($(window).width() < 1024) {
         $(parentMobileBlock).append(el);
       } else {
         $(parentDesktopBlock).append(el);

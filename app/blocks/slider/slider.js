@@ -46,14 +46,14 @@ export default function slider() {
   };
   let newsSlider;
   let scrollSlider;
-  if (document.body.clientWidth < 1024) {
+  if ($(window).width() < 1024) {
     newsSlider = new Swiper('.js-slider-news', newsSliderOptions);
   } else {
     scrollSlider = new Swiper('.js-slider-scroll', scrollSliderOptions);
   }
 
   $(window).on('resize', () => {
-    if (document.body.clientWidth < 1024) {
+    if ($(window).width() < 1024) {
       if (scrollSlider) {
         scrollSlider.destroy();
       }

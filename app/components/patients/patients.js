@@ -6,7 +6,7 @@ export default function moveStatistic() {
     const mobileParent = $('.patients__mobile-stat');
     const desktopParent = $('.slider__slide_statistic');
 
-    if (document.body.clientWidth < 1024) {
+    if ($(window).width() < 1024) {
       $(mobileParent).append(moveBlock);
     } else {
       $(desktopParent).append(moveBlock);

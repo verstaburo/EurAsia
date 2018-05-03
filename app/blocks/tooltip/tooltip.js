@@ -73,14 +73,14 @@ export default function tooltips() {
   }
 
   $(document).on('click', '.js-tooltip', (evt) => {
-    if (document.body.clientWidth < 1024) {
+    if ($(window).width() < 1024) {
       evt.preventDefault();
       const self = $(evt.target).hasClass('js-tooltip') ? $(evt.target) : $(evt.target).closest('.js-tooltip');
       mobileTooltipOpen(self);
     }
   });
   $(document).on('click', '.js-tooltip-close', (evt) => {
-    if (document.body.clientWidth < 1024) {
+    if ($(window).width() < 1024) {
       evt.preventDefault();
       const self = $(evt.target).hasClass('js-tooltip-close') ? $(evt.target) : $(evt.target).closest('.js-tooltip-close');
       const targetEl = $(self).closest('.pin').find('.js-tooltip');
@@ -89,7 +89,7 @@ export default function tooltips() {
   });
 
   function switchTooltipster() {
-    if (document.body.clientWidth < 1024) {
+    if ($(window).width() < 1024) {
       $('.js-tooltip').tooltipster('disable');
       $('.js-tooltip').each((i, el) => {
         $(el).attr('data-base-height', $(el).outerHeight());

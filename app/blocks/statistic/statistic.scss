@@ -1,7 +1,8 @@
 .statistic {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: flex-start;
   box-sizing: border-box;
 
@@ -11,6 +12,7 @@
     font-family: $font-fourth;
     margin-bottom: 18px;
     letter-spacing: .029em;
+    width: 100%;
 
     @include screen('tablet-wide') {
       @include heading-5;

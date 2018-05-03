@@ -7,7 +7,7 @@ export default function showPartners() {
       case 'always':
         break;
       case 'desktop':
-        if (document.body.clientWidth >= 1024) {
+        if ($(window).width() >= 1024) {
           $(it).addClass('show').fadeIn();
         }
         break;
@@ -23,7 +23,7 @@ export default function showPartners() {
       case 'always':
         break;
       case 'desktop':
-        if (document.body.clientWidth < 1024) {
+        if ($(window).width() < 1024) {
           $(it).removeClass('show').fadeOut();
         }
         break;
@@ -43,7 +43,7 @@ export default function showPartners() {
   function switcher(el) {
     const elements = $(el).parent().find('[data-visible]');
     let elementsCount;
-    if (document.body.clientWidth < 1024) {
+    if ($(window).width() < 1024) {
       elementsCount = $(elements).filter('[data-visible="none"]').length + $(elements).filter('[data-visible="desktop"]').length;
     } else {
       elementsCount = $(elements).filter('[data-visible="none"]').length;
@@ -68,14 +68,14 @@ export default function showPartners() {
     const elements = $('[data-visible="desktop"]').not('show');
     const sortelems = $('[data-visible]');
     let elementsCount;
-    if (document.body.clientWidth < 1024) {
+    if ($(window).width() < 1024) {
       elementsCount = $(sortelems).filter('[data-visible="none"]').length + $(sortelems).filter('[data-visible="desktop"]').length;
     } else {
       elementsCount = $(sortelems).filter('[data-visible="none"]').length;
     }
     const partners = declOfNum(elementsCount, ['партнер', 'партнера', 'партнеров']);
     $('.js-switch-visibility').find('.partners__text').text(`Показать еще ${elementsCount} ${partners}`);
-    if (document.body.clientWidth < 1024) {
+    if ($(window).width() < 1024) {
       $(elements).fadeOut();
     } else {
       $(elements).fadeIn();
