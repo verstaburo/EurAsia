@@ -1,3 +1,56 @@
 .footer {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 42px 0 24px;
+  flex-wrap: wrap;
+
+  @include screen('tablet-small') {
+    padding: 42px 0;
+  }
+
+  @include screen('tablet-wide') {
+    padding: 60px 0;
+  }
+
+  &__column {
+    box-sizing: border-box;
+    padding: 0 $container-padding-mobile;
+    width: 100%;
+    text-align: center;
+
+    @include screen('tablet-small') {
+      width: 50%;
+      text-align: left;
+    }
+
+    @include screen('tablet-wide') {
+      padding: 0 6.25vw;
+    }
+
+    &_left {
+      padding-bottom: 36px;
+
+      @include screen('tablet-small') {
+        padding-bottom: 0;
+      }
+    }
+
+    &_right {
+      border-top: 1px solid $color-border;
+      padding-top: 22px;
+
+      @include screen('tablet-small') {
+        border-top: none;
+        padding-top: 0;
+        text-align: right;
+      }
+    }
+  }
+
+  .logo {
+    display: inline-block;
+  }
 }

@@ -141,6 +141,29 @@ block content
           +accordion-working
         SECTION.page__working-images
           +gallery-2
+    +page-section.page__help
+      .container
+        +grid
+          +col({ md: 12, xl: 6 })
+            +e.title Как нам помочь?
+            +text-block 
+              p Воснове деятельности Фонда Сердце ЕврАзии (EurAsia Heart Foundation) — высокий профессионализм и преданность своему делу специалистов со всего мира, которые осуществляют свою миссию благодаря поддержке меценатов и благотворителей.
+            +informer
+          +col({ md: 12, xl: 6 })(data-fbd-place="help")
+            +text-block._frame(data-float-block="help")
+              p За годы существования Фонда Сердце ЕврАзии (EurAsia Heart Foundation) были прооперированы 
+                b 3290 детей и подростков.
+                | В Европе стоимость таких операций колеблется в пределах 
+                b 80 - 150.000 евро.
+                | В Швейцарии лечение этих детей обошлось бы в 
+                b 240 млн евро. 
+                | Наши специалисты работают на благотворительной основе и осуществляют лечение на родине пациента. Собранные средства необходимы для покрытия затратной части проекта в расчете 
+                b 5.000 евро
+                | за операцию.
+      +donation
+      +e.help-describe(data-fbm-place="help")
+    +founder
+    +footer
   +popups
     +popup-news#news
     +popup-registration#registration

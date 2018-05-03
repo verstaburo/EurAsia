@@ -6,10 +6,12 @@ mixin logo(tag)
       +e.bottom Благотворительный Фонд
       
 mixin logo-full()
-  +b.A.logo&attributes(attributes)
+  +b.A.logo_centered&attributes(attributes)
     +e.IMG.image(src="assets/images/logo.svg")
     +e.text
       +e.top Сердце ЕврАзии
       +e.bottom 
         +e.hidden Российско-Швейцарский
-        | Благотворительный Фонд
+        | Благотворительный
+        br
+        | Фонд

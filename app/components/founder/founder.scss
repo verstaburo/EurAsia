@@ -1,0 +1,90 @@
+.founder {
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 78vw;
+  padding-bottom: 15vw;
+  background: $color-charcoal-grey-2;
+
+  @include screen('tablet-small') {
+    padding-top: 8.2vw;
+    padding-bottom: 6.3vw;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+    background-position: 75% 0;
+
+    @include screen('tablet-small') {
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    &::before {
+      @include pseudo;
+
+      width: 100%;
+      height: 75%;
+      top: 25%;
+      background: linear-gradient(to top, $color-charcoal-grey-2 0%, $color-charcoal-grey-2 33%, $color-dark-grey 66%, rgba($color-dark-grey, 0) 100%);
+
+      @include screen('tablet-small') {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    @include fill-img;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    @include screen('tablet-small') {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    @include screen('tablet-wide') {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text {
+    @include text-small;
+
+    line-height: 1.47;
+    margin-bottom: 22px;
+
+    @include screen('tablet-wide') {
+      @include heading-4;
+
+      font-weight: 500;
+      line-height: 1.23;
+      font-family: $font-third;
+      width: 100%;
+      max-width: 88%;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__signature {
+    width: 156px;
+    height: 82px;
+  }
+}

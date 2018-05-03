@@ -17,9 +17,11 @@
   &__content {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
     box-sizing: border-box;
     padding: 0 6.875vw;
     width: 100%;
@@ -77,6 +79,7 @@
     align-items: flex-start;
     padding-top: 52px;
     margin-bottom: auto;
+    width: 100%;
 
     @include screen('desktop-small') {
       display: flex;

@@ -1,0 +1,13 @@
+.donation {
+  display: block;
+  box-sizing: border-box;
+
+  @include screen('tablet-wide') {
+    padding: 0 9.375vw;
+  }
+
+  &__content {
+    background: $color-bg2;
+    color: $color-white;
+  }
+}

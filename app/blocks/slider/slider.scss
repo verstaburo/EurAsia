@@ -8,6 +8,7 @@
     box-sizing: border-box;
     padding-top: 0;
     padding-bottom: 13.75vw;
+    display: flex;
 
     @include screen('tablet-wide') {
       padding-top: 6.7vw;
@@ -28,7 +29,7 @@
     }
 
     .child, .child-list {
-      height: 100%;
+      // height: 100%;
     }
   }
 

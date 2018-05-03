@@ -1,0 +1,9 @@
+mixin donation()
+  +b.donation&attributes(attributes)
+    +e.content
+      +e.title Сделать пожертвование
+      +e.list
+        +donate('Телефон')._white
+          +e.text Отправьте смс на&nbsp;номер 7715&nbsp;со словом &laquo;КОМАНДА&raquo; и&nbsp;сумму пожертвования
+        +donate('Банковский перевод')._white
+          +button('a').js-popup(href="#donation" data-target-news="bank") Показать реквизиты

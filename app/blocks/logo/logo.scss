@@ -47,4 +47,37 @@
       letter-spacing: .023em;
     }
   }
+
+  &__hidden {
+    display: block;
+
+    @include screen('tablet-small') {
+      display: none;
+    }
+  }
+
+  &_centered {
+
+    br {
+      @include screen('tablet-small') {
+        display: none;
+      }
+    }
+
+    .logo {
+
+      &__image {
+        @include screen('tablet-small', max) {
+          display: block;
+          margin: 0 auto 19px;
+        }
+      }
+
+      &__text {
+        @include screen('tablet-small', max) {
+          text-align: center;
+        }
+      }
+    }
+  }
 }

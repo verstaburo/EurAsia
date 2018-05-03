@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   padding-left: $container-padding-mobile;
-  height: 100%;
+  // height: 100%;
   width: calc(240px + 6.875vw);
 
   @include screen('tablet-wide') {
