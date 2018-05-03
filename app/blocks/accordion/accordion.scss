@@ -63,7 +63,7 @@
     display: none;
     padding-bottom: 8vh;
 
-    #{$b}.is-active & { display: block; }
+    #{$b}.is-active &, &.is-active { display: block; }
   }
 }
 

@@ -71,7 +71,6 @@ block content
                 +e.item_note
                   +stat-data('**')._note По данным Фонда                
           +col({md: 12, xl: 4}).page__statistic-images
-            .page__statistic-slider.js-slider-gal
               +gallery
     +page-section.page__achievements
       .container
@@ -135,6 +134,13 @@ block content
                 br 
                 | комитет
               +link-arrow(href="#trustees")._light.js-popup Показать
+    +page-section._light.page__working
+      .container
+        +e.title Как мы работаем
+        SECTION.page__working-describe
+          +accordion-working
+        SECTION.page__working-images
+          +gallery-2
   +popups
     +popup-news#news
     +popup-registration#registration

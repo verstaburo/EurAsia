@@ -15,7 +15,7 @@ mixin accordion-header
 mixin accordion-button
   +e.button.js-accordion-button&attributes(attributes)
     +e.toggle
-      +icon('arrow-small').icon
+      +icon('plus').icon
     block
 
 mixin accordion-body
@@ -23,88 +23,44 @@ mixin accordion-body
     block
 
 
-mixin accordion-experts()
-  +accordion
-    +accordion-header
-      +accordion-button Международная группа экспертов
-    +accordion-body
-      +grid
-        +col(3)
-          +person('assets/images/member-4.jpg', 'Хубулава Геннадий Григорьевич')
-            +e.short-info Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиох…
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиохирург, академик РАН, доктор медицинских наук.
-        +col(3)
-          +person('assets/images/member-5.jpg', 'Марченко Сергей Павлович')
-            +e.short-info Кардиохирург, доктор медицинских наук
-        +col(3)
-          +person('assets/images/member-6.jpg', 'Селивёрстова Анастасия Алексеевна')
-            +e.short-info Известный cпециалист в неонатальной и детской кардиологии, эхокардиографии…
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Известный cпециалист в неонатальной и детской кардиологии, эхокардиографии. Неоднократно стажировалась в ведущих европейских клиниках.
-        +col(3)
-          +person('assets/images/member-7.jpg', 'Чупаева Ольга Юрьевна')
-            +e.short-info Неонатолог, детский кардиолог. Известный специалист в эхокардиографиче…
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Неонатолог, детский кардиолог. Известный специалист в эхокардиографической диагностике врожденных пороков сердца, гемодинамики, острой сердечной недостаточности, детской кардиореаниматологии, анестезиологии, экстракорпоральной мембранной оксигенации.
-        +col(3)
-          +person('assets/images/member-8.jpg', 'Алексей Борисович Наумов')
-            +e.short-info Кандидат медицинских наук. Известный специалист в вопросах гемодинамики, ост…
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Кандидат медицинских наук. Известный специалист в вопросах гемодинамики, острой сердечной недостаточности, детской кардиореаниматологии, анестезиологии, экстракорпоральной мембранной оксигенации.
-        +col(3)
-          +person('assets/images/member-9.jpg', 'Невмержицкая Оксана Владимировна')
-            +e.short-info Неонатолог, кандидат медицинских наук. Обладает клиническим опытом в неонатол
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Неонатолог, кандидат медицинских наук. Обладает клиническим опытом в неонатологии, ведении беременности и является известным специалистом по контролю качества оказания медицинской помощи.
-        +col(3)
-          +person('assets/images/member-1.jpg', 'Пауль Р. Фогт (Paul Vogt)')
-            +e.short-info Кардиохирург, профессор университетской клиники Цюриха,…
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Кардиохирург, профессор университетской клиники Цюриха, Щвейцария
-        +col(3)
-          +person('assets/images/member-11.jpg', 'Дитрих Клаувер (Dietrich Klauwer)')
-            +e.short-info Швейцария. Известный специалист по вопросам неонатальной кар…
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Швейцария. Известный специалист по вопросам неонатальной кардиологии, кардиореаниматологии, эхокардиографии у детей с врожденными пороками сердца. По монографиям Д. Клаувера учатся специалисты в детской кардиореанимации по всему миру.
-        +col(3)
-          +person('assets/images/member-12.jpg', 'Сабина Дэбриц (Sabine Daebritz)')
-            +e.short-info Кардиохирург, профессор, Клиника им Парк, Швейцария.
-        +col(3)
-        +col(3)
-        +col(3)
-
-mixin accordion-trustees()
-  +accordion
-    +accordion-header
-      +accordion-button Попечительский комитет
-    +accordion-body
-      +grid
-        +col(3)
-          +person('assets/images/member-1.jpg', 'Пауль Фогт')
-            +e.short-info Учредитель Фонда Ведущий кардиохирург Швейцарии
-        +col(3)
-          +person('assets/images/member-2.jpg', 'Герхард Шредер')
-            +e.short-info Сопредседатель Попечительского Совета Фонда, Экс-канцлер Германии
-        +col(3)
-          +person('assets/images/member-3.jpg', 'Дёлф Оги')
-            +e.short-info Сопредседатель Попечительского Совета Фонда, Экс-президент Швейцарии
-        +col(3)
-          +person('assets/images/member-14.jpg', 'Александр Дмитриев')
-            +e.short-info Художественный руководитель и главный дирижер Академического симфо…
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Художественный руководитель и главный дирижер Академического симфонического оркестра Санкт-Петербургской филармонии
-        +col(3)
-          +person('assets/images/member-4.jpg', 'Геннадий Хубулава')
-            +e.short-info Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиох…
-              +e.A(href='#').more.js-show-more еще
-            +e.full-info Главный кардиохирург СЗФО, заведующий кафедрой факультетской хирургии, кардиохирург, академик РАН, доктор медицинских наук.
-        +col(3)
-          +person('assets/images/member-13.jpg', 'Андрей Фоменко')
-            +e.short-info Российский предприниматель в сфере недвижимости и биотехнологий
-        +col(3)
-          +person('assets/images/member-16.jpg', 'Сергей Слагода')
-            +e.short-info Адвокат
-        +col(3)
-          +person('assets/images/member-15.jpg', 'Элла Толмачева')
-            +e.short-info Директор проекта
+mixin accordion-working()
+  +grid
+    +col({xs: 12, xl: 6})
+      +accordion.is-active
+        +accordion-header
+          +accordion-button(data-target="acc1") Передаем опыт
+        +e.content(data-fbm-place="acc1")
+          +accordion-body.is-active(data-float-block="acc1" data-body="acc1")
+            +text-block._stylized Блок 1
+      +accordion
+        +accordion-header
+          +accordion-button(data-target="acc2") Объединяем специалистов
+        +e.content(data-fbm-place="acc2")
+          +accordion-body(data-float-block="acc2" data-body="acc2")
+            +text-block._stylized Блок 2
+      +accordion
+        +accordion-header
+          +accordion-button(data-target="acc3") Налаживаем связи
+        +e.content(data-fbm-place="acc3")
+          +accordion-body(data-float-block="acc3" data-body="acc3")
+            +text-block._stylized Блок 3
+      +accordion
+        +accordion-header
+          +accordion-button(data-target="acc4") Находим пациетов
+        +e.content(data-fbm-place="acc4")
+          +accordion-body(data-float-block="acc4" data-body="acc4")
+            +text-block._stylized Блок 4
+      +accordion
+        +accordion-header
+          +accordion-button(data-target="acc5") Вырабатываем стратегию
+        +e.content(data-fbm-place="acc5")
+          +accordion-body(data-float-block="acc5" data-body="acc5")
+            +text-block._stylized Блок 5
+      +accordion
+        +accordion-header
+          +accordion-button(data-target="acc6") Контролируем результат
+        +e.content(data-fbm-place="acc6")
+          +accordion-body(data-float-block="acc6" data-body="acc6")
+            +text-block._stylized Блок 6
+    +col({xs: 12, xl: 6})
+      div.accordion__content-desktop(data-fbd-place="acc1 acc2 acc3 acc4 acc5 acc6")

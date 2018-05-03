@@ -1,11 +1,11 @@
 .gallery {
-  display: flex;
-  flex-direction: row;
-  font-size: 0;
-  width: 100%;
+  display: block;
+  white-space: nowrap;
+  width: auto;
 
   @include screen('tablet-wide') {
-    flex-direction: column;
+    width: 100%;
+    white-space: normal;
   }
 
   &__item {
@@ -32,5 +32,51 @@
 
   &__image {
     @include fill-img;
+  }
+
+  &_style {
+    display: block;
+    white-space: nowrap;
+    width: auto;
+
+    @include screen('tablet-wide') {
+      display: block;
+      width: calc(100% + 6px);
+      margin-left: -3px;
+      margin-right: -3px;
+    }
+
+    .gallery {
+
+      &__item {
+        display: inline-block;
+        width: 100%;
+        min-width: 100%;
+        box-sizing: border-box;
+
+        @include screen('tablet-wide') {
+          width: 50%;
+          float: left;
+          padding: 0 3px;
+          min-width: 0;
+        }
+      }
+
+      &__media {
+        padding-top: 70%;
+
+        &_big {
+          @include screen('tablet-wide') {
+            padding-top: 100%;
+          }
+        }
+
+        &_small {
+          @include screen('tablet-wide') {
+            padding-top: calc(50% - 3px);
+          }
+        }
+      }
+    }
   }
 }
