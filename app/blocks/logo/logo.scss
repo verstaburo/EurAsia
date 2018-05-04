@@ -56,7 +56,10 @@
     }
   }
 
-  &_centered {
+  &_footer {
+    @include screen('tablet-small', max) {
+      flex-wrap: wrap;
+    }
 
     br {
       @include screen('tablet-small') {
@@ -76,7 +79,22 @@
       &__text {
         @include screen('tablet-small', max) {
           text-align: center;
+          width: 100%;
         }
+      }
+
+      &__top {
+        @include screen('tablet-small', max) {
+          margin-bottom: 4px;
+        }
+      }
+
+      &__bottom {
+        @include text-small;
+
+        line-height: 1.4;
+        font-weight: 300;
+        letter-spacing: .023em;
       }
     }
   }

@@ -214,4 +214,34 @@
       }
     }
   }
+
+  &__help {
+    padding-bottom: 15vw;
+
+    @include screen('tablet-wide') {
+      padding-top: 6.25vw;
+      padding-bottom: 6.5vw;
+    }
+
+    .page-section__title {
+      margin-bottom: 34px;
+
+      @include screen('tablet-wide') {
+        margin-top: -6px;
+        margin-bottom: 43px;
+      }
+    }
+
+    .grid {
+      @include screen('tablet-wide') {
+        margin-bottom: 54px;
+      }
+    }
+
+    &-describe {
+      box-sizing: border-box;
+      width: 100%;
+      padding-top: 28px;
+    }
+  }
 }

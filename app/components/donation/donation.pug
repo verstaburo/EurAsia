@@ -1,9 +1,17 @@
 mixin donation()
   +b.donation&attributes(attributes)
     +e.content
-      +e.title Сделать пожертвование
-      +e.list
-        +donate('Телефон')._white
-          +e.text Отправьте смс на&nbsp;номер 7715&nbsp;со словом &laquo;КОМАНДА&raquo; и&nbsp;сумму пожертвования
-        +donate('Банковский перевод')._white
-          +button('a').js-popup(href="#donation" data-target-news="bank") Показать реквизиты
+      +e.title Сделать
+        br 
+        | пожертвование
+      +grid
+        +col({ md: 12, xl: 6 })
+          +donate('Телефон')._gold._phone
+            +e.text Отправьте смс на&nbsp;номер 
+              b 7715&nbsp;
+              | со словом 
+              b &laquo;КОМАНДА&raquo;&nbsp;
+              | и&nbsp;сумму пожертвования
+        +col({ md: 12, xl: 6 })
+          +donate('Банковский перевод')._gold
+            +button('a').js-popup(href="#donation" data-target-news="bank") Показать реквизиты

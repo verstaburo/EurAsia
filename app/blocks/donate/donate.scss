@@ -64,4 +64,26 @@
       }
     }
   }
+
+  .button {
+    margin-top: 6px;
+
+    @include screen('tablet-wide') {
+      margin-top: 13px;
+    }
+  }
+
+  &_gold {
+
+    .donate__title {
+      color: $color-main;
+    }
+  }
+
+  &_phone {
+    @include screen('desktop-wide') {
+      box-sizing: border-box;
+      padding-right: 40px;
+    }
+  }
 }
