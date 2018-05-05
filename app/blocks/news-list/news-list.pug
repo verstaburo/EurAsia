@@ -20,26 +20,26 @@ mixin news-list-slider()
     +e.title Новости Фонда
     +slider(false, true).js-slider-news
       +slide
-        +news-short('image', 'assets/images/news-0.jpg').news-list__item
-          +e.A.content.js-popup(href="#news")
+        +news-short('image', 'assets/images/news-0.jpg').news-list__item.js-popup(href="#news")
+          +e.content
             +e.text Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с РФС
       +slide
-        +news-short('video', 'assets/images/news-1.jpg', 'https://youtu.be/UA3OexmrSfs').news-list__item
-          +e.A.content.js-popup(href="#news"  data-target-news="news-2")
+        +news-short('video', 'assets/images/news-1.jpg', 'https://youtu.be/UA3OexmrSfs').news-list__item.js-popup(href="#news"  data-target-news="news-2")
+          +e.content
             +e.text Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки
       +slide
-        +news-short('video', 'assets/images/news-2.jpg', 'https://youtu.be/eZ2IHTd3G7g').news-list__item
-          +e.A.content.js-popup(href="#news"  data-target-news="news-3")
+        +news-short('video', 'assets/images/news-2.jpg', 'https://youtu.be/eZ2IHTd3G7g').news-list__item.js-popup(href="#news"  data-target-news="news-3")
+          +e.content
             +e.text Хубулава Г.Г. Слово единомышленника
       +slide
-        +news-short('image', 'assets/images/news-3.jpg').news-list__item
-          +e.A.content.js-popup(href="#news"  data-target-news="news-4")
+        +news-short('image', 'assets/images/news-3.jpg').news-list__item.js-popup(href="#news"  data-target-news="news-4")
+          +e.content
             +e.text По&nbsp;зову сердца. Мария-Анна Лэммли
       +slide
-        +news-short('image', 'assets/images/news-4.jpg').news-list__item
-          +e.A.content.js-popup(href="#news"  data-target-news="news-5")
+        +news-short('image', 'assets/images/news-4.jpg').news-list__item.js-popup(href="#news"  data-target-news="news-5")
+          +e.content
             +e.text Смерть на&nbsp;игровом поле. Вита Мач
-            
+
 mixin news-list-full()
   +b.news-list_full&attributes(attributes)
     +e.title Новости Фонда
@@ -48,7 +48,7 @@ mixin news-list-full()
         +e.content
           +e.title Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с РФС
           +e.text
-            p 23&nbsp;марта во&nbsp;время дружеского матча Россия-Бразилия будет подписан меморандум о&nbsp;сотрудничестве между Фондом &laquo;Сердце Евразии&raquo; и&nbsp;Российским Футбольным Союзом. Российские футболисты откликнулись на&nbsp;беду малышей с&nbsp;врожденным пороком сердца и&nbsp;с&nbsp;огромным энтузиазмом готовы поддерживать деятельность Фонда в&nbsp;России. Все собранные средства будут адресно раходоваться на&nbsp;детские операции. 
+            p 23&nbsp;марта во&nbsp;время дружеского матча Россия-Бразилия будет подписан меморандум о&nbsp;сотрудничестве между Фондом &laquo;Сердце Евразии&raquo; и&nbsp;Российским Футбольным Союзом. Российские футболисты откликнулись на&nbsp;беду малышей с&nbsp;врожденным пороком сердца и&nbsp;с&nbsp;огромным энтузиазмом готовы поддерживать деятельность Фонда в&nbsp;России. Все собранные средства будут адресно раходоваться на&nbsp;детские операции.
             p Наша искренняя благодарность Российскому Футбольному Союзу за&nbsp;эту инициативу!
       +news('video', 'assets/images/news-1.jpg', 'https://youtu.be/UA3OexmrSfs').__item#news-2
         +e.content
@@ -70,7 +70,7 @@ mixin news-list-full()
           +e.text
             p Пауль Р. Фогт Доктор медицины, профессор в&nbsp;области сердечно-сосудистой хирургии, прези- дент фонда EurAsia Heart
           +partner
-          +link(href="#").js-fancybox Читать статью
+          +link(href="assets/files/calloftheheart.pdf" target="_blank") Читать статью
       +news('image', 'assets/images/news-4.jpg').__item#news-5
         +e.content
           +e.title Смерть на игровом поле.
@@ -79,4 +79,4 @@ mixin news-list-full()
           +e.text
             p Cмертельных случаев в спорте гораздо больше, чем мы узнаем из новостей
           +partner
-          +link(href="#").js-fancybox Читать статью
+          +link(href="assets/files/deathonthefield.pdf" target="_blank") Читать статью

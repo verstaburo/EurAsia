@@ -9,8 +9,8 @@ mixin link-icon(iconname)
     +e.SPAN.text
       block
 
-mixin link-arrow()
-  +b.A.link&attributes(attributes)._arrow
+mixin link-arrow(tag)
+  +b(tag || "a").link&attributes(attributes)._arrow
     +e.SPAN.text
       block
     +e.SPAN.arrow

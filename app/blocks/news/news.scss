@@ -159,6 +159,8 @@
     height: 100%;
     border-bottom: none;
     padding-bottom: 0;
+    transition: all $ease-main;
+    cursor: pointer;
 
     @include screen('tablet-wide') {
       padding: 0;
@@ -166,6 +168,10 @@
       width: 100%;
       height: auto;
       padding-top: 30px;
+    }
+
+    &:hover {
+      opacity: .5;
     }
 
     .news {

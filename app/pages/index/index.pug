@@ -69,7 +69,7 @@ block content
                 +e.item_note
                   +stat-data('*')._note По данным Всемирной организации здравоохранения
                 +e.item_note
-                  +stat-data('**')._note По данным Фонда                
+                  +stat-data('**')._note По данным Фонда
           +col({md: 12, xl: 4}).page__statistic-images
               +gallery
     +page-section.page__achievements
@@ -77,7 +77,7 @@ block content
         +e.H3.title_smb Наши достижения
         +grid
           +col({ md: 12, xl: 8 })
-            +e.A.media_long.js-fancybox(href="assets/images/achievments-1.jpg") 
+            +e.A.media_long.js-fancybox(href="assets/images/achievments-1.jpg")
               +e.IMG.image(src="assets/images/achievments-1.jpg")
             div.page__achievements-info-mobile.desktop-hide(data-fbm-place="achievements-info")
             div.page__achievements-stat-mobile.desktop-hide(data-fbm-place="achievements-stat")
@@ -98,7 +98,7 @@ block content
                   span.desktop-hide усилиями Фонда&nbsp;
                   | было осуществлено свыше 1800 операций и проведено более 5000 консультаций в клиниках по всему миру.
         +text-switcher(data-target-text="achievements") Читать далее
-    +page-section.page__partners  
+    +page-section.page__partners
       .container
         +e.H3.title_smb Наши партнеры
         .grid
@@ -110,10 +110,10 @@ block content
             +text-block._small-mg
               +e.P Спасенные жизни и&nbsp;высокий профессионализм врачей на&nbsp;местах. Мы&nbsp;передаем знания, опыт, навыки и&nbsp;новые технологии коллегам и&nbsp;специалистам по&nbsp;всему миру. Мы&nbsp;развиваем эффективную, а&nbsp;не&nbsp;дорогостоящую инфраструктуру госпиталей. Благодаря этому повышается качество лечения и&nbsp;количество выздоровевших пациентов.
           +col({ md: 12, xl: 4 })
-            +e.A.media_h452.js-fancybox.mobile-hide(href="assets/images/achievments-2.jpg") 
+            +e.A.media_h452.js-fancybox.mobile-hide(href="assets/images/achievments-2.jpg")
               +e.IMG.image(src="assets/images/achievments-2.jpg")
             +e.side-title_mt Документы
-            +e.links 
+            +e.links
               +download-link(href="assets/files/statement.doc" title="Учредительные документы") Учредительные документы
               +download-link(href="assets/files/statement.doc" title="Отчет") Отчет
     +page-section.page__members
@@ -123,17 +123,17 @@ block content
             +e.H3.title_style._big Люди фонда
             +e.media_wide
               +e.IMG.image(src="assets/images/members.jpg")
-          +e.panel 
-            +e.panel-button_gold
+          +e.panel
+            +e.A.panel-button_gold.js-popup(href="#experts")
               +e.side-title_bold Международная
                 br
                 | группа экспертов
-              +link-arrow(href="#experts")._light.js-popup Показать
-            +e.panel-button
+              +link-arrow('div')._light Показать
+            +e.panel-button.js-popup(href="#trustees")
               +e.side-title_bold Попечительский
-                br 
+                br
                 | комитет
-              +link-arrow(href="#trustees")._light.js-popup Показать
+              +link-arrow('div')._light Показать
     +page-section._light.page__working
       .container
         +e.title Как мы работаем
@@ -146,18 +146,18 @@ block content
         +grid
           +col({ md: 12, xl: 6 })
             +e.title Как нам помочь?
-            +text-block 
+            +text-block
               p Воснове деятельности Фонда Сердце ЕврАзии (EurAsia Heart Foundation) — высокий профессионализм и преданность своему делу специалистов со всего мира, которые осуществляют свою миссию благодаря поддержке меценатов и благотворителей.
             +informer
           +col({ md: 12, xl: 6 }).mobile-hide(data-fbd-place="help")
             +text-block._frame(data-float-block="help")
-              p За годы существования Фонда Сердце ЕврАзии (EurAsia Heart Foundation) были прооперированы 
+              p За годы существования Фонда Сердце ЕврАзии (EurAsia Heart Foundation) были прооперированы
                 b 3290 детей и подростков.
-                | В Европе стоимость таких операций колеблется в пределах 
+                | В Европе стоимость таких операций колеблется в пределах
                 b 80 - 150.000 евро.
-                | В Швейцарии лечение этих детей обошлось бы в 
-                b 240 млн евро. 
-                | Наши специалисты работают на благотворительной основе и осуществляют лечение на родине пациента. Собранные средства необходимы для покрытия затратной части проекта в расчете 
+                | В Швейцарии лечение этих детей обошлось бы в
+                b 240 млн евро.
+                | Наши специалисты работают на благотворительной основе и осуществляют лечение на родине пациента. Собранные средства необходимы для покрытия затратной части проекта в расчете
                 b 5.000 евро
                 | за операцию.
       +donation

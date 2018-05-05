@@ -12,14 +12,14 @@ mixin news(type, img, video)
               +icon('play').icon
           - }
     block
-      
+
 mixin news-short(type, img, video)
   - var link = "#"
-  - if (type === 'video') { link = video }
-  - if (type === 'image') {link = img}
-  +b.news_short&attributes(attributes)
+  //- if (type === 'video') { link = video }
+  //- if (type === 'image') {link = img}
+  +b.A.news_short&attributes(attributes)
     if type
-      +e.A.media.js-fancybox(href= link)
+      +e.DIV.media
         +e.IMG.image(src=img)
         - if (type === 'video') {
           +e.play

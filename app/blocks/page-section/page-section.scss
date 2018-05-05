@@ -138,8 +138,8 @@
     margin-right: -$container-padding-mobile/2;
     height: 100%;
     overflow: hidden;
-    font-size: 0;
-    line-height: 0;
+    vertical-align: bottom;
+    box-sizing: border-box;
 
     @include screen('tablet-wide') {
       width: 100%;
@@ -179,9 +179,8 @@
   &__image {
     @include fill-img;
 
+    vertical-align: bottom;
     display: block;
-    font-size: 0;
-    line-height: 0;
   }
 
   &__accent {
@@ -247,6 +246,7 @@
     box-sizing: border-box;
     background-color: $color-bg;
     padding-top: 13vw;
+    vertical-align: top;
 
     @include screen('tablet-wide') {
       padding-top: 0;
@@ -275,6 +275,7 @@
     align-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
+    vertical-align: top;
 
     &-button {
       display: flex;
@@ -285,6 +286,13 @@
       background-color: $color-charcoal-grey-2;
       box-sizing: border-box;
       padding: 26px $container-padding-mobile 30px;
+      cursor: pointer;
+      transition: all $ease-main;
+      text-transform: none;
+      text-decoration: none;
+      vertical-align: top;
+      border: none;
+      outline: none;
 
       @include screen('tablet') {
         width: 50%;
@@ -292,6 +300,10 @@
 
       @include screen('tablet-wide') {
         padding: 35px 45px 40px;
+      }
+
+      &:hover {
+        opacity: .8;
       }
 
       &_gold {
