@@ -25,7 +25,7 @@ mixin accordion-body
 
 mixin accordion-working()
   +grid
-    +col({md: 12, xl: 6})
+    +col({md: 12, xl: 6}).js-sr_1
       +accordion.is-active
         +accordion-header
           +accordion-button(data-target="acc1") Передаем опыт
@@ -68,5 +68,5 @@ mixin accordion-working()
           +accordion-body(data-float-block="acc6" data-body="acc6")
             +text-block._stylized 
               p Мы контролируем качество лечения и поддерживаем связь с нашими пациентами в течение длительного периода времени
-    +col({md: 12, xl: 6}).mobile-hide
+    +col({md: 12, xl: 6}).mobile-hide.js-sr_2
       div.accordion__content-desktop(data-fbd-place="acc1 acc2 acc3 acc4 acc5 acc6")

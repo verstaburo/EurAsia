@@ -1,24 +1,24 @@
 mixin gallery()
   +b.UL.gallery&attributes(attributes)
-    +e.LI.item.js-fancybox.mobile-hide(data-src="assets/images/statistic-1.jpg" data-fancybox="statistic")
+    +e.LI.item.js-fancybox.mobile-hide.js-sr_1(data-src="assets/images/statistic-1.jpg" data-fancybox="statistic")
       +e.media
         +e.IMG.image(src="assets/images/statistic-1.jpg")
-    +e.LI.item.js-fancybox(data-src="assets/images/statistic-2.jpg" data-fancybox="statistic")
+    +e.LI.item.js-fancybox.js-sr_1(data-src="assets/images/statistic-2.jpg" data-fancybox="statistic")
       +e.media
         +e.IMG.image(src="assets/images/statistic-2.jpg")
-    +e.LI.item.js-fancybox.mobile-hide(data-src="assets/images/statistic-3.jpg" data-fancybox="statistic")
+    +e.LI.item.js-fancybox.mobile-hide.js-sr_1(data-src="assets/images/statistic-3.jpg" data-fancybox="statistic")
       +e.media
         +e.IMG.image(src="assets/images/statistic-3.jpg")
         
 mixin gallery-2()
   +b.gallery_style&attributes(attributes)
-    +e.item.js-fancybox.mobile-hide(data-src="assets/images/work-1.jpg" data-fancybox="woking").mobile-hide
+    +e.item.js-fancybox.mobile-hide.js-sr_1(data-src="assets/images/work-1.jpg" data-fancybox="woking").mobile-hide
       +e.media_big
         +e.IMG.image(src="assets/images/work-1.jpg")
-    +e.item.js-fancybox.mobile-hide(data-src="assets/images/work-2.jpg" data-fancybox="woking")
+    +e.item.js-fancybox.mobile-hide.js-sr_1(data-src="assets/images/work-2.jpg" data-fancybox="woking")
       +e.media_small
         +e.IMG.image(src="assets/images/work-2.jpg")
-    +e.item.js-fancybox(data-src="assets/images/work-3.jpg" data-fancybox="woking")
+    +e.item.js-fancybox.js-sr_1(data-src="assets/images/work-3.jpg" data-fancybox="woking")
       +e.media_small
         +e.IMG.image(src="assets/images/work-3.jpg")
     

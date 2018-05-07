@@ -10,9 +10,25 @@
   padding: 7.5vw $container-padding-mobile;
   overflow: hidden;
   color: $color-white;
+  cursor: pointer;
+  text-decoration: none;
 
   @include screen('tablet-wide') {
     padding: 50px 46px 56px;
+  }
+
+  &:hover {
+
+    .focus {
+
+      &__header, &__link {
+        opacity: .5;
+      }
+
+      &__image {
+        transform: scale(1.1);
+      }
+    }
   }
 
   &::before {
@@ -30,6 +46,8 @@
     @include fill-img;
 
     z-index: 1;
+    transition: transform $ease-main;
+    transform: scale(1);
   }
 
   &__header {
@@ -37,6 +55,7 @@
     width: 100%;
     z-index: 3;
     margin-bottom: auto;
+    transition: opacity $ease-main;
   }
 
   &__title {
@@ -45,6 +64,7 @@
     width: 100%;
     font-family: $font-second;
     font-weight: 700;
+    display: block;
 
     @include screen('tablet-wide') {
       @include heading-2;
@@ -60,6 +80,7 @@
     font-family: $font-fourth;
     font-weight: 700;
     margin-bottom: 4px;
+    display: block;
 
     @include screen('tablet-wide') {
       @include heading-2;
@@ -76,6 +97,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    transition: opacity $ease-main;
     z-index: 3;
 
     @include text-small;
@@ -85,15 +107,10 @@
     font-family: $font-fourth;
     letter-spacing: .029em;
     font-weight: 700;
-    transition: all $ease-main;
     margin-top: 24vw;
 
     @include screen('tablet-wide') {
       margin-top: 80px;
-    }
-
-    &:hover {
-      opacity: .5;
     }
   }
 

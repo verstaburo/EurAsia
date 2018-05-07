@@ -211,9 +211,6 @@
 
     &_right {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
       order: 1;
       margin-bottom: 53.125vw;
 
@@ -222,8 +219,6 @@
       }
 
       @include screen('desktop-small') {
-        flex-direction: column;
-        align-items: flex-end;
         width: 30%;
         order: 3;
         margin-bottom: 0;
@@ -232,12 +227,31 @@
   }
 
   &__play {
-    @include text-small;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity $ease-main;
 
-    font-family: $font-fourth;
-    line-height: 1.17;
-    letter-spacing: .03em;
-    font-weight: 700;
+    @include screen('desktop-small') {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+
+    .link {
+      @include text-small;
+
+      font-family: $font-fourth;
+      line-height: 1.17;
+      letter-spacing: .03em;
+      font-weight: 700;
+    }
   }
 
   &__news {

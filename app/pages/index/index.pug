@@ -12,13 +12,13 @@ block content
       .container
         +grid
           +col({ md: 12, xl: 6 })
-            +text-block._stylized
+            +text-block._stylized.js-sr_1
               +e.P Наша главная задача — повышение квалификации и обучение специалистов в сфере кардиологии и сердечно-сосудистой хирургии новорождённых, детей и взрослых. Мы реализуем эту задачу посредством тесного сотрудничества <br> швейцарских и российских специалистов.
               +e.P(data-hidden-text="mission")
                 +e.B Наша миссия —&nbsp;
                 | сохранение здоровья молодого поколения и предотвращение преждевременной смертности детей и подростков из-за сердечно-сосудистых заболеваний.
           +col({ md: 12, xl: 6 })(data-hidden-text="mission")
-            +text-block
+            +text-block.js-sr_2
               +e.P
                 +e.B Наша цель —&nbsp;
                 | спасти как можно больше детей. В этом нам помогает налаженная система передачи медицинских знаний в области диагностики, лечения и профилактики сердечно-сосудистых заболеваний, а также практических навыков в кардиологии, хирургии и ряде смежных специальностей.
@@ -26,57 +26,57 @@ block content
     +patients
     +page-section._dark._small.__focus
       .container
-        +e.title_style._small Россия
+        +e.title_style._small.js-sr_1 Россия
         +grid
           +col({ md: 12, xl: 8 })
-            +text-block._small-mg
+            +text-block._small-mg.js-sr_1
               p – один из самых перспективных партнеров Фонда. Поддержка Президента и правительства, реализующаяся в национальном российском проекте «Здоровье» в сочетании с международной образовательной и научной деятельностью Сердца ЕврАзии может вывести российские федеральные центры сердечно-сосудистой хирургии на мировой уровень и прекратить отток пациентов за границу.
               p(data-hidden-text="focus") С 2005 года Фонд сотрудничает с российскими партнерами. Миссии проходят в Санкт-Петербурге, Новосибирске, Екатеринбурге, Пензе, Петрозаводске, Томске, Ярославле, Воронеже. В числе партнерских организаций Фонда — Первый Санкт-Петербургский государственный медицинский университет им. академика И.П. Павлова, Военно-медицинская академия, Санкт-Петербургский Государственный Педиатрический Медицинский Университет, Новосибирский Институт Патологии Кровообращения им. Е.Н. Мешалкина, Томский центр детского сердца РАН, Ярославский медицинский университет и др.
             +text-switcher(data-target-text="focus") Россия
           +col({md: 12, xl: 4})(data-fbd-place="focus").mobile-hide
-            +focus(data-float-block="focus")
+            +focus.js-popup.js-sr_2(href="#focus" data-float-block="focus")
     +page-section._dark._map.__map
       .container
-        +e.subtitle.desktop-hide Фонд активно работает
-      +map
+        +e.subtitle.desktop-hide.js-sr_1 Фонд активно работает
+      +map.js-sr_1
       +e.map-describe
         .container
           +grid
             +col({ md: 12, xl: 8 })
-              +text-block
+              +text-block.js-sr_1
                 p.desktop-hide а также в Украине, Узбекистане, Армении, Болгарии, Камбодже, Эритрее и Вьетнаме.
                 p По запросам руководства заинтересованных в сотрудничестве с Фондом стран Сердце ЕврАзии занимается образованием и обучением персонала непосредственно в лечебных учреждениях: получение практических знаний, технических навыков и их применение в операционных, а также в отделениях кардиореанимаций.
             +col({md: 12, xl: 4})
               +e.accent.mobile-hide
-                +text-block._big-style
+                +text-block._big-style.js-sr_2
                   p Фонд активно работает в России, Украине, Узбекистане, Армении, Болгарии, Мьянме, Камбодже, Китае, Эритрее и Вьетнаме
         +e.mobile-focus.desktop-hide(data-fbm-place="focus")
     +page-section._light.page__statistic
       .container
-        +e.H3.title Статистика
+        +e.H3.title.js-sr_1 Статистика
         +grid
           +col({ md: 12, xl: 8 }).page__statistic-data
             +statistic-list
               +e.UL.list
-                +e.item
+                +e.item.js-sr_1
                   +stat-data('17,5 млн') Ежегодно от сердечно-сосудистых заболеваний умирает 17,5 млн человек
-                +e.item
+                +e.item.js-sr_1
                   +stat-data('80%') преждевременных инфарктов и инсультов может быть предотвращено
-                +e.item
+                +e.item.js-sr_1
                   +stat-data('5 лет **') Невылеченные и невыявленные пороки сердца являются главной причиной детской смертности (до 5 лет) во всем мире, обогнав смертность от СПИДа, малярии и туберкулеза
-                +e.item
+                +e.item.js-sr_1
                   +stat-data('1 место *') Ишемическая болезнь сердца (12,2) и инсульт (9,7) занимают ведущие места по причинам смерти в мире.
-                +e.item_note
+                +e.item_note.js-sr_1
                   +stat-data('*')._note По данным Всемирной организации здравоохранения
-                +e.item_note
+                +e.item_note.js-sr_1
                   +stat-data('**')._note По данным Фонда
           +col({md: 12, xl: 4}).page__statistic-images
               +gallery
     +page-section.page__achievements
       .container
-        +e.H3.title_smb Наши достижения
+        +e.H3.title_smb.js-sr_1 Наши достижения
         +grid
-          +col({ md: 12, xl: 8 })
+          +col({ md: 12, xl: 8 }).js-sr_1
             +e.A.media_long.js-fancybox(href="assets/images/achievments-1.jpg")
               +e.IMG.image(src="assets/images/achievments-1.jpg")
             div.page__achievements-info-mobile.desktop-hide(data-fbm-place="achievements-info")
@@ -88,35 +88,35 @@ block content
           +col({ md: 12, xl: 4 }).mobile-hide
             div.page__achievements-stat(data-fbd-place="achievements-stat")
               +e.side-wrapper(data-float-block="achievements-stat")
-                +e.side-title_bold За 17 лет напряженной работы фонд EurAsia Heart Foundation:
-                +e.statistic
+                +e.side-title_bold.js-sr_2 За 17 лет напряженной работы фонд EurAsia Heart Foundation:
+                +e.statistic.js-sr_2
                   +stat-data('3300')._achievment детей успешно прооперировано
                   +stat-data('13000')._achievment детей обследовано и назначена им схема лечения
             div.page__achievements-stat(data-fbd-place="achievements-info")
               +e.side-wrapper(data-float-block="achievements-info")
-                +text-block._big-style За последние 4 года
+                +text-block._big-style.js-sr_2 За последние 4 года
                   span.desktop-hide усилиями Фонда&nbsp;
                   | было осуществлено свыше 1800 операций и проведено более 5000 консультаций в клиниках по всему миру.
         +text-switcher(data-target-text="achievements") Читать далее
     +page-section.page__partners
       .container
-        +e.H3.title_smb Наши партнеры
+        +e.H3.title_smb.js-sr_1 Наши партнеры
         .grid
           +col({ md: 12, xl: 8 })
-            +partners
-            +text-block._small-mg.mobile-hide
+            +partners.js-sr_1
+            +text-block._small-mg.mobile-hide.js-sr_1
               +e.P Специалисты нашего Фонда работали в&nbsp;18&nbsp;странах Европы и&nbsp;Азии. Сегодня мы&nbsp;осуществляем научную и&nbsp;исследовательскую деятельность, участвуем в&nbsp;разработках новейших методов лечения в&nbsp;области взрослой и&nbsp;детской сердечно-сосудистой хирургии и&nbsp;кардиологии.
-            +e.H3.title Результаты работы Фонда
-            +text-block._small-mg
+            +e.H3.title.js-sr_1 Результаты работы Фонда
+            +text-block._small-mg.js-sr_1
               +e.P Спасенные жизни и&nbsp;высокий профессионализм врачей на&nbsp;местах. Мы&nbsp;передаем знания, опыт, навыки и&nbsp;новые технологии коллегам и&nbsp;специалистам по&nbsp;всему миру. Мы&nbsp;развиваем эффективную, а&nbsp;не&nbsp;дорогостоящую инфраструктуру госпиталей. Благодаря этому повышается качество лечения и&nbsp;количество выздоровевших пациентов.
           +col({ md: 12, xl: 4 })
-            +e.A.media_h452.js-fancybox.mobile-hide(href="assets/images/achievments-2.jpg")
+            +e.A.media_h452.js-fancybox.mobile-hide.js-sr_2(href="assets/images/achievments-2.jpg")
               +e.IMG.image(src="assets/images/achievments-2.jpg")
-            +e.side-title_mt Документы
-            +e.links
+            +e.side-title_mt.js-sr_2 Документы
+            +e.links.js-sr_2
               +download-link(href="assets/files/statement.doc" title="Учредительные документы") Учредительные документы
               +download-link(href="assets/files/statement.doc" title="Отчет") Отчет
-    +page-section.page__members
+    +page-section.page__members.js-sr_1
       .container
         div.page__members-wrapper
           +e.head
@@ -136,7 +136,7 @@ block content
               +link-arrow('div')._light Показать
     +page-section._light.page__working
       .container
-        +e.title Как мы работаем
+        +e.title.js-sr_1 Как мы работаем
         SECTION.page__working-describe
           +accordion-working
         SECTION.page__working-images
@@ -145,12 +145,12 @@ block content
       .container
         +grid
           +col({ md: 12, xl: 6 })
-            +e.title Как нам помочь?
-            +text-block
+            +e.title.js-sr_1 Как нам помочь?
+            +text-block.js-sr_1
               p Воснове деятельности Фонда Сердце ЕврАзии (EurAsia Heart Foundation) — высокий профессионализм и преданность своему делу специалистов со всего мира, которые осуществляют свою миссию благодаря поддержке меценатов и благотворителей.
-            +informer
+            +informer.js-sr_2
           +col({ md: 12, xl: 6 }).mobile-hide(data-fbd-place="help")
-            +text-block._frame(data-float-block="help")
+            +text-block._frame.js-sr_1(data-float-block="help")
               p За годы существования Фонда Сердце ЕврАзии (EurAsia Heart Foundation) были прооперированы
                 b 3290 детей и подростков.
                 | В Европе стоимость таких операций колеблется в пределах
@@ -160,10 +160,10 @@ block content
                 | Наши специалисты работают на благотворительной основе и осуществляют лечение на родине пациента. Собранные средства необходимы для покрытия затратной части проекта в расчете
                 b 5.000 евро
                 | за операцию.
-      +donation
+      +donation.js-sr_1
       .page__help-describe.desktop-hide(data-fbm-place="help")
-    +founder
-    +footer
+    +founder.js-sr_1
+    +footer.js-sr_1
   +popups
     +popup-news#news
     +popup-registration#registration

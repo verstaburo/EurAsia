@@ -68,7 +68,7 @@
       @include screen('tablet-wide') {
         margin-left: 0;
         margin-right: 0;
-        overflow: auto;
+        overflow: visible;
       }
 
       @include screen('tablet-wide', max) {

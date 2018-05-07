@@ -11,8 +11,9 @@ mixin main()
           +e.H1.title Российско-швейцарский фонд Сердце ЕврАзии
           +e.text Благотворительная гуманитарная организация, специализирующаяся на лечении тяжелых пороков сердца и сердечно-сосудистых заболеваний у детей из Европы и Азии.
         +e.col_right
-          +play(href="https://youtu.be/gszwFaEKGzI").js-fancybox
-          +link._light(href="https://youtu.be/gszwFaEKGzI").__play Смотреть видео
+          +e.A.play(href="https://youtu.be/gszwFaEKGzI").js-fancybox
+            +play('div')
+            +link('div')._light Смотреть видео
     +e.ASIDE.news.js-slider-scroll
       +e.wrapper
         +news-list-slider

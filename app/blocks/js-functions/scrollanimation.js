@@ -8,12 +8,14 @@ export default function scrollanimation() {
   // Стандартные настройки
   const sr = ScrollReveal({
     origin: 'bottom',
-    reset: true,
+    reset: false,
     mobile: false,
+    distance: 0,
+    opacity: 0,
     scale: 1,
     delay: 0,
     easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
-    duration: 600,
+    duration: 650,
   });
 
   if ($('.js-sr_1').length) {

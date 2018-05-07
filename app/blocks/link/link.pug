@@ -1,5 +1,5 @@
-mixin link()
-  +b.A.link&attributes(attributes)
+mixin link(tag)
+  +b(tag || 'a').link&attributes(attributes)
     +e.SPAN.text
       block
 
@@ -10,7 +10,7 @@ mixin link-icon(iconname)
       block
 
 mixin link-arrow(tag)
-  +b(tag || "a").link&attributes(attributes)._arrow
+  +b(tag || 'a').link&attributes(attributes)._arrow
     +e.SPAN.text
       block
     +e.SPAN.arrow
