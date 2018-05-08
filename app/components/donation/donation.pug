@@ -7,11 +7,7 @@ mixin donation()
       +grid
         +col({ md: 12, xl: 6 })
           +donate('Телефон')._gold._phone
-            +e.text Отправьте смс на&nbsp;номер 
-              b 7715&nbsp;
-              | со словом 
-              b &laquo;КОМАНДА&raquo;&nbsp;
-              | и&nbsp;сумму пожертвования
+            +e.text Отправьте смс на&nbsp;номер <b>7715</b> со словом <b>КОМАНДА пробел СУММА</b> пожертвования (КОМАНДА 100).
         +col({ md: 12, xl: 6 })
           +donate('Банковский перевод')._gold
             +button('a').js-popup(href="#donation" data-target-news="bank") Показать реквизиты

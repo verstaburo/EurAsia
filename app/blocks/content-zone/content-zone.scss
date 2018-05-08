@@ -186,7 +186,11 @@
   p {
 
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: $grid-gap;
+
+      @include screen('tablet-wide') {
+        margin-bottom: 30px;
+      }
     }
 
     small {
@@ -254,6 +258,17 @@
       @include text;
 
       line-height: 1.45;
+    }
+
+    li {
+
+      &:not(:last-child) {
+        margin-bottom: $grid-gap;
+
+        @include screen('tablet-wide') {
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 
