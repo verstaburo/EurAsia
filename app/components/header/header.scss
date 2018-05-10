@@ -57,6 +57,7 @@
       width: auto;
       pointer-events: auto;
       opacity: 1;
+      display: flex;
       transform: translate3d(0, 0, 0);
     }
 
@@ -67,7 +68,6 @@
     }
 
     .block-list {
-      height: 100%;
       font-family: $font-fourth;
     }
   }

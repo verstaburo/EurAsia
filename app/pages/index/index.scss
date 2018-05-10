@@ -60,6 +60,10 @@
       @include screen('tablet-wide', max) {
         order: 2;
       }
+
+      @include screen('tablet-wide') {
+        display: flex;
+      }
     }
 
     &-images {
