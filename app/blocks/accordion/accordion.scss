@@ -14,7 +14,7 @@
     transition: border-color $ease-main, padding $ease-main;
 
     @include screen('tablet-wide') {
-      padding-right: 10px;
+      padding-right: 32px;
     }
 
     #{$b}.is-active & {
