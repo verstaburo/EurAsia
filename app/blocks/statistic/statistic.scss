@@ -75,6 +75,12 @@
   }
 
   &_list {
+    @include screen('tablet-wide') {
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+      align-items: stretch;
+    }
 
     .stat-data {
 
@@ -97,7 +103,6 @@
     .statistic {
 
       &__list {
-        height: 100%;
         align-content: space-between;
       }
 
