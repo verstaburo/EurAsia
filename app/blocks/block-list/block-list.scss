@@ -56,15 +56,20 @@
     box-sizing: border-box;
     width: 100%;
 
-    @include screen('desktop-small') {
-      width: auto;
-      padding: 0 36px 6px;
-    }
-
     @include text-small;
 
     line-height: 1.2;
     letter-spacing: .03em;
     font-weight: 700;
+
+    @include screen('desktop-small') {
+      width: auto;
+      padding: 0 30px 6px;
+    }
+
+    @include screen('desktop') {
+      width: auto;
+      padding: 0 36px 6px;
+    }
   }
 }

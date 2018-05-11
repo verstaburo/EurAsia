@@ -74,6 +74,16 @@
     }
   }
 
+  &_big {
+    @include screen('tablet-wide') {
+      @include text-biggest;
+
+      font-family: $font-third;
+      font-weight: 500;
+      line-height: 1.21;
+    }
+  }
+
   &_big-style {
     @include screen('tablet-wide') {
       box-sizing: border-box;
