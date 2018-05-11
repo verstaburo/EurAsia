@@ -56,7 +56,6 @@
     box-sizing: border-box;
     padding: 10px 20px 10px 24px;
     vertical-align: middle;
-    hyphens: auto;
 
     @include text;
 
@@ -78,6 +77,22 @@
       line-height: 1.1;
       letter-spacing: -.008em;
       margin-bottom: 5px;
+    }
+
+    @include screen('desktop-small') {
+      @include text-big;
+
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -.008em;
+    }
+
+    @include screen('desktop') {
+      @include heading-4;
+
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -.008em;
     }
   }
 
