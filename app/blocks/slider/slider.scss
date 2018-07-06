@@ -21,6 +21,22 @@
     }
 
     &_child {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      @include screen('tablet-wide') {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .child {
+        padding-bottom: 13.75vw;
+
+        @include screen('tablet-wide') {
+          padding-top: 6.7vw;
+          padding-bottom: 6vw;
+        }
+      }
       //width: 25vw;
     }
 

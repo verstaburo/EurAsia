@@ -147,10 +147,10 @@
 a.child {
   color: $color-basic;
   text-decoration: none;
-  transition: opacity $ease-main;
+  transition: background $ease-main;
   cursor: pointer;
 
   &:hover {
-    opacity: .7;
+    background: $color-bg;
   }
 }

@@ -19,6 +19,12 @@ mixin patients()
         +child('assets/images/vp-child.jpg', '', 'Видеоинтервью с родителями пациентов', 'https://www.youtube.com/watch?v=H3dnZuM2RrA')  
           +link.js-fancybox(href="https://www.youtube.com/watch?v=H3dnZuM2RrA") Смотреть видео
       +slide('_child')
+        +child('assets/images/child-34.jpg', 'Комина Диана', 'Атриовентрикулярная коммуникация, неполная форма', '', 'a').js-popup(href="#child" data-child-id="child-1") 7 лет, Республика Коми
+      +slide('_child')
+        +child('assets/images/child-35.jpg', 'Солунина Вероника', 'Общий артериальный ствол', '', 'a').js-popup(href="#child" data-child-id="child-2") 7 мес, Ленинградская область
+      +slide('_child')
+        +child('assets/images/child-36.jpg', 'Макарова Наташа', 'Атриовентрикулярная коммуникация, транзиторная форма', '', 'a').js-popup(href="#child" data-child-id="child-3") 11 мес, Тверская область
+      +slide('_child')
         +child('assets/images/child-28.jpg', 'Лахнов Гриша', 'ВПС. Перерыв дуги аорты, дефект межжелудочковой перегородки') 4 мес
       +slide('_child')
         +child('assets/images/child-29.jpg', 'Голубева Полина', 'ВПС. Множественные ДМЖП') 6 мес
@@ -30,73 +36,67 @@ mixin patients()
         +child('assets/images/child-32.jpg', 'Старцев Ростислав', 'ВПС. Частичный аномальный дренаж лёгочных вен. Стеноз лёгочной артерии. Дефект межпредсердной перегородки') 5 мес
       +slide('_child')
         +child('assets/images/child-33.jpg', 'Ершова Галя', 'ВПС. Коарктации аорты и гипоплазия дуги аорты') 1 мес
-      +slide('_child')
-        +child('assets/images/child-34.jpg', 'Комина Диана', 'Атриовентрикулярная коммуникация, неполная форма', '', 'a').js-popup(href="#child" data-child-id="child-1") 7 лет, Республика Коми
-      +slide('_child')
-        +child('assets/images/child-35.jpg', 'Солунина Вероника', 'Общий артериальный ствол', '', 'a').js-popup(href="#child" data-child-id="child-2") 7 мес, Ленинградская область
-      +slide('_child')
-        +child('assets/images/child-36.jpg', 'Макарова Наташа', 'Атриовентрикулярная коммуникация, транзиторная форма', '', 'a').js-popup(href="#child" data-child-id="child-3") 11 мес, Тверская область
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +reg-button.js-popup(href="#registration")
-          +e.LI.item
-            +child-short('assets/images/child-6.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-7.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-8.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-9.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-10.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-11.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-12.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-13.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-14.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-15.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-16.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-17.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-18.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-19.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-20.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-21.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-22.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-23.jpg')
-          +e.LI.item
-            +child-short('assets/images/child-24.jpg')
-      +slide('_list')
-        +child-list
-          +e.LI.item
-            +child-short('assets/images/child-25.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +reg-button.js-popup(href="#registration")
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-6.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-7.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-8.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-9.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-10.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-11.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-12.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-13.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-14.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-15.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-16.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-17.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-18.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-19.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-20.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-21.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-22.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-23.jpg')
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-24.jpg')
+      //- +slide('_list')
+      //-   +child-list
+      //-     +e.LI.item
+      //-       +child-short('assets/images/child-25.jpg')
