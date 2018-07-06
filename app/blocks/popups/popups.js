@@ -17,20 +17,49 @@ export default function popups() {
     const targetPopup = $(self).attr('href').split('#').pop();
     const currentPopup = $('.popups').attr('data-active-popup');
     const targetLink = $(self).attr('data-target-news');
-    if ($('.popups').hasClass('is-active') && currentPopup !== targetPopup) {
-      $(`#${currentPopup}`).fadeOut(300);
-      $(`#${targetPopup}`).fadeIn(300);
-    } else {
-      freeze();
-      $('.popups').attr('data-active-popup', targetPopup);
-      $(`#${targetPopup}`).fadeIn(300);
-      $('.popups').addClass('is-active');
-      $('.overlay').addClass('is-active');
-      if (targetLink) {
-        $('.popups__wrapper').stop().animate({
-          scrollTop: ($(`#${targetLink}`).offset().top - 60),
-        }, 1000, 'swing');
+    if (targetPopup !== 'child') {
+      if ($('.popups').hasClass('is-active') && currentPopup !== targetPopup) {
+        $(`#${currentPopup}`).fadeOut(300);
+        $(`#${targetPopup}`).fadeIn(300);
+      } else {
+        freeze();
+        $('.popups').attr('data-active-popup', targetPopup);
+        $(`#${targetPopup}`).fadeIn(300);
+        $('.popups').addClass('is-active');
+        $('.overlay').addClass('is-active');
+        if (targetLink) {
+          $('.popups__wrapper').stop().animate({
+            scrollTop: ($(`#${targetLink}`).offset().top - 60),
+          }, 1000, 'swing');
+        }
       }
+    } else {
+      $.getJSON('assets/child-info-popup.json', (data) => {
+        const base = data;
+        const childId = $(self).attr('data-child-id');
+        const childInfo = base[childId];
+        $(`#${targetPopup}`).find('[data-child-photo]').attr('src', childInfo.photo);
+        $(`#${targetPopup}`).find('[data-child-diagnosis-short]').text(childInfo['diagnosis-short']);
+        $(`#${targetPopup}`).find('[data-child-name]').text(childInfo.name);
+        $(`#${targetPopup}`).find('[data-child-info]').text(childInfo.info);
+        $(`#${targetPopup}`).find('[data-child-diagnosis-full]').text(childInfo['diagnosis-full']);
+        $(`#${targetPopup}`).find('[data-child-epicrisis]').text(childInfo.epicrisis);
+        if ($('.popups').hasClass('is-active') && currentPopup !== targetPopup) {
+          $(`#${currentPopup}`).fadeOut(300);
+          $(`#${targetPopup}`).fadeIn(300);
+        } else {
+          freeze();
+          $('.popups').attr('data-active-popup', targetPopup);
+          $(`#${targetPopup}`).fadeIn(300);
+          $('.popups').addClass('is-active');
+          $('.overlay').addClass('is-active');
+          if (targetLink) {
+            $('.popups__wrapper').stop().animate({
+              scrollTop: ($(`#${targetLink}`).offset().top - 60),
+            }, 1000, 'swing');
+          }
+        }
+      });
     }
     $('.header__navigation').removeClass('is-active');
   });

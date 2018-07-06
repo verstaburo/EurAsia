@@ -1,5 +1,5 @@
-mixin child(img, name, title, video)
-  +b.child&attributes(attributes)
+mixin child(img, name, title, video, tag)
+  +b(tag || 'div').child&attributes(attributes)
     +e.wrapper
       +e.media
         +e.IMG.image(src=img)

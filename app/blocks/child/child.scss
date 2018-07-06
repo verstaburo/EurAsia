@@ -143,3 +143,14 @@
     }
   }
 }
+
+a.child {
+  color: $color-basic;
+  text-decoration: none;
+  transition: opacity $ease-main;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .7;
+  }
+}
