@@ -34,11 +34,15 @@ export default function popups() {
         }
       }
     } else {
-      $.getJSON('assets/child-info-popup.json', (data) => {
+      $.getJSON('child-info-popup.json', (data) => {
         const base = data;
         const childId = $(self).attr('data-child-id');
         const childInfo = base[childId];
         $(`#${targetPopup}`).find('[data-child-photo]').attr('src', childInfo.photo);
+        const photoImitation = $(`#${targetPopup}`).find('[data-child-photo]').attr('style');
+        if (photoImitation !== undefined && photoImitation !== false) {
+          $(`#${targetPopup}`).find('[data-child-photo]').attr('style', `background-position: center; background-image: url(${childInfo.photo}); background-repeat: no-repeat; background-size: cover; background-origin: content-box;`);
+        }
         $(`#${targetPopup}`).find('[data-child-diagnosis-short]').text(childInfo['diagnosis-short']);
         $(`#${targetPopup}`).find('[data-child-name]').text(childInfo.name);
         $(`#${targetPopup}`).find('[data-child-info]').text(childInfo.info);
