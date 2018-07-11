@@ -1,19 +1,43 @@
 mixin header()
   +b.header&attributes(attributes)
     +logo.__logo(href="index.html")
-    +burger.js-menu
-    +e.NAV.navigation
-      +block-list
-        +e.LI.item
-          +link._dark.js-popup(href="#registration") Зарегистрировать пациента
-          +icon('arrow-small').icon
-        +e.LI.item
-          +link._dark.js-popup(href="#donation") Подержать работу Фонда
-          +icon('arrow-small').icon
-        +e.LI.item
-          +link._dark.js-popup(href="#contacts") Связаться с нами
-          +icon('arrow-small').icon
-      +e.close-panel
-        +logo('div')
-        +close.js-close-menu
+    .overlay
+    +e.menu(data-fbd-place="anchors")
+      +e.menu-anchors(data-float-block="anchors")
+        +block-list._vertical
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-about") О нас
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-patients") Наши пациенты
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-geography") География
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-focus") Фокус Россия
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-statistic") Статистика
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-achievements") Наши достижения
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-partners") Наши партнеры
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-members") Люди фонда
+          +e.LI.item
+            +link._dark.js-anchor.js-close-menu(href="#scn-working") Как мы работаем
+      +e.NAV.navigation
+        .scrollblock
+          div(data-fbm-place="anchors")
+          +block-list
+            +e.LI.item
+              +link._dark.js-popup(href="#registration") Зарегистрировать пациента
+              +icon('arrow-small').icon
+            +e.LI.item
+              +link._dark.js-popup(href="#donation") Помощь детям
+              +icon('arrow-small').icon
+            +e.LI.item
+              +link._dark.js-popup(href="#contacts") Связаться с нами
+              +icon('arrow-small').icon
+          +e.close-panel
+            +logo('div')
+            +close.js-close-menu
+      +burger.js-menu
       

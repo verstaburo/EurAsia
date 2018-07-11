@@ -1,10 +1,17 @@
 .burger {
   position: relative;
-  display: block;
-  width: 22px;
-  height: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  min-height: 68px;
   background: transparent;
   cursor: pointer;
+
+  @include screen('desktop-small') {
+    width: 78px;
+  }
 
   &:hover {
 
@@ -16,12 +23,13 @@
   span {
     position: absolute;
     display: block;
-    top: 7px;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 22px;
     height: 2px;
     pointer-events: none;
     background: $color-dirt;
+    transform: translate3d(-50%, -50%, 0);
     transition: all $ease-main;
 
     &::after, &::before {
@@ -41,6 +49,24 @@
 
     &::before {
       bottom: -7px;
+    }
+  }
+
+  &.js-close-menu {
+
+    span {
+      width: 25px;
+      background-color: $color-white;
+
+      &::after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+        bottom: 0;
+      }
     }
   }
 }

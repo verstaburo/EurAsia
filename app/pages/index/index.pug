@@ -5,26 +5,25 @@ block head
 
 block content
   +header
-  .overlay
   +b.page
     +main
-    +page-section._light.__mission
+    +page-section._light.__mission#scn-about
       .container
         +grid
           +col({ md: 12, xl: 6 })
             +text-block._stylized.js-sr_1
-              +e.P <b>Наша главная задача —</b> передавать медицинские знания, делиться опытом и повышать квалификацию специалистов в сфере кардиологии и сердечно-сосудистой хирургии новорождённых и детей.
+              +e.P <b>Наша задача —</b> повышение квалификации и обучение специалистов в сфере кардиологии и сердечно-сосудистой хирургии у детей. Обмен опытом Швейцарских и Российских специалистов осуществляется непосредственно на рабочих местах по наиболее сложным разделам: практические и технические навыки и их применение в диагностике, кардиохирургии, кардиореанимации и кардиологии.
               +e.P(data-hidden-text="mission")
                 +e.B Наша миссия —&nbsp;
-                | сохранить здоровье молодого поколения и предотвратить преждевременную смертность детей и подростков из-за сердечно-сосудистых заболеваний.
+                | сохранить здоровье молодого поколения и предотвратить преждевременную смертность детей и подростков из-за сердечно-сосудистых заболеваний, а также обеспечить передачу мирового опыта в области профилактики, диагностики и лечении заболеваний сердечно-сосудистой системы.
           +col({ md: 12, xl: 6 })(data-hidden-text="mission")
             +text-block._big.js-sr_2
               +e.P
                 +e.B Наша цель —&nbsp;
-                | спасти как можно больше детей, нуждающихся в операции, обеспечить им высокое качество жизни  и стать надежным помощником их родителям.
+                | спасти как можно больше детей, нуждающихся в операции и обеспечить им в последствии высокое качество жизни, стать надежным партнером родителям в решении задач, связанных со здоровьем их детей.
         +text-switcher(data-target-text="mission") Наша миссия
-    +patients
-    +page-section._dark._small.__focus
+    +patients#scn-patients
+    +page-section._dark._small.__focus#scn-focus
       .container
         +e.title_style._small.js-sr_1 Россия
         +grid
@@ -35,7 +34,7 @@ block content
             +text-switcher(data-target-text="focus") Россия
           +col({md: 12, xl: 4})(data-fbd-place="focus").mobile-hide
             +focus.js-popup.js-sr_2(href="#focus" data-float-block="focus")
-    +page-section._dark._map.__map
+    +page-section._dark._map.__map#scn-geography
       .container
         +e.subtitle.desktop-hide.js-sr_1 Фонд активно работает
       +map.js-sr_1
@@ -51,7 +50,7 @@ block content
                 +text-block._big-style.js-sr_2
                   p Фонд наиболее активно работает в России, Узбекистане, Армении, Болгарии, Украине, Мьянме, Камбодже, Китае, Эритрее и Вьетнаме.
         +e.mobile-focus.desktop-hide(data-fbm-place="focus")
-    +page-section._light.page__statistic
+    +page-section._light.page__statistic#scn-statistic
       .container
         +e.H3.title.js-sr_1 Статистика
         +grid
@@ -72,7 +71,7 @@ block content
                   +stat-data('**')._note По данным Фонда
           +col({md: 12, xl: 4}).page__statistic-images
               +gallery
-    +page-section.page__achievements
+    +page-section.page__achievements#scn-achievements
       .container
         +e.H3.title_smb.js-sr_1 Наши достижения
         +grid
@@ -82,7 +81,7 @@ block content
             div.page__achievements-info-mobile.desktop-hide(data-fbm-place="achievements-info")
             div.page__achievements-stat-mobile.desktop-hide(data-fbm-place="achievements-stat")
             +text-block._stylized._stylized_black._small-mg
-              +e.P В программах и миссиях Фонда задействовано около 120 специалистов со всего мира — 
+              +e.P В программах и миссиях Фонда задействовано около 80 специалистов со всего мира — 
                 span(data-hidden-text="achievements") кардиохирурги, кардиологи, анестезиологи, реаниматологи, электрофизиологи, неонатологи, перфузиологи, бактериологи и многие другие специалисты.
               +e.P(data-hidden-text="achievements") Мы осуществили и осуществляем образовательную программу, включающую в себя мастер-классы по обмену опытом, консультации и обследования пациентов, доклады и лекции на актуальные темы.
           +col({ md: 12, xl: 4 }).mobile-hide
@@ -96,14 +95,14 @@ block content
               +e.side-wrapper(data-float-block="achievements-info")
                 +text-block._big-style.js-sr_2 За последние 4 года усилиями Фонда было осуществлено свыше 1800 операций и проведено более 5000 консультаций в клиниках по всему миру.
         +text-switcher(data-target-text="achievements") Читать далее
-    +page-section.page__partners
+    +page-section.page__partners#scn-partners
       .container
         +e.H3.title_smb.js-sr_1 Наши партнеры
         .grid
           +col({ md: 12, xl: 8 })
             +partners.js-sr_1
             +text-block._small-mg.mobile-hide.js-sr_1
-              +e.P Специалисты нашего Фонда работали в 18 странах Европы и Азии. Мы проводим научную и исследовательскую деятельность, участвуем в разработках новейших методов лечения в области взрослой и детской сердечно-сосудистой хирургии и кардиологии.
+              +e.P Специалисты нашего Фонда работали в 18 странах Европы и Азии. Сегодня мы проводим научную и исследовательскую деятельность, участвуем в разработках новейших методов лечения в области взрослой и детской сердечно-сосудистой хирургии и кардиологии.
             +e.H3.title.js-sr_1 Результаты работы Фонда
             +text-block._small-mg.js-sr_1
               +e.P Спасенные жизни и высокий профессионализм врачей на местах. Мы передаем знания, опыт, навыки и новые технологии коллегам и специалистам по всему миру. Мы развиваем эффективную, а не дорогостоящую инфраструктуру госпиталей. Благодаря этому повышается качество лечения и количество выздоровевших пациентов.
@@ -114,7 +113,7 @@ block content
             +e.links.js-sr_2
               +download-link(href="assets/files/statement.doc" title="Учредительные документы") Учредительные документы
               +download-link(href="assets/files/statement.doc" title="Отчет") Отчет
-    +page-section.page__members.js-sr_1
+    +page-section.page__members.js-sr_1#scn-members
       .container
         div.page__members-wrapper
           +e.head
@@ -132,7 +131,7 @@ block content
                 br
                 | комитет
               +link-arrow('div')._light Показать
-    +page-section._light.page__working
+    +page-section._light.page__working#scn-working
       .container
         +e.title.js-sr_1 Как мы работаем
         SECTION.page__working-describe
@@ -145,8 +144,8 @@ block content
           +col({ md: 12, xl: 6 })
             +e.title.js-sr_1 Как помочь детям?
             +text-block._small-mg.js-sr_1
-              p В основе деятельности Фонда Сердце ЕврАзии (EurAsia Heart Foundation) — высокий профессионализм и преданность своему делу специалистов со всего мира, которые осуществляют свою миссию благодаря поддержке меценатов и благотворителей.
-              p В числе наших донаторов — швейцарские и российские благотворители (пациенты и друзья Фонда из мира искусства и бизнеса), жертвователи благотворительных мероприятий. Также нас поддерживают сборы от проведения маркетинговых кампаний и представители индустрии.
+              p В числе наших покровителей – швейцарские и российские благотворители (пациенты и друзья Фонда из мира искусства, культуры и бизнеса). Миссии Фонда поддерживаются также благодаря сборам от проведения благотворительных мероприятий.
+              p Прямо сейчас вы можете тоже поддержать работу Фонда Сердце Евразии в России.
             +informer.js-sr_2
           +col({ md: 12, xl: 6 }).mobile-hide(data-fbd-place="help")
             +text-block._frame.js-sr_1(data-float-block="help")

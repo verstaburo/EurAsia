@@ -23,48 +23,102 @@
                 <span class="logo__bottom">Благотворительный Фонд</span>
             </span>
         </a>
-        <button class="burger js-menu" type="button">
-            <span></span>
-        </button>
-        <nav class="header__navigation">
-            <ul class="block-list">
-                <li class="block-list__item">
-                    <a class="link link_dark js-popup" href="#registration">
-                        <span class="link__text">Зарегистрировать пациента</span>
-                    </a>
-                    <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
-                </li>
-                <li class="block-list__item">
-                    <a class="link link_dark js-popup" href="#donation">
-                        <span class="link__text">Подержать работу Фонда</span>
-                    </a>
-                    <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
-                </li>
-                <li class="block-list__item">
-                    <a class="link link_dark js-popup" href="#contacts">
-                        <span class="link__text">Связаться с нами</span>
-                    </a>
-                    <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
-                </li>
-            </ul>
-            <div class="header__close-panel">
-                <div class="logo">
-                    <img class="logo__image" src="assets/images/logo.svg" alt="" role="presentation" />
-                    <div class="logo__text">
-                        <div class="logo__top">Сердце ЕврАзии</div>
-                        <div class="logo__bottom">Благотворительный Фонд</div>
+        <div class="overlay"></div>
+        <div class="header__menu" data-fbd-place="anchors">
+            <div class="header__menu-anchors" data-float-block="anchors">
+                <ul class="block-list block-list_vertical">
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-about">
+                            <span class="link__text">О нас</span>
+                        </a>
+                    </li>
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-patients">
+                            <span class="link__text">Наши пациенты</span>
+                        </a>
+                    </li>
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-geography">
+                            <span class="link__text">География</span>
+                        </a>
+                    </li>
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-focus">
+                            <span class="link__text">Фокус Россия</span>
+                        </a>
+                    </li>
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-statistic">
+                            <span class="link__text">Статистика</span>
+                        </a>
+                    </li>
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-achievements">
+                            <span class="link__text">Наши достижения</span>
+                        </a>
+                    </li>
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-partners">
+                            <span class="link__text">Наши партнеры</span>
+                        </a>
+                    </li>
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-members">
+                            <span class="link__text">Люди фонда</span>
+                        </a>
+                    </li>
+                    <li class="block-list__item">
+                        <a class="link link_dark js-anchor js-close-menu" href="#scn-working">
+                            <span class="link__text">Как мы работаем</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="header__navigation">
+                <div class="scrollblock">
+                    <div data-fbm-place="anchors"></div>
+                    <ul class="block-list">
+                        <li class="block-list__item">
+                            <a class="link link_dark js-popup" href="#registration">
+                                <span class="link__text">Зарегистрировать пациента</span>
+                            </a>
+                            <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
+                        </li>
+                        <li class="block-list__item">
+                            <a class="link link_dark js-popup" href="#donation">
+                                <span class="link__text">Помощь детям</span>
+                            </a>
+                            <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
+                        </li>
+                        <li class="block-list__item">
+                            <a class="link link_dark js-popup" href="#contacts">
+                                <span class="link__text">Связаться с нами</span>
+                            </a>
+                            <svg class="block-list__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-small"></use></svg>
+                        </li>
+                    </ul>
+                    <div class="header__close-panel">
+                        <div class="logo">
+                            <img class="logo__image" src="assets/images/logo.svg" alt="" role="presentation" />
+                            <div class="logo__text">
+                                <div class="logo__top">Сердце ЕврАзии</div>
+                                <div class="logo__bottom">Благотворительный Фонд</div>
+                            </div>
+                        </div>
+                        <div class="close js-close-menu">
+                            <svg class="close__icon" viewBox="0 0 19.41 19.41">
+                                <path d="M.71.71l18,18" stroke-width="2"></path>
+                                <path d="M18.71.71l-18,18" stroke-width="2"></path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
-                <div class="close js-close-menu">
-                    <svg class="close__icon" viewBox="0 0 19.41 19.41">
-                        <path d="M.71.71l18,18" stroke-width="2"></path>
-                        <path d="M18.71.71l-18,18" stroke-width="2"></path>
-                    </svg>
-                </div>
-            </div>
-        </nav>
+            </nav>
+            <button class="burger js-menu" type="button">
+                <span></span>
+            </button>
+        </div>
     </div>
-    <div class="overlay"></div>
     <div class="page">
         <section class="main">
             <section class="main__content">
@@ -81,7 +135,7 @@
                     <div class="main__subtitle">EurAsia Heart Foundation</div>
                     <div class="main__col main__col_left">
                         <h1 class="main__title">Российско-швейцарский <br> фонд Сердце ЕврАзии</h1>
-                        <div class="main__text">Благотворительная гуманитарная организация. Мы лечим тяжелые пороки сердца и сердечно-сосудистые заболевания у детей.</div>
+                        <div class="main__text">Благотворительная некоммерческая организация, специализирующаяся на лечении тяжелых пороков сердца и сердечно-сосудистых заболеваний у детей.</div>
                     </div>
                     <div class="main__col main__col_right">
                         <a class="main__play js-fancybox" href="https://www.youtube.com/watch?v=X-LEWZcd7FI">
@@ -170,21 +224,23 @@
                 <div class="swiper-scrollbar"></div>
             </aside>
         </section>
-        <div class="page-section page-section_light page__mission">
+        <div class="page-section page-section_light page__mission" id="scn-about">
             <div class="container">
                 <div class="grid">
                     <div class="grid__col grid__col_md_12 grid__col_xl_6">
                         <div class="text-block text-block_stylized js-sr js-sr_1">
                             <p>
-                                <b>Наша главная задача —</b> передавать медицинские знания, делиться опытом и повышать квалификацию специалистов в сфере кардиологии и сердечно-сосудистой хирургии новорождённых и детей.</p>
+                                <b>Наша задача —</b> повышение квалификации и обучение специалистов в сфере кардиологии и сердечно-сосудистой хирургии у детей. Обмен опытом Швейцарских и Российских специалистов осуществляется непосредственно на рабочих местах
+                                по наиболее сложным разделам: практические и технические навыки и их применение в диагностике, кардиохирургии, кардиореанимации и кардиологии.</p>
                             <p data-hidden-text="mission">
-                                <b>Наша миссия —&nbsp;</b>сохранить здоровье молодого поколения и предотвратить преждевременную смертность детей и подростков из-за сердечно-сосудистых заболеваний.</p>
+                                <b>Наша миссия —&nbsp;</b>сохранить здоровье молодого поколения и предотвратить преждевременную смертность детей и подростков из-за сердечно-сосудистых заболеваний, а также обеспечить передачу мирового опыта в области профилактики,
+                                диагностики и лечении заболеваний сердечно-сосудистой системы.</p>
                         </div>
                     </div>
                     <div class="grid__col grid__col_md_12 grid__col_xl_6" data-hidden-text="mission">
                         <div class="text-block text-block_big js-sr js-sr_2">
                             <p>
-                                <b>Наша цель —&nbsp;</b>спасти как можно больше детей, нуждающихся в операции, обеспечить им высокое качество жизни и стать надежным помощником их родителям.</p>
+                                <b>Наша цель —&nbsp;</b>спасти как можно больше детей, нуждающихся в операции и обеспечить им в последствии высокое качество жизни, стать надежным партнером родителям в решении задач, связанных со здоровьем их детей.</p>
                         </div>
                     </div>
                 </div>
@@ -195,7 +251,7 @@
                 </div>
             </div>
         </div>
-        <div class="patients js-sr js-sr_1">
+        <div class="patients js-sr js-sr_1" id="scn-patients">
             <div class="container">
                 <div class="patients__mobile-stat"></div>
             </div>
@@ -256,129 +312,115 @@
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
                         <a class="child js-popup" href="#child" data-child-id="child-1">
-                            <span class="child__wrapper">
-                                <span class="child__media">
-                                    <img class="child__image" src="assets/images/child-34.jpg" alt="" role="presentation" />
-                                </span>
-                                <span class="child__title">Атриовентрикулярная коммуникация, неполная форма</span>
-                            </span>
-                            <span class="child__info">
-                                <span class="child__name">Комина Диана</span>
-                                <span class="child__text">7 лет, Республика Коми</span>
-                            </span>
+                            <div class="child__wrapper">
+                                <div class="child__media">
+                                    <img class="child__image" src="assets/images/child-1.jpg" alt="" role="presentation" />
+                                </div>
+                                <div class="child__title">Тотальный аномальный дренаж лёгочных вен</div>
+                            </div>
+                            <div class="child__info">
+                                <div class="child__name">Вероника Поваго</div>
+                                <div class="child__text">2 года</div>
+                            </div>
                         </a>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
                         <a class="child js-popup" href="#child" data-child-id="child-2">
-                            <span class="child__wrapper">
-                                <span class="child__media">
-                                    <img class="child__image" src="assets/images/child-35.jpg" alt="" role="presentation" />
-                                </span>
-                                <span class="child__title">Общий артериальный ствол</span>
-                            </span>
-                            <span class="child__info">
-                                <span class="child__name">Солунина Вероника</span>
-                                <span class="child__text">7 мес, Ленинградская область</span>
-                            </span>
+                            <div class="child__wrapper">
+                                <div class="child__media">
+                                    <img class="child__image" src="assets/images/child-2.jpg" alt="" role="presentation" />
+                                </div>
+                                <div class="child__title">Врожденный порок сердца</div>
+                            </div>
+                            <div class="child__info">
+                                <div class="child__name">Дауд Колоев</div>
+                                <div class="child__text">17 лет</div>
+                            </div>
                         </a>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
                         <a class="child js-popup" href="#child" data-child-id="child-3">
-                            <span class="child__wrapper">
-                                <span class="child__media">
-                                    <img class="child__image" src="assets/images/child-36.jpg" alt="" role="presentation" />
-                                </span>
-                                <span class="child__title">Атриовентрикулярная коммуникация, транзиторная форма</span>
-                            </span>
-                            <span class="child__info">
-                                <span class="child__name">Макарова Наташа</span>
-                                <span class="child__text">11 мес, Тверская область</span>
-                            </span>
+                            <div class="child__wrapper">
+                                <div class="child__media">
+                                    <img class="child__image" src="assets/images/child-3.jpg" alt="" role="presentation" />
+                                </div>
+                                <div class="child__title">Дефект межжелудочковой перегородки. Лёгочная артериальная гипертензия</div>
+                            </div>
+                            <div class="child__info">
+                                <div class="child__name">Алиса Ложкина</div>
+                                <div class="child__text">2,5 года</div>
+                            </div>
                         </a>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
-                        <div class="child">
+                        <a class="child js-popup" href="#child" data-child-id="child-4">
                             <div class="child__wrapper">
                                 <div class="child__media">
-                                    <img class="child__image" src="assets/images/child-28.jpg" alt="" role="presentation" />
+                                    <img class="child__image" src="assets/images/child-5.jpg" alt="" role="presentation" />
                                 </div>
-                                <div class="child__title">ВПС. Перерыв дуги аорты, дефект межжелудочковой перегородки</div>
+                                <div class="child__title">Аномалия Тауссиг-Бинг</div>
                             </div>
                             <div class="child__info">
-                                <div class="child__name">Лахнов Гриша</div>
-                                <div class="child__text">4 мес</div>
+                                <div class="child__name">Глеб Шалашин</div>
+                                <div class="child__text">1,5 года</div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
-                        <div class="child">
+                        <a class="child js-popup" href="#child" data-child-id="child-5">
                             <div class="child__wrapper">
                                 <div class="child__media">
-                                    <img class="child__image" src="assets/images/child-29.jpg" alt="" role="presentation" />
+                                    <img class="child__image" src="assets/images/child-4.jpg" alt="" role="presentation" />
                                 </div>
-                                <div class="child__title">ВПС. Множественные ДМЖП</div>
+                                <div class="child__title">Коарктация аорты. Дефект межжелудочковой перегородки</div>
                             </div>
                             <div class="child__info">
-                                <div class="child__name">Голубева Полина</div>
-                                <div class="child__text">6 мес</div>
+                                <div class="child__name">Ярослав Дьяконов</div>
+                                <div class="child__text">2 года</div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
-                        <div class="child">
+                        <a class="child js-popup" href="#child" data-child-id="child-6">
                             <div class="child__wrapper">
                                 <div class="child__media">
-                                    <img class="child__image" src="assets/images/child-30.jpg" alt="" role="presentation" />
+                                    <img class="child__image" src="assets/images/child-34.jpg" alt="" role="presentation" />
                                 </div>
-                                <div class="child__title">Общий артериальный ствол, дефект межжелудочковой перегородки</div>
+                                <div class="child__title">Атриовентрикулярная коммуникация, неполная форма</div>
                             </div>
                             <div class="child__info">
-                                <div class="child__name">Довгая Эвита</div>
-                                <div class="child__text">7 мес</div>
+                                <div class="child__name">Комина Диана</div>
+                                <div class="child__text">7 лет, Республика Коми</div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
-                        <div class="child">
+                        <a class="child js-popup" href="#child" data-child-id="child-7">
                             <div class="child__wrapper">
                                 <div class="child__media">
-                                    <img class="child__image" src="assets/images/child-31.jpg" alt="" role="presentation" />
+                                    <img class="child__image" src="assets/images/child-35.jpg" alt="" role="presentation" />
                                 </div>
-                                <div class="child__title">ВПС. Атрезия лёгочной артерии с дефектом межжелудочковой перегородки</div>
+                                <div class="child__title">Общий артериальный ствол</div>
                             </div>
                             <div class="child__info">
-                                <div class="child__name">Недошковская Ира</div>
-                                <div class="child__text">1 мес</div>
+                                <div class="child__name">Солунина Вероника</div>
+                                <div class="child__text">7 мес, Ленинградская область</div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="slider__slide slider__slide_child swiper-slide">
-                        <div class="child">
+                        <a class="child js-popup" href="#child" data-child-id="child-8">
                             <div class="child__wrapper">
                                 <div class="child__media">
-                                    <img class="child__image" src="assets/images/child-32.jpg" alt="" role="presentation" />
+                                    <img class="child__image" src="assets/images/child-36.jpg" alt="" role="presentation" />
                                 </div>
-                                <div class="child__title">ВПС. Частичный аномальный дренаж лёгочных вен. Стеноз лёгочной артерии. Дефект межпредсердной перегородки</div>
+                                <div class="child__title">Атриовентрикулярная коммуникация, транзиторная форма</div>
                             </div>
                             <div class="child__info">
-                                <div class="child__name">Старцев Ростислав</div>
-                                <div class="child__text">5 мес</div>
+                                <div class="child__name">Макарова Наташа</div>
+                                <div class="child__text">11 мес, Тверская область</div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="slider__slide slider__slide_child swiper-slide">
-                        <div class="child">
-                            <div class="child__wrapper">
-                                <div class="child__media">
-                                    <img class="child__image" src="assets/images/child-33.jpg" alt="" role="presentation" />
-                                </div>
-                                <div class="child__title">ВПС. Коарктации аорты и гипоплазия дуги аорты</div>
-                            </div>
-                            <div class="child__info">
-                                <div class="child__name">Ершова Галя</div>
-                                <div class="child__text">1 мес</div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="slider__button slider__button_prev">
@@ -389,7 +431,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-section page-section_dark page-section_small page__focus">
+        <div class="page-section page-section_dark page-section_small page__focus" id="scn-focus">
             <div class="container">
                 <div class="page-section__title page-section__title_style page-section__title_small js-sr js-sr_1">Россия</div>
                 <div class="grid">
@@ -425,7 +467,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-section page-section_dark page-section_map page__map">
+        <div class="page-section page-section_dark page-section_map page__map" id="scn-geography">
             <div class="container">
                 <div class="page-section__subtitle desktop-hide js-sr js-sr_1">Фонд активно работает</div>
             </div>
@@ -533,7 +575,7 @@
                 <div class="page-section__mobile-focus desktop-hide" data-fbm-place="focus"></div>
             </div>
         </div>
-        <div class="page-section page-section_light page__statistic">
+        <div class="page-section page-section_light page__statistic" id="scn-statistic">
             <div class="container">
                 <h3 class="page-section__title js-sr js-sr_1">Статистика</h3>
                 <div class="grid">
@@ -601,7 +643,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-section page__achievements">
+        <div class="page-section page__achievements" id="scn-achievements">
             <div class="container">
                 <h3 class="page-section__title page-section__title_smb js-sr js-sr_1">Наши достижения</h3>
                 <div class="grid">
@@ -612,7 +654,7 @@
                         <div class="page__achievements-info-mobile desktop-hide" data-fbm-place="achievements-info"></div>
                         <div class="page__achievements-stat-mobile desktop-hide" data-fbm-place="achievements-stat"></div>
                         <div class="text-block text-block_stylized text-block_stylized_black text-block_small-mg">
-                            <p>В программах и миссиях Фонда задействовано около 120 специалистов со всего мира —
+                            <p>В программах и миссиях Фонда задействовано около 80 специалистов со всего мира —
                                 <span data-hidden-text="achievements">кардиохирурги, кардиологи, анестезиологи, реаниматологи, электрофизиологи, неонатологи, перфузиологи, бактериологи и многие другие специалисты.</span>
                             </p>
                             <p data-hidden-text="achievements">Мы осуществили и осуществляем образовательную программу, включающую в себя мастер-классы по обмену опытом, консультации и обследования пациентов, доклады и лекции на актуальные темы.</p>
@@ -648,7 +690,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-section page__partners">
+        <div class="page-section page__partners" id="scn-partners">
             <div class="container">
                 <h3 class="page-section__title page-section__title_smb js-sr js-sr_1">Наши партнеры</h3>
                 <div class="grid">
@@ -680,7 +722,7 @@
                             </div>
                         </div>
                         <div class="text-block text-block_small-mg mobile-hide js-sr js-sr_1">
-                            <p>Специалисты нашего Фонда работали в 18 странах Европы и Азии. Мы проводим научную и исследовательскую деятельность, участвуем в разработках новейших методов лечения в области взрослой и детской сердечно-сосудистой хирургии
+                            <p>Специалисты нашего Фонда работали в 18 странах Европы и Азии. Сегодня мы проводим научную и исследовательскую деятельность, участвуем в разработках новейших методов лечения в области взрослой и детской сердечно-сосудистой хирургии
                                 и кардиологии.</p>
                         </div>
                         <h3 class="page-section__title js-sr js-sr_1">Результаты работы Фонда</h3>
@@ -708,7 +750,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-section page__members js-sr js-sr_1">
+        <div class="page-section page__members js-sr js-sr_1" id="scn-members">
             <div class="container">
                 <div class="page__members-wrapper">
                     <div class="page-section__head">
@@ -740,7 +782,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-section page-section_light page__working">
+        <div class="page-section page-section_light page__working" id="scn-working">
             <div class="container">
                 <div class="page-section__title js-sr js-sr_1">Как мы работаем</div>
                 <SECTION class="page__working-describe">
@@ -748,17 +790,34 @@
                         <div class="grid__col grid__col_md_12 grid__col_xl_6 js-sr_1">
                             <div class="accordion is-active">
                                 <div class="accordion__header">
+                                    <div class="accordion__button js-accordion-button" data-target="acc0">
+                                        <div class="accordion__toggle">
+                                            <svg class="accordion__icon"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
+                                        </div>Как мы работаем</div>
+                                </div>
+                                <div class="accordion__content" data-fbm-place="acc0">
+                                    <div class="accordion__body is-active" data-float-block="acc0" data-body="acc0">
+                                        <div class="text-block text-block_stylized">
+                                            <p>Сердце ЕврАзии работает полностью на благотворительной основе. Все виды деятельности организации предоставляются бесплатно и без какой-либо компенсации участникам проектов. Специалистам компенсируются только
+                                                расходы на транспорт, проживание и питание во время миссий. Члены комитета и патронажного комитета Фонда работают бесплатно. Административные расходы ограничиваются техническими затратами и работой интернет-сайта.
+                                                </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion__header">
                                     <div class="accordion__button js-accordion-button" data-target="acc1">
                                         <div class="accordion__toggle">
                                             <svg class="accordion__icon"><use xlink:href="assets/images/icon.svg#icon_plus"></use></svg>
                                         </div>Передаем опыт</div>
                                 </div>
                                 <div class="accordion__content" data-fbm-place="acc1">
-                                    <div class="accordion__body is-active" data-float-block="acc1" data-body="acc1">
+                                    <div class="accordion__body" data-float-block="acc1" data-body="acc1">
                                         <div class="text-block text-block_stylized">
-                                            <p>Наши специалисты делятся опытом непосредственно в операционной, отделении реанимации и стационаре. Врачи Фонда приезжают в заинтересованные страны для сотрудничества с местными специалистами на благотворительной
-                                                основе. Мы делимся опытом и помогаем коллегам успешно осуществлять диагностику и лечение сердечно-сосудистых заболеваний, а также осуществлять профилактику, диагностику и лечение заболеваний сердечно-сосудистой
-                                                системы.</p>
+                                            <p>Врачи Фонда приезжают в заинтересованные страны для сотрудничества с местными специалистами на благотворительной основе. Обмен опытом и передача знаний осуществляется непосредственно на рабочих местах (в операционных,
+                                                отделениях кардиореанимаций, детской кардиологии, перинатальных центрах) и помогает коллегам еще более успешно осуществлять диагностику и лечение сердечно-сосудистых заболеваний у детей, а также проводить
+                                                профилактические меры.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -773,7 +832,8 @@
                                 <div class="accordion__content" data-fbm-place="acc2">
                                     <div class="accordion__body" data-float-block="acc2" data-body="acc2">
                                         <div class="text-block text-block_stylized">
-                                            <p>Мы формируем команду профессионалов из местных и зарубежных специалистов для углубленного взаимодействия. Мы обучаем специалистов на местах, используя существующую инфраструктуру госпиталя.</p>
+                                            <p>Формируется команда профессионалов из местных и зарубежных специалистов для углубленного взаимодействия как во время миссий, так и между визитами посредством проведения консилиумов и консультаций, проводимых
+                                                на постоянной основе. Передача знаний осуществляется на местах, используя существующую инфраструктуру госпиталя.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -788,7 +848,7 @@
                                 <div class="accordion__content" data-fbm-place="acc3">
                                     <div class="accordion__body" data-float-block="acc3" data-body="acc3">
                                         <div class="text-block text-block_stylized">
-                                            <p>Мы помогаем пациентам с врожденными пороками сердца, требующими привлечения опытной международной команды врачей в силу тяжести диагноза.</p>
+                                            <p>Происходит отбор пациентов с особо сложной или редкой формой заболевания, требующей привлечения опытной международной команды врачей или хирургов для повторных ревизионных операций.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -803,7 +863,7 @@
                                 <div class="accordion__content" data-fbm-place="acc4">
                                     <div class="accordion__body" data-float-block="acc4" data-body="acc4">
                                         <div class="text-block text-block_stylized">
-                                            <p>Мы сотрудничаем с клиниками, заинтересованными в обмене опытом и повышении квалификации своих сотрудников. На консилиумы выносятся спорные и сложные случаи.</p>
+                                            <p>На консилиумах тщательно разбирается диагноз каждого ребенка, но особое внимание уделяется спорным и сложным случаям.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -818,7 +878,8 @@
                                 <div class="accordion__content" data-fbm-place="acc5">
                                     <div class="accordion__body" data-float-block="acc5" data-body="acc5">
                                         <div class="text-block text-block_stylized">
-                                            <p>Мы выстраиваем стратегию диагностики и лечения каждого пациента.</p>
+                                            <p>После проведения диагностических мер, команда специалистов выстраивает стратегию лечения каждого пациента, нередко требуется привлечение специалистов и из других сфер медицины, чем Фонд также располагает через
+                                                сеть контактов с ведущими мировыми клиниками.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -833,14 +894,14 @@
                                 <div class="accordion__content" data-fbm-place="acc6">
                                     <div class="accordion__body" data-float-block="acc6" data-body="acc6">
                                         <div class="text-block text-block_stylized">
-                                            <p>Мы контролируем качество лечения и поддерживаем связь с нашими пациентами в течение длительного периода времени.</p>
+                                            <p>Контроль качества лечения - это залог роста и успеха! Мы поддерживаем связь с нашими пациентами в течение длительного периода времени, корректируем схемы лечения, если это необходимо.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_md_12 grid__col_xl_6 mobile-hide js-sr_2">
-                            <div class="accordion__content-desktop" data-fbd-place="acc1 acc2 acc3 acc4 acc5 acc6"></div>
+                            <div class="accordion__content-desktop" data-fbd-place="acc0 acc1 acc2 acc3 acc4 acc5 acc6"></div>
                         </div>
                     </div>
                 </SECTION>
@@ -871,9 +932,8 @@
                     <div class="grid__col grid__col_md_12 grid__col_xl_6">
                         <div class="page-section__title js-sr js-sr_1">Как помочь детям?</div>
                         <div class="text-block text-block_small-mg js-sr js-sr_1">
-                            <p>В основе деятельности Фонда Сердце ЕврАзии (EurAsia Heart Foundation) — высокий профессионализм и преданность своему делу специалистов со всего мира, которые осуществляют свою миссию благодаря поддержке меценатов и благотворителей.</p>
-                            <p>В числе наших донаторов — швейцарские и российские благотворители (пациенты и друзья Фонда из мира искусства и бизнеса), жертвователи благотворительных мероприятий. Также нас поддерживают сборы от проведения маркетинговых кампаний
-                                и представители индустрии.</p>
+                            <p>В числе наших покровителей – швейцарские и российские благотворители (пациенты и друзья Фонда из мира искусства, культуры и бизнеса). Миссии Фонда поддерживаются также благодаря сборам от проведения благотворительных мероприятий.</p>
+                            <p>Прямо сейчас вы можете тоже поддержать работу Фонда Сердце Евразии в России.</p>
                         </div>
                         <div class="informer js-sr js-sr_2">
                             <div class="informer__text">Дети получили за 2018 год</div>
@@ -1168,9 +1228,9 @@
                             возраста с тяжелой сопутствующей патологией.</li>
                     </ul>
                     <h5>Совершенствование лечения</h5>
-                    <p>Одним из партнеров Сердца ЕврАзии является Первый Санкт-Петербургский государственный медицинский университет им. академика И.П. Павлова, возглавляемый член-корр. РАН, профессором Г.Г. Хубулава. На протяжении многих лет проводится
-                        совместная работа по совершенствованию работы кардиохирургических отделений Северо-Западного Федерального Округа, а также развитию смежных специальностей: кардиологии, перфузиологии, анестезиологии, интенсивной терапии и послеоперационного
-                        лечения взрослых и детей. Основной принцип работы Сердца ЕврАзии — &laquo;поддержка в организации самопомощи&raquo; — прекрасно работает в России.</p>
+                    <p>Одним из партнеров Сердца ЕврАзии является Первый Санкт-Петербургский государственный медицинский университет им. академика И.П. Павлова, возглавляемый доктором медицинских наук, член-корр. РАН, профессором С.Ф. Багненко. На протяжении
+                        многих лет проводится совместная работа по совершенствованию работы кардиохирургических отделений Северо-Западного Федерального Округа, а также развитию смежных специальностей: кардиологии, перфузиологии, анестезиологии, интенсивной
+                        терапии и послеоперационного лечения взрослых и детей. Основной принцип работы Сердца ЕврАзии — &laquo;поддержка в организации самопомощи&raquo; — прекрасно работает в России.</p>
                     <h5>Подготовка молодых специалистов</h5>
                     <p>Подготовка молодых российских специалистов, работающих в наиболее сложной сфере — кардиохирургии новорожденных и детей раннего возраста, непосредственно в лечебных учреждениях по наиболее сложным разделам, является одним из приоритетных
                         направлений деятельности Сердца ЕврАзии. Передача практических навыков, знаний и опыта происходит непосредственно в операционной, а также отделении кардиореанимации. Такой подход не только повышает эффективность образования, но

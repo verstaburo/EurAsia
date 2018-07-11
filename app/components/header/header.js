@@ -1,3 +1,5 @@
+// import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
+
 const $ = window.$;
 
 export function headerResize() {
@@ -15,13 +17,24 @@ export function headerResize() {
 export function openMenu() {
   $(document).on('click', '.js-menu', (evt) => {
     evt.preventDefault();
-    $('.header__navigation').addClass('is-active');
+    $('.js-menu').toggleClass('js-close-menu');
+    if ($(window).width() >= 1140) {
+      $('.header__menu-anchors').addClass('is-active');
+      $('.header__navigation').removeClass('is-active');
+    } else {
+      $('.header__navigation').addClass('is-active');
+      $('.header__menu-anchors').removeClass('is-active');
+    }
     $('.overlay').addClass('is-active');
+    // freeze();
   });
 
   $(document).on('click', '.js-close-menu', (evt) => {
     evt.preventDefault();
+    // unfreeze();
     $('.header__navigation').removeClass('is-active');
+    $('.header__menu-anchors').removeClass('is-active');
     $('.overlay').removeClass('is-active');
+    $('.js-menu').removeClass('js-close-menu');
   });
 }

@@ -67,12 +67,13 @@ export default function popups() {
     }
     $('.header__navigation').removeClass('is-active');
   });
-  $(document).on('click', '.js-popup-close,.overlay', (evt) => {
+  $(document).on('click', '.js-popup-close, .overlay', (evt) => {
     evt.preventDefault();
     unfreeze();
     $('.popup').fadeOut();
     $('.popups').removeClass('is-active').attr('data-active-popup', '');
     $('.overlay').removeClass('is-active');
     $('.header__navigation').removeClass('is-active');
+    $('.js-menu').removeClass('js-close-menu');
   });
 }

@@ -1,18 +1,18 @@
 mixin child(img, name, title, video, tag)
   +b(tag || 'div').child&attributes(attributes)
-    +e.wrapper
+    +e.DIV.wrapper
       +e.media
         +e.IMG.image(src=img)
         if video
           +play._big.js-fancybox(href=video)
       +e.title!= title
-    +e.info
+    +e.DIV.info
       +e.name!= name
       +e.text
         block
 
 mixin child-short(img)
   +b.A.child_short&attributes(attributes)
-    +e.wrapper
+    +e.DIV.wrapper
       +e.DIV.media
         +e.IMG.image(src=img)
