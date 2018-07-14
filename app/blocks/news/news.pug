@@ -1,16 +1,25 @@
-mixin news(type, img, video)
+mixin news(type, img, video, innerVideo)
   - var link = "#"
   - if (type === 'video') { link = video }
   - if (type === 'image') {link = img}
   +b.news&attributes(attributes)
     if type
       +e.media-wrapper
-        +e.A.media.js-fancybox(href= link)
-          +e.IMG.image(src=img)
-          - if (type === 'video') {
-            +e.play
-              +icon('play').icon
-          - }
+        - if (!innerVideo) {
+          +e.A.media.js-fancybox(href= link)
+            +e.IMG.image(src=img)
+            - if (type === 'video') {
+              +e.play
+                +icon('play').icon
+            - }
+        - } else {
+          +e.A.media.js-fancybox(href= link data-inner-video= innerVideo)
+            +e.IMG.image(src=img)
+            - if (type === 'video') {
+              +e.play
+                +icon('play').icon
+            - }
+        - }
     block
 
 mixin news-short(type, img, video)

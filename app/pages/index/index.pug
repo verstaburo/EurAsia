@@ -10,18 +10,20 @@ block content
     +page-section._light.__mission#scn-about
       .container
         +grid
-          +col({ md: 12, xl: 6 })
+          +col({ md: 12, lg: 7, xl: 8 })
             +text-block._stylized.js-sr_1
               +e.P <b>Наша задача —</b> повышение квалификации и обучение специалистов в сфере кардиологии и сердечно-сосудистой хирургии у детей. Обмен опытом Швейцарских и Российских специалистов осуществляется непосредственно на рабочих местах по наиболее сложным разделам: практические и технические навыки и их применение в диагностике, кардиохирургии, кардиореанимации и кардиологии.
+              +e.P(data-fbm-place="target" data-hidden-text="mission")
+                +e.SPAN(data-float-block="target")
+                  +e.B Наша цель —&nbsp;
+                  | спасти как можно больше детей, нуждающихся в операции и обеспечить им в последствии высокое качество жизни, стать надежным партнером родителям в решении задач, связанных со здоровьем их детей.
               +e.P(data-hidden-text="mission")
                 +e.B Наша миссия —&nbsp;
                 | сохранить здоровье молодого поколения и предотвратить преждевременную смертность детей и подростков из-за сердечно-сосудистых заболеваний, а также обеспечить передачу мирового опыта в области профилактики, диагностики и лечении заболеваний сердечно-сосудистой системы.
-          +col({ md: 12, xl: 6 })(data-hidden-text="mission")
-            +text-block._big.js-sr_2
-              +e.P
-                +e.B Наша цель —&nbsp;
-                | спасти как можно больше детей, нуждающихся в операции и обеспечить им в последствии высокое качество жизни, стать надежным партнером родителям в решении задач, связанных со здоровьем их детей.
-        +text-switcher(data-target-text="mission") Наша миссия
+          +col({ md: 12, lg: 5, xl: 4 }).mobile-hide
+            +text-block._big-style._black.js-sr_2
+              +e.P(data-fbd-place="target")
+        +text-switcher(data-target-text="mission") Наша цель
     +patients#scn-patients
     +page-section._dark._small.__focus#scn-focus
       .container
@@ -133,7 +135,7 @@ block content
               +link-arrow('div')._light Показать
     +page-section._light.page__working#scn-working
       .container
-        +e.title.js-sr_1 Как мы работаем
+        +e.title.js-sr_1 Принципы работы Фонда
         SECTION.page__working-describe
           +accordion-working
         SECTION.page__working-images
@@ -144,6 +146,7 @@ block content
           +col({ md: 12, xl: 6 })
             +e.title.js-sr_1 Как помочь детям?
             +text-block._small-mg.js-sr_1
+              p В основе деятельности Фонда Сердце ЕврАзии (EurAsia Heart Foundation) — высокий профессионализм и преданность своему делу специалистов со всего мира, которые осуществляют свою миссию благодаря поддержке меценатов и благотворителей.
               p В числе наших покровителей – швейцарские и российские благотворители (пациенты и друзья Фонда из мира искусства, культуры и бизнеса). Миссии Фонда поддерживаются также благодаря сборам от проведения благотворительных мероприятий.
               p Прямо сейчас вы можете тоже поддержать работу Фонда Сердце Евразии в России.
             +informer.js-sr_2
@@ -163,3 +166,4 @@ block content
     +popup-experts#experts
     +popup-trustees#trustees
     +popup-child#child
+    +b.VIDEO.video-popup#video(controls)

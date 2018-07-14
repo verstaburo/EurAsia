@@ -65,4 +65,12 @@
   &:hover {
     opacity: .7;
   }
+
+  &_nostyle {
+    margin: 22px;
+
+    &::before {
+      display: none;
+    }
+  }
 }

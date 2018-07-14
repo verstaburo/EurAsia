@@ -152,6 +152,13 @@
       margin-right: 0;
     }
 
+    &.js-fancybox:hover {
+
+      .page-section__image {
+        transform: scale(1.1);
+      }
+    }
+
     &_long {
       padding-top: 74.4%;
       height: auto;
@@ -188,6 +195,7 @@
     display: block;
     line-height: 0;
     font-size: 0;
+    transition: transform $ease-main;
   }
 
   &__accent {

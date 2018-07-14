@@ -20,7 +20,6 @@ export default function slider() {
       bulletClass: 'slider__dot',
       bulletActiveClass: 'active',
     },
-    roundLengths: true,
   });
   const scrollSliderOptions = {
     direction: 'vertical',

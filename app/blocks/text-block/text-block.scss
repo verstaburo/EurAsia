@@ -96,6 +96,11 @@
       padding-top: 32px;
       border-top: 2px solid $color-main;
     }
+
+    p b {
+      color: $color-basic;
+      font-weight: 400;
+    }
   }
 
   &_frame {

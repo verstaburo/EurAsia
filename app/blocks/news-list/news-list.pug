@@ -24,6 +24,10 @@ mixin news-list-slider()
           +e.content
             +e.text Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с РФС
       +slide
+        +news-short('video', 'assets/images/news-5.jpg', 'assets/video/Swiss_delegation_Koloev_StPetersburg.mp4').news-list__item.js-popup(href="#news"  data-target-news="news-1")
+          +e.content
+            +e.text Швейцарские специалисты в Санкт-Перебурге
+      +slide
         +news-short('video', 'assets/images/news-1.jpg', 'https://youtu.be/UA3OexmrSfs').news-list__item.js-popup(href="#news"  data-target-news="news-2")
           +e.content
             +e.text Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки
@@ -44,12 +48,18 @@ mixin news-list-full()
   +b.news-list_full&attributes(attributes)
     +e.title Новости Фонда
     +e.list
-      +news('image', 'assets/images/news-0.jpg').__item#news-1
+      +news('image', 'assets/images/news-0.jpg').__item#news-0
         +e.content
           +e.title Российские Футболисты помогают детям с&nbsp;пороком сердца&nbsp;/ сотрудничество с РФС
           +e.text
             p 23&nbsp;марта во&nbsp;время дружеского матча Россия-Бразилия будет подписан меморандум о&nbsp;сотрудничестве между Фондом &laquo;Сердце Евразии&raquo; и&nbsp;Российским Футбольным Союзом. Российские футболисты откликнулись на&nbsp;беду малышей с&nbsp;врожденным пороком сердца и&nbsp;с&nbsp;огромным энтузиазмом готовы поддерживать деятельность Фонда в&nbsp;России. Все собранные средства будут адресно раходоваться на&nbsp;детские операции.
             p Наша искренняя благодарность Российскому Футбольному Союзу за&nbsp;эту инициативу!
+      +news('video', 'assets/images/news-5.jpg', '#video', 'assets/video/news-video1.mp4').__item#news-1
+        +e.content
+          +e.title Швейцарские специалисты в Санкт-Перебурге
+          +e.text
+            p Жизнь мальчика из Ингушетии могла оборваться в любую секунду. Благодаря международной бригаде медиков все завершилось благополучно. Это работа не одного хирурга, это работа большого коллектива Педиатрического Университета
+          +link(href="#video" data-inner-video="assets/video/news-video1.mp4").js-fancybox Смотреть видео
       +news('video', 'assets/images/news-1.jpg', 'https://www.youtube.com/watch?v=WCgAJHQu0do').__item#news-2
         +e.content
           +e.title Александр Дмитриев. Многолетняя дружба с&nbsp;миром музыки

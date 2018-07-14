@@ -7,7 +7,14 @@ const $ = window.$;
 
 export default function popups() {
   $('.js-fancybox').fancybox({
-    afterLoad: freeze,
+    afterLoad(i, v) {
+      freeze();
+      if (v.src === '#video') {
+        $(v.src).append(`<source src="${v.opts.innerVideo}">`);
+        $(v.src)[0].load();
+        $(v.src)[0].play();
+      }
+    },
     afterClose: unfreeze,
   });
 
@@ -75,5 +82,7 @@ export default function popups() {
     $('.overlay').removeClass('is-active');
     $('.header__navigation').removeClass('is-active');
     $('.js-menu').removeClass('js-close-menu');
+    $('.header__navigation').removeClass('is-active');
+    $('.header__menu-anchors').removeClass('is-active');
   });
 }

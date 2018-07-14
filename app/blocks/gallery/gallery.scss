@@ -34,10 +34,19 @@
     width: 100%;
     padding-top: 70%;
     overflow: hidden;
+
+    &:hover {
+
+      .gallery__image {
+        transform: scale(1.1);
+      }
+    }
   }
 
   &__image {
     @include fill-img;
+
+    transition: transform $ease-main;
   }
 
   &_style {
