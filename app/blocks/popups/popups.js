@@ -10,12 +10,17 @@ export default function popups() {
     afterLoad(i, v) {
       freeze();
       if (v.src === '#video') {
-        $(v.src).append(`<source src="${v.opts.innerVideo}">`);
+        $(v.src).find('source').attr('src', v.opts.innerVideo);
         $(v.src)[0].load();
         $(v.src)[0].play();
       }
     },
-    afterClose: unfreeze,
+    afterClose(i, v) {
+      unfreeze();
+      if (v.src === '#video') {
+        $(v.src)[0].pause();
+      }
+    },
   });
 
   $(document).on('click', '.js-popup', (evt) => {
