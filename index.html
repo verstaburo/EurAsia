@@ -1064,7 +1064,7 @@
                         </div>
                         <div class="news news-list__item" id="news-1">
                             <div class="news__media-wrapper">
-                                <a class="news__media js-fancybox" href="assets/video/Swiss_delegation_Koloev_StPetersburg.mp4">
+                                <a class="news__media js-fancybox" href="#video" data-inner-video="assets/video/news-video1.mp4">
                                     <img class="news__image" src="assets/images/news-5.jpg" alt="" role="presentation" />
                                     <span class="news__play">
                                         <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
@@ -1076,7 +1076,7 @@
                                 <div class="news__text">
                                     <p>Жизнь мальчика из Ингушетии могла оборваться в любую секунду. Благодаря международной бригаде медиков все завершилось благополучно. Это работа не одного хирурга, это работа большого коллектива Педиатрического Университета</p>
                                 </div>
-                                <a class="link js-fancybox" href="assets/video/Swiss_delegation_Koloev_StPetersburg.mp4">
+                                <a class="link js-fancybox" href="#video" data-inner-video="assets/video/news-video1.mp4">
                                     <span class="link__text">Смотреть видео</span>
                                 </a>
                             </div>
@@ -1258,6 +1258,22 @@
                 <h3 class="popup__title">
                     <div class="popup__title-text">Фокус: Россия</div>
                 </h3>
+                <div class="news news_content">
+                    <div class="news__media-wrapper">
+                        <a class="news__media js-fancybox" href="#video" data-inner-video="assets/video/InterviewPaulVogtRussiantv.mp4">
+                            <img class="news__image" src="assets/images/focus-video-1.jpg" alt="" role="presentation" />
+                            <span class="news__play">
+                                <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="news__content">
+                        <div class="news__title">Видео Interview Paul Vogt Russian TV</div>
+                        <a class="link js-fancybox" href="#video" data-inner-video="assets/video/InterviewPaulVogtRussiantv.mp4">
+                            <span class="link__text">Смотреть видео</span>
+                        </a>
+                    </div>
+                </div>
                 <div class="content-zone content-zone_no-mg">
                     <h5>Образовательные программы</h5>
                     <p>Одним из ключевых направлений совместной работы российских Центров с Сердцем ЕврАзии является подготовка специалистов (кардиохирургов, анестезиологов, кардиологов, электрофизиологов), работающих с наиболее тяжелой категорией пациентов.
@@ -1274,6 +1290,24 @@
                             <b>Сотрудничество с национальным медицинским исследовательским центром имени академика Е.Н. Мешалкина</b><br/>Фонд наладил тесное сотрудничество в сфере операций у наиболее сложных категорий пациентов — пожилого и старческого
                             возраста с тяжелой сопутствующей патологией.</li>
                     </ul>
+                </div>
+                <div class="news news_content">
+                    <div class="news__media-wrapper">
+                        <a class="news__media js-fancybox" href="#video" data-inner-video="assets/video/ProfPaulVogtInterviewStPetersburg.mp4">
+                            <img class="news__image" src="assets/images/focus-video-2.jpg" alt="" role="presentation" />
+                            <span class="news__play">
+                                <svg class="news__icon"><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="news__content">
+                        <div class="news__title">Видео Prof. Paul Vogt interview St.Petersburg</div>
+                        <a class="link js-fancybox" href="#video" data-inner-video="assets/video/ProfPaulVogtInterviewStPetersburg.mp4">
+                            <span class="link__text">Смотреть видео</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content-zone content-zone_no-mg">
                     <h5>Совершенствование лечения</h5>
                     <p>Одним из партнеров Сердца ЕврАзии является Первый Санкт-Петербургский государственный медицинский университет им. академика И.П. Павлова, возглавляемый доктором медицинских наук, член-корр. РАН, профессором С.Ф. Багненко. На протяжении
                         многих лет проводится совместная работа по совершенствованию работы кардиохирургических отделений Северо-Западного Федерального Округа, а также развитию смежных специальностей: кардиологии, перфузиологии, анестезиологии, интенсивной
@@ -1583,6 +1617,7 @@
                     <p data-child-epicrisis="data-child-epicrisis"></p>
                 </div>
             </div>
+            <video class="video-popup" id="video" controls="controls"></video>
         </div>
     </div>
     <script src="assets/scripts/app.min.js"></script>
